@@ -1,0 +1,315 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class AccessibilityAnalyzer
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class AccessibilityAnalyzer
+   ">
+    <meta name="generator" content="docfx 2.56.4.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="VisualTreeAnalyzers.Accessibility.AccessibilityAnalyzer">
+  
+  
+  <h1 id="VisualTreeAnalyzers_Accessibility_AccessibilityAnalyzer" data-uid="VisualTreeAnalyzers.Accessibility.AccessibilityAnalyzer" class="text-break">Class AccessibilityAnalyzer
+  </h1>
+  <div class="markdown level0 summary"><p>The accessibility analyzer provides a range of accessibility rules such as missing names or misaligned control types.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">AccessibilityAnalyzer</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="VisualTreeAnalyzers.Core.IElementAnalyzer.html">IElementAnalyzer</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="VisualTreeAnalyzers.Accessibility.html">VisualTreeAnalyzers.Accessibility</a></h6>
+  <h6><strong>Assembly</strong>: VisualTreeAnalyzers.dll</h6>
+  <h5 id="VisualTreeAnalyzers_Accessibility_AccessibilityAnalyzer_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class AccessibilityAnalyzer : IElementAnalyzer</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <a id="VisualTreeAnalyzers_Accessibility_AccessibilityAnalyzer__ctor_" data-uid="VisualTreeAnalyzers.Accessibility.AccessibilityAnalyzer.#ctor*"></a>
+  <h4 id="VisualTreeAnalyzers_Accessibility_AccessibilityAnalyzer__ctor" data-uid="VisualTreeAnalyzers.Accessibility.AccessibilityAnalyzer.#ctor">AccessibilityAnalyzer()</h4>
+  <div class="markdown level1 summary"><p>Creates a new AccessibilityAnalyzer object. The default AccessibilityAnalyzer loads all accessibility rules included by this library.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AccessibilityAnalyzer()</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <a id="VisualTreeAnalyzers_Accessibility_AccessibilityAnalyzer_AccessibilityRules_" data-uid="VisualTreeAnalyzers.Accessibility.AccessibilityAnalyzer.AccessibilityRules*"></a>
+  <h4 id="VisualTreeAnalyzers_Accessibility_AccessibilityAnalyzer_AccessibilityRules" data-uid="VisualTreeAnalyzers.Accessibility.AccessibilityAnalyzer.AccessibilityRules">AccessibilityRules</h4>
+  <div class="markdown level1 summary"><p>The list of all rules this accessibility analyzer uses to analyze and flag elements.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IList&lt;IRule&gt; AccessibilityRules { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="VisualTreeAnalyzers.Core.IRule.html">IRule</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="VisualTreeAnalyzers_Accessibility_AccessibilityAnalyzer_ErrorBrush_" data-uid="VisualTreeAnalyzers.Accessibility.AccessibilityAnalyzer.ErrorBrush*"></a>
+  <h4 id="VisualTreeAnalyzers_Accessibility_AccessibilityAnalyzer_ErrorBrush" data-uid="VisualTreeAnalyzers.Accessibility.AccessibilityAnalyzer.ErrorBrush">ErrorBrush</h4>
+  <div class="markdown level1 summary"><p>This brush is used to highlight violating elements by either setting the border of foreground.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SolidColorBrush ErrorBrush { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Windows.UI.Xaml.Media.SolidColorBrush</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="VisualTreeAnalyzers_Accessibility_AccessibilityAnalyzer_ErrorBrushThickness_" data-uid="VisualTreeAnalyzers.Accessibility.AccessibilityAnalyzer.ErrorBrushThickness*"></a>
+  <h4 id="VisualTreeAnalyzers_Accessibility_AccessibilityAnalyzer_ErrorBrushThickness" data-uid="VisualTreeAnalyzers.Accessibility.AccessibilityAnalyzer.ErrorBrushThickness">ErrorBrushThickness</h4>
+  <div class="markdown level1 summary"><p>The thickness used to render a border when an element is being highlighted by updating the border.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Thickness ErrorBrushThickness { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Windows.UI.Xaml.Thickness</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <a id="VisualTreeAnalyzers_Accessibility_AccessibilityAnalyzer_Analyze_" data-uid="VisualTreeAnalyzers.Accessibility.AccessibilityAnalyzer.Analyze*"></a>
+  <h4 id="VisualTreeAnalyzers_Accessibility_AccessibilityAnalyzer_Analyze_Windows_UI_Xaml_FrameworkElement_" data-uid="VisualTreeAnalyzers.Accessibility.AccessibilityAnalyzer.Analyze(Windows.UI.Xaml.FrameworkElement)">Analyze(FrameworkElement)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Analyze(FrameworkElement element)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Windows.UI.Xaml.FrameworkElement</span></td>
+        <td><span class="parametername">element</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="VisualTreeAnalyzers_Accessibility_AccessibilityAnalyzer_ResetState_" data-uid="VisualTreeAnalyzers.Accessibility.AccessibilityAnalyzer.ResetState*"></a>
+  <h4 id="VisualTreeAnalyzers_Accessibility_AccessibilityAnalyzer_ResetState" data-uid="VisualTreeAnalyzers.Accessibility.AccessibilityAnalyzer.ResetState">ResetState()</h4>
+  <div class="markdown level1 summary"><p>This will clear the state on all accessibility rules associated with this object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ResetState()</code></pre>
+  </div>
+  <a id="VisualTreeAnalyzers_Accessibility_AccessibilityAnalyzer_ShouldVisitChildren_" data-uid="VisualTreeAnalyzers.Accessibility.AccessibilityAnalyzer.ShouldVisitChildren*"></a>
+  <h4 id="VisualTreeAnalyzers_Accessibility_AccessibilityAnalyzer_ShouldVisitChildren_Windows_UI_Xaml_FrameworkElement_" data-uid="VisualTreeAnalyzers.Accessibility.AccessibilityAnalyzer.ShouldVisitChildren(Windows.UI.Xaml.FrameworkElement)">ShouldVisitChildren(FrameworkElement)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ShouldVisitChildren(FrameworkElement element)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Windows.UI.Xaml.FrameworkElement</span></td>
+        <td><span class="parametername">element</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="VisualTreeAnalyzers.Core.IElementAnalyzer.html">IElementAnalyzer</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            VisualTreeAnalyzers documentation
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

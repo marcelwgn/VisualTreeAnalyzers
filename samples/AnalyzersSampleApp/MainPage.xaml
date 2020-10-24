@@ -1,0 +1,26 @@
+﻿<Page
+    x:Class="AnalyzersSampleApp.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:AnalyzersSampleApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:muxc="using:Microsoft.UI.Xaml.Controls" xmlns:pages="using:AnalyzersSampleApp.Pages"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <muxc:NavigationView IsSettingsVisible="False" IsBackButtonVisible="Collapsed"
+                PaneDisplayMode="Top" ItemInvoked="MainNavigation_ItemInvoked">
+            <muxc:NavigationView.PaneFooter>
+                <TextBlock Margin="8" FontSize="16">This is a demo app to demonstrate the different visual tree analyzer.</TextBlock>
+            </muxc:NavigationView.PaneFooter>
+
+            <muxc:NavigationView.MenuItems>
+                <muxc:NavigationViewItem x:Name="AccessibilityPageItem" 
+                        IsSelected="True" Content="Accessiblity demo"/>
+            </muxc:NavigationView.MenuItems>
+
+            <Frame x:Name="NavigationFrame"/>
+        </muxc:NavigationView>
+    </Grid>
+</Page>

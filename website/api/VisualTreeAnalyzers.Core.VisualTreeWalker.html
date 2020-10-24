@@ -1,0 +1,273 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class VisualTreeWalker
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class VisualTreeWalker
+   ">
+    <meta name="generator" content="docfx 2.56.4.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="VisualTreeAnalyzers.Core.VisualTreeWalker">
+  
+  
+  <h1 id="VisualTreeAnalyzers_Core_VisualTreeWalker" data-uid="VisualTreeAnalyzers.Core.VisualTreeWalker" class="text-break">Class VisualTreeWalker
+  </h1>
+  <div class="markdown level0 summary"><p>The VisualTreeWalker can be used to scan entire subtrees of the VisualTree.
+Every analyzer added to the VisualTreeWalker will be called on all elements visited.
+The tree walker might not visit all nodes if no analyzer requests to visit the children of a specific element.</p>
+<p>The VisualTreeWalker will always perform a breadth-first-search on the visual tree.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">VisualTreeWalker</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="VisualTreeAnalyzers.Core.html">VisualTreeAnalyzers.Core</a></h6>
+  <h6><strong>Assembly</strong>: VisualTreeAnalyzers.dll</h6>
+  <h5 id="VisualTreeAnalyzers_Core_VisualTreeWalker_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class VisualTreeWalker</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <a id="VisualTreeAnalyzers_Core_VisualTreeWalker__ctor_" data-uid="VisualTreeAnalyzers.Core.VisualTreeWalker.#ctor*"></a>
+  <h4 id="VisualTreeAnalyzers_Core_VisualTreeWalker__ctor_Windows_UI_Xaml_FrameworkElement_" data-uid="VisualTreeAnalyzers.Core.VisualTreeWalker.#ctor(Windows.UI.Xaml.FrameworkElement)">VisualTreeWalker(FrameworkElement)</h4>
+  <div class="markdown level1 summary"><p>Creates a new VisualTreeWalker object with the specified element as the root of the VisualTree to analyzer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public VisualTreeWalker(FrameworkElement root)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Windows.UI.Xaml.FrameworkElement</span></td>
+        <td><span class="parametername">root</span></td>
+        <td><p>The root of the visual tree that will be processed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="VisualTreeAnalyzers_Core_VisualTreeWalker__ctor_" data-uid="VisualTreeAnalyzers.Core.VisualTreeWalker.#ctor*"></a>
+  <h4 id="VisualTreeAnalyzers_Core_VisualTreeWalker__ctor_Windows_UI_Xaml_FrameworkElement_VisualTreeAnalyzers_Core_IElementAnalyzer_" data-uid="VisualTreeAnalyzers.Core.VisualTreeWalker.#ctor(Windows.UI.Xaml.FrameworkElement,VisualTreeAnalyzers.Core.IElementAnalyzer)">VisualTreeWalker(FrameworkElement, IElementAnalyzer)</h4>
+  <div class="markdown level1 summary"><p>Creates a new VisualTreeWalker object with the specified element as the root of the VisualTree to analyzer.
+This also adds the specified analyzer to list of analyzers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public VisualTreeWalker(FrameworkElement root, IElementAnalyzer analyzer)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Windows.UI.Xaml.FrameworkElement</span></td>
+        <td><span class="parametername">root</span></td>
+        <td><p>The root of the visual tree that will be processed.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="VisualTreeAnalyzers.Core.IElementAnalyzer.html">IElementAnalyzer</a></td>
+        <td><span class="parametername">analyzer</span></td>
+        <td><p>The analyzer that will be added to the collection of analyzers.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <a id="VisualTreeAnalyzers_Core_VisualTreeWalker_Analyzers_" data-uid="VisualTreeAnalyzers.Core.VisualTreeWalker.Analyzers*"></a>
+  <h4 id="VisualTreeAnalyzers_Core_VisualTreeWalker_Analyzers" data-uid="VisualTreeAnalyzers.Core.VisualTreeWalker.Analyzers">Analyzers</h4>
+  <div class="markdown level1 summary"><p>The collection of analyzers used by this VisualTreeWalker.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IList&lt;IElementAnalyzer&gt; Analyzers { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="VisualTreeAnalyzers.Core.IElementAnalyzer.html">IElementAnalyzer</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="VisualTreeAnalyzers_Core_VisualTreeWalker_Root_" data-uid="VisualTreeAnalyzers.Core.VisualTreeWalker.Root*"></a>
+  <h4 id="VisualTreeAnalyzers_Core_VisualTreeWalker_Root" data-uid="VisualTreeAnalyzers.Core.VisualTreeWalker.Root">Root</h4>
+  <div class="markdown level1 summary"><p>The <span class="xref">Windows.UI.Xaml.FrameworkElement</span> indicating the root of the visual tree to analyze.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FrameworkElement Root { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Windows.UI.Xaml.FrameworkElement</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <a id="VisualTreeAnalyzers_Core_VisualTreeWalker_ScanVisualTree_" data-uid="VisualTreeAnalyzers.Core.VisualTreeWalker.ScanVisualTree*"></a>
+  <h4 id="VisualTreeAnalyzers_Core_VisualTreeWalker_ScanVisualTree" data-uid="VisualTreeAnalyzers.Core.VisualTreeWalker.ScanVisualTree">ScanVisualTree()</h4>
+  <div class="markdown level1 summary"><p>Scans the visual tree with the <a class="xref" href="VisualTreeAnalyzers.Core.VisualTreeWalker.html#VisualTreeAnalyzers_Core_VisualTreeWalker_Root">Root</a> as the starting point of the tree scan.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ScanVisualTree()</code></pre>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            VisualTreeAnalyzers documentation
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

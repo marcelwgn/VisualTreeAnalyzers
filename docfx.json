@@ -1,0 +1,76 @@
+{
+  "metadata": [
+    {
+      "src": [
+        {
+          "files": [
+            "src/**.csproj"
+          ]
+        }
+      ],
+      "dest": "api",
+      "disableGitFeatures": false,
+      "disableDefaultFilter": false
+    }
+  ],
+  "build": {
+    "content": [
+      {
+        "files": [
+          "api/toc.yml",
+          "api/**.yml"
+        ]
+      },
+      {
+        "files": [
+          "docs/index.md",
+          "docs/*.md"
+        ]
+      },
+      {
+        "src": "build/docs/site",
+        "files": [
+          "index.md",
+          "toc.yml",
+          "docs/index.md",
+          "docs/toc.yml",
+          "api/index.md"
+        ]
+      }
+    ],
+    "resource": [
+      {
+        "files": [
+          "docs/images/**"
+        ]
+      }
+    ],
+    "overwrite": [
+      {
+        "files": [
+          "apidoc/**.md"
+        ],
+        "exclude": [
+          "obj/**",
+          "_site/**"
+        ]
+      }
+    ],
+    "dest": "website",
+    "fileMetadataFiles": [],
+    "template": [
+      "default",
+      "build/docs/template"
+    ],
+    "globalMetadata": {
+      "_appFooter": "VisualTreeAnalyzers documentation",
+      "_disableContribution": true
+    },
+    "postProcessors": [],
+    "markdownEngineName": "markdig",
+    "noLangKeyword": false,
+    "keepFileLink": false,
+    "cleanupCacheHistory": true,
+    "disableGitFeatures": false
+  }
+}

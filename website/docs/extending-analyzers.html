@@ -1,0 +1,182 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Extending analyzers </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Extending analyzers ">
+    <meta name="generator" content="docfx 2.56.4.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="extending-analyzers">Extending analyzers</h1>
+
+<p>VisualTreeAnalyzers allows the authoring of new analyzers and rules and integrating them into the existing APIs.
+For that, existing classes have ways to add new rules and work with self authored analyzers.
+Below are examples showing how to extend the functionality of the VisualTreeAnalyzers.</p>
+<h3 id="adding-additional-accessibility-rules">Adding additional accessibility rules</h3>
+<p>The <a class="xref" href="../api/VisualTreeAnalyzers.Accessibility.AccessibilityAnalyzer.html">AccessibilityAnalyzer</a> exposes the list of rules used for analyzing and allows adding new rules to an existing analyzer object.
+To add a new rule, you will need to implement the <a class="xref" href="../api/VisualTreeAnalyzers.Core.IRule.html">IRule</a> interface:</p>
+<pre><code class="lang-c#">class CustomAccessibilityRule : IRule
+{
+    public string FailureMessage =&gt; &quot;Element should ....&quot;;
+
+    public bool IsValid(FrameworkElement element, AutomationPeer peer)
+    {
+        bool elementIsValid = true;
+        // Process element
+        return elementIsValid;
+    }
+
+    public void ResetState() 
+    { 
+        // Reset state of this rule in case it needs broader context of the visual tree.
+        // An example of that, is the LandmarkTypeOnceRule which counts the number of all elements encountered
+        // with the LandmarkType=Main.
+    }
+}
+</code></pre>
+<p>After authoring a new rule, you can add the new rule to an existing <a class="xref" href="../api/VisualTreeAnalyzers.Accessibility.AccessibilityAnalyzer.html">AccessibilityAnalyzer</a> object:</p>
+<pre><code class="lang-c#">var analyzer = new AccessibilityAnalyzer();
+analyzer.AccessibilityRules.Add(new CustomAccessibilityRule());
+</code></pre>
+<h3 id="authoring-a-new-analyzer">Authoring a new analyzer</h3>
+<p>To scan the visual tree for specific issues or patterns, in some cases, it can be easier to write a new analyzer instead of extending existing ones.
+The VisualTreeWalker is able to work with any object implementing the <a class="xref" href="../api/VisualTreeAnalyzers.Core.IElementAnalyzer.html">IElementAnalyzer</a> interface.</p>
+<p>Below is the skeleton of an analyzer:</p>
+<pre><code class="lang-c#">public class CustomAnalyzer : IElementAnalyzer
+{
+    private SolidColorBrush markingBrush = new SolidColorBrush(Colors.Yellow);
+    private Thickness markingBorderThickness = new Thickness(1);
+
+    private IList&lt;IRule&gt; rules { get; }
+
+    /// &lt;summary&gt;
+    /// Creates a new CustomAnalyzer.
+    /// &lt;/summary&gt;
+    public CustomAnalyzer()
+    {
+        // Add all rules that should be used for this analyzer in here.
+    }
+
+    public void Analyze(FrameworkElement element)
+    {
+        foreach (IRule rule in rules)
+        {
+            // If your rules don't need the AutomationPeer, you can just pass null for the peer
+            if (!rule.IsValid(element, null))
+            {
+                MarkElement(element, rule.FailureMessage);
+            }
+        }
+    }
+
+    public bool ShouldVisitChildren(FrameworkElement element)
+    {
+        // Determine whether to visit the children of this element. 
+        return true;
+    }
+
+    public void ResetState()
+    {
+        // This calls ClearState on all rules
+        AnalyzerHelper.ClearStates(rules);
+    }
+
+    private void MarkElement(FrameworkElement element, string message)
+    {
+        AnalyzerHelper.MarkElement(element, markingBrush, markingBorderThickness, message);
+    }
+}
+</code></pre>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            VisualTreeAnalyzers documentation
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,6 @@
+- name: Guides
+  href: ./docs/index.md
+  tocHref: ./docs/toc.yml
+- name: API documentation
+  href: ./api/index.md
+  tocHref: ../../../api/toc.yml

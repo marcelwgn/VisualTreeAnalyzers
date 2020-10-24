@@ -1,0 +1,68 @@
+/* Navbar icon */
+.navbar-brand > img, .navbar-brand > svg
+{
+    max-height: 100%;
+    max-width: 50px;
+}
+svg:hover path
+{
+    fill: initial;
+}
+
+/* Navbar colors */
+.navbar-inverse
+{
+    background: #112b11;
+}
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover
+{
+    background: #1c4720;
+}
+.navbar-inverse .navbar-nav>li>a:focus, .navbar-inverse .navbar-nav>li>a:hover 
+{
+    background: #183d1c;
+}
+.navbar-inverse .navbar-nav>li>a, .navbar-inverse .navbar-text
+{
+    transition: background-color 200ms, color 200ms;
+    color: #cccccc;
+}
+
+/* Table of contents styling */
+#sidetoc .sidetoc #toc
+{
+    background: transparent;
+}
+
+#sidetoc .sidefilter, #sidetoc .sidetoc
+{
+    background: #f3f3f3;
+}
+
+#sidetoc .sidetoc
+{
+    transition: bottom 100ms;
+}
+
+#sidetoc .toc-filter
+{
+    background: transparent;
+}
+
+/* Table of contents searchbox */
+#sidetoc .toc-filter .filter-icon
+{
+    top: 11px;
+    left: 9px;
+}
+
+#sidetoc .toc-filter input
+{
+    border-radius: 4px;
+    border: 2px solid #afafaf;
+}
+
+#sidetoc .toc-filter input:focus
+{
+    border: 2px solid #000000;
+}

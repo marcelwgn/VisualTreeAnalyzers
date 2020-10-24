@@ -1,0 +1,455 @@
+{
+  "homepages": [],
+  "source_base_path": "D:/Projects/VisualTreeAnalyzers",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VisualTreeAnalyzers.Accessibility.AccessibilityAnalyzer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VisualTreeAnalyzers.Accessibility.AccessibilityAnalyzer.html",
+          "hash": "nKS4S0iTMUVpA1ipvbvDJw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VisualTreeAnalyzers.Accessibility.Rules.ControlNameNotIncludeTypeRule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VisualTreeAnalyzers.Accessibility.Rules.ControlNameNotIncludeTypeRule.html",
+          "hash": "HQUuxWltLdKnM1yCVvQGqQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VisualTreeAnalyzers.Accessibility.Rules.ControlNonEmptyNameRule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VisualTreeAnalyzers.Accessibility.Rules.ControlNonEmptyNameRule.html",
+          "hash": "ecN/86c0F2IPMxvpTlhIqg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VisualTreeAnalyzers.Accessibility.Rules.ExpectKeyboardFocusableFalseRule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VisualTreeAnalyzers.Accessibility.Rules.ExpectKeyboardFocusableFalseRule.html",
+          "hash": "Nq9orYVBw/NOBXNhxgWR2A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VisualTreeAnalyzers.Accessibility.Rules.ExpectKeyboardFocusableTrueRule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VisualTreeAnalyzers.Accessibility.Rules.ExpectKeyboardFocusableTrueRule.html",
+          "hash": "8RTVIryHmdwE95mDT7mlTA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VisualTreeAnalyzers.Accessibility.Rules.LandmarkTypeMainOnceRule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VisualTreeAnalyzers.Accessibility.Rules.LandmarkTypeMainOnceRule.html",
+          "hash": "cxIYEyhE9dyqEPSNvIRFEw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VisualTreeAnalyzers.Accessibility.Rules.ListItemNameNotEqualDataContextRule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VisualTreeAnalyzers.Accessibility.Rules.ListItemNameNotEqualDataContextRule.html",
+          "hash": "XNUyiS7Hpx+sOLHxUecG5Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VisualTreeAnalyzers.Accessibility.Rules.LocalizedLandMarkTypeRule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VisualTreeAnalyzers.Accessibility.Rules.LocalizedLandMarkTypeRule.html",
+          "hash": "2IELNNRmAqqifBPMkXyU6w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VisualTreeAnalyzers.Accessibility.Rules.NameReasonableLengthRule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VisualTreeAnalyzers.Accessibility.Rules.NameReasonableLengthRule.html",
+          "hash": "j0eNNw8xX8PXV+EFErOMog=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VisualTreeAnalyzers.Accessibility.Rules.OrientationNotNoneRule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VisualTreeAnalyzers.Accessibility.Rules.OrientationNotNoneRule.html",
+          "hash": "N6v4JpCPH34dOMnqfcpKCw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VisualTreeAnalyzers.Accessibility.Rules.PatternInterfaceImplementedRule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VisualTreeAnalyzers.Accessibility.Rules.PatternInterfaceImplementedRule.html",
+          "hash": "iCI3F0DfSZhJmPNUR5Sd+A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VisualTreeAnalyzers.Accessibility.Rules.RequiredSelectionRule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VisualTreeAnalyzers.Accessibility.Rules.RequiredSelectionRule.html",
+          "hash": "JHX+N2PNNymbMuxKMWlQwQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VisualTreeAnalyzers.Accessibility.Rules.SingleSelectionRule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VisualTreeAnalyzers.Accessibility.Rules.SingleSelectionRule.html",
+          "hash": "4zwzxhICanJtcEtEGiE1YQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VisualTreeAnalyzers.Accessibility.Rules.TypeButtonIsInvokeOrToggleRule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VisualTreeAnalyzers.Accessibility.Rules.TypeButtonIsInvokeOrToggleRule.html",
+          "hash": "6hcSNLKiglVATSmMPAHxYg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VisualTreeAnalyzers.Accessibility.Rules.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VisualTreeAnalyzers.Accessibility.Rules.html",
+          "hash": "3gvPyJtZ+ZUt6aAQ2d8QCA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VisualTreeAnalyzers.Accessibility.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VisualTreeAnalyzers.Accessibility.html",
+          "hash": "BzFGyAGDInVt6fIMA/eIQA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VisualTreeAnalyzers.Core.AnalyzerHelper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VisualTreeAnalyzers.Core.AnalyzerHelper.html",
+          "hash": "GqW4QmssMbEvTbH2c72Lkw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VisualTreeAnalyzers.Core.IElementAnalyzer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VisualTreeAnalyzers.Core.IElementAnalyzer.html",
+          "hash": "6iHBqV64I+psR94F0P3gfw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VisualTreeAnalyzers.Core.IRule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VisualTreeAnalyzers.Core.IRule.html",
+          "hash": "FFRB4EuLEs79y4xkc1r+6g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VisualTreeAnalyzers.Core.VisualTreeWalker.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VisualTreeAnalyzers.Core.VisualTreeWalker.html",
+          "hash": "DYxEljhUzHguCUqidIxdQA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VisualTreeAnalyzers.Core.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VisualTreeAnalyzers.Core.html",
+          "hash": "auMgSi678EU3UrQQMuGGVg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "73VuJ/+BztNilrApAitLmw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "build/docs/site/api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "IKlOJfPe4GqOb8mG5ICoMA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "build/docs/site/docs/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/index.html",
+          "hash": "5lPqA6tGI5M/RKg5BKglIA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "build/docs/site/docs/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/toc.html",
+          "hash": "tX7NxMcjVRKrG/MFhQ1dSg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "build/docs/site/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "kG3NgAzS9hiBFyOMGLIucg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "build/docs/site/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "bRgeSp/bcE3kDBjYlFMu0g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/extending-analyzers.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/extending-analyzers.html",
+          "hash": "DzNjL/5tbQd9vEbRRf+NMQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/get-started.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/get-started.html",
+          "hash": "GDl91CvwLrRMyKA3q0kr1g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/images/AccessibilityAnalyzerPageAfter.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/images/AccessibilityAnalyzerPageAfter.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/images/AccessibilityAnalyzerPageBefore.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/images/AccessibilityAnalyzerPageBefore.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/images/VisualTreeAnalyzers_Icon.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/images/VisualTreeAnalyzers_Icon.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/images/VisualTreeAnalyzers_Icon.svg",
+      "output": {
+        "resource": {
+          "relative_path": "docs/images/VisualTreeAnalyzers_Icon.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot build incrementally because last build info is missing.",
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0,
+        "full_build_reason_code": "NoAvailableBuildCache"
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 5,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 21,
+          "skipped_file_count": 0
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: last post processor info is null.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

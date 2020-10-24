@@ -1,0 +1,17 @@
+pool:
+  vmImage: 'windows-2019'
+
+jobs:
+  - template: ./templates/build-all.yml
+    parameters:
+      buildPlatform: 'x64'
+      buildConfiguration: 'Debug'
+
+  - template: ./templates/test-all.yml
+    parameters:
+      buildPlatform: 'x64'
+      buildConfiguration: 'Debug'
+
+  - template: ./templates/build-nupkg.yml
+    parameters:
+      testStep: 'Test_Debug_x64'

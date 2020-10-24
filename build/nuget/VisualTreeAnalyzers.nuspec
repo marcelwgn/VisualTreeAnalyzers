@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>VisualTreeAnalyzers</id>
+        <license type="expression">MIT</license>
+        <authors>Marcel Wagner</authors>
+        <copyright>Marcel Wagner</copyright>
+        <description>
+            Library containing different visual tree analyzers and helpers.
+
+            This library contains multiple analyzers directly scanning the visual tree for potential issues, especially for accessibility issues.
+            In addition to that, the library also allows easy writing of visual tree snapshot tests.
+        </description>
+        <title>VisualTreeAnalyzers</title>
+        <tags>c# uwp accesibility visualtree analyzer</tags>
+        <repository type="git" url="https://github.com/chingucoding/VisualTreeAnalyzers" branch="main"/>
+        <projectUrl>https://chingucoding.github.io/VisualTreeAnalyzers/website/index.html</projectUrl>
+        <version>0.1.1</version>
+        <!-- <icon>./icon.png</icon> -->
+        <!-- Optional elements -->
+        <!-- ... -->
+    </metadata>
+    <!-- Optional 'files' node -->
+    <files>
+        <!-- Icon -->
+        <!-- <file src="/icon.png"/> -->
+        <file src="..\..\artifacts\Release\AnyCPU\VisualTreeAnalyzers\*.*" target="lib\uap10.0"/> 
+
+        <file src="..\..\artifacts\Release\x86\VisualTreeAnalyzers\*.*" target="runtimes\win10-x86"/> 
+        <file src="..\..\artifacts\Release\x64\VisualTreeAnalyzers\*.*" target="runtimes\win10-x64"/> 
+        <file src="..\..\artifacts\Release\ARM\VisualTreeAnalyzers\*.*" target="runtimes\win10-arm"/> 
+        <file src="..\..\artifacts\Release\ARM64\VisualTreeAnalyzers\*.*" target="runtimes\win10-arm64"/>
+    </files>
+</package>

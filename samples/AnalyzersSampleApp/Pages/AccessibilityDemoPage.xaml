@@ -1,0 +1,50 @@
+﻿<Page
+    x:Class="AnalyzersSampleApp.Pages.AccessibilityDemoPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:AnalyzersSampleApp.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Page.Resources>
+        <DataTemplate x:Key="NumberItemTemplate">
+            <StackPanel>
+                <StackPanel>
+                    <TextBlock Text="{Binding Name}"/>
+                    <TextBlock Text="{Binding Number}"/>
+                </StackPanel>
+            </StackPanel>
+        </DataTemplate>
+    </Page.Resources>
+    
+    <StackPanel Padding="10" Spacing="8">
+        <TextBlock Text="Accessibility Analyzer" Style="{ThemeResource HeaderTextBlockStyle}"/>
+        <TextBlock TextWrapping="WrapWholeWords"
+            Text="This is a demo page showcasing the Accessibility analyzer. Elements on this page are inacessible for different reasons and are marked because of that."/>
+
+        <StackPanel>
+            <TextBlock></TextBlock>
+            <StackPanel Orientation="Horizontal" Spacing="5">
+                <Button Width="100" Height="30"></Button>
+                <Button Height="30" Content="&#xE700;" FontFamily="Segoe MDL2 Assets"/>
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel Spacing="5">
+            <StackPanel AutomationProperties.LandmarkType="Main">
+                <TextBlock Text="I am main landmark" />
+            </StackPanel>
+
+            <StackPanel AutomationProperties.LandmarkType="Main">
+                <TextBlock x:Name="Text" Text="I am another main landmark" />
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal">
+            <GridView Height="300" Width="200" ItemsSource="{x:Bind numbers}" ItemTemplate="{ThemeResource NumberItemTemplate}"/>
+            <ListView Height="300" Width="200" ItemsSource="{x:Bind numbers}" ItemTemplate="{ThemeResource NumberItemTemplate}"/>
+        </StackPanel>
+    </StackPanel>
+</Page>

@@ -1,0 +1,5 @@
+items:
+  - name: Getting started
+    href: ../../../../docs/get-started.md
+  - name: Extending analyzers
+    href: ../../../../docs/extending-analyzers.md

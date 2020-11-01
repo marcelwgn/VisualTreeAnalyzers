@@ -63,7 +63,7 @@
       "build/docs/template"
     ],
     "globalMetadata": {
-      "_appFooter": "VisualTreeAnalyzers documentation",
+      "_appFooter": "<a href=\"https://github.com/chingucoding/VisualTreeAnalyzers\">VisualTreeAnalyzers on GitHub</a>",
       "_disableContribution": true
     },
     "postProcessors": [],

@@ -3,6 +3,10 @@
 ###############################################################################
 * text=auto
 
+# The website and documentatin take up a large portion of content, so exclude them from GitHub language scanning.
+docs/** linguist-documentation
+website/** linguist-generated
+
 ###############################################################################
 # Set default behavior for command prompt diff.
 #

@@ -15,7 +15,7 @@
         <tags>c# uwp accesibility visualtree analyzer</tags>
         <repository type="git" url="https://github.com/chingucoding/VisualTreeAnalyzers" branch="main"/>
         <projectUrl>https://chingucoding.github.io/VisualTreeAnalyzers/website/index.html</projectUrl>
-        <version>0.1.1</version>
+        <version>0.1.2</version>
         <!-- <icon>./icon.png</icon> -->
         <!-- Optional elements -->
         <!-- ... -->

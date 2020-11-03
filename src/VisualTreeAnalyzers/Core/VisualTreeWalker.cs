@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Diagnostics;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Media;
 
@@ -24,6 +25,13 @@ namespace VisualTreeAnalyzers.Core
         public IList<IElementAnalyzer> Analyzers { get; } = new List<IElementAnalyzer>();
 
         /// <summary>
+        /// Indicates whether analyzing elements should be skipped if no debugger is attached.
+        /// </summary>
+        public bool OnlyWithDebugger { get; set; }
+
+        private Queue<FrameworkElement> elementsToVisit = new Queue<FrameworkElement>();
+
+        /// <summary>
         /// Creates a new VisualTreeWalker object with the specified element as the root of the VisualTree to analyzer.
         /// </summary>
         /// <param name="root">The root of the visual tree that will be processed.</param>
@@ -32,7 +40,6 @@ namespace VisualTreeAnalyzers.Core
             Root = root;
         }
 
-        private Queue<FrameworkElement> elementsToVisit = new Queue<FrameworkElement>();
 
         /// <summary>
         /// Creates a new VisualTreeWalker object with the specified element as the root of the VisualTree to analyzer.
@@ -56,6 +63,11 @@ namespace VisualTreeAnalyzers.Core
         private void ScanElement(FrameworkElement rootElement)
         {
             elementsToVisit.Clear();
+
+            if(OnlyWithDebugger && !Debugger.IsAttached)
+            {
+                return;
+            }
 
             foreach(var analyzer in Analyzers)
             {

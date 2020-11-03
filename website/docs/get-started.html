@@ -87,7 +87,8 @@ private void PageLoaded(object sender, RoutedEventArgs e)
     var analyzer = new AccessibilityAnalyzer();
     // Associate analyzer with a VisualTreeWalker.
     var walker = new VisualTreeWalker(this, analyzer);
-
+    // Optional: Specify that scanning should only be done when a debugger is attached:
+    walker.OnlyWithDebugger = true;
     // Scan the current page.
     walker.ScanVisualTree();
 }

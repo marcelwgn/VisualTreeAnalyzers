@@ -864,6 +864,19 @@ references:
   isSpec: "True"
   fullName: VisualTreeAnalyzers.Core.VisualTreeWalker.Analyzers
   nameWithType: VisualTreeWalker.Analyzers
+- uid: VisualTreeAnalyzers.Core.VisualTreeWalker.OnlyWithDebugger
+  name: OnlyWithDebugger
+  href: api/VisualTreeAnalyzers.Core.VisualTreeWalker.html#VisualTreeAnalyzers_Core_VisualTreeWalker_OnlyWithDebugger
+  commentId: P:VisualTreeAnalyzers.Core.VisualTreeWalker.OnlyWithDebugger
+  fullName: VisualTreeAnalyzers.Core.VisualTreeWalker.OnlyWithDebugger
+  nameWithType: VisualTreeWalker.OnlyWithDebugger
+- uid: VisualTreeAnalyzers.Core.VisualTreeWalker.OnlyWithDebugger*
+  name: OnlyWithDebugger
+  href: api/VisualTreeAnalyzers.Core.VisualTreeWalker.html#VisualTreeAnalyzers_Core_VisualTreeWalker_OnlyWithDebugger_
+  commentId: Overload:VisualTreeAnalyzers.Core.VisualTreeWalker.OnlyWithDebugger
+  isSpec: "True"
+  fullName: VisualTreeAnalyzers.Core.VisualTreeWalker.OnlyWithDebugger
+  nameWithType: VisualTreeWalker.OnlyWithDebugger
 - uid: VisualTreeAnalyzers.Core.VisualTreeWalker.Root
   name: Root
   href: api/VisualTreeAnalyzers.Core.VisualTreeWalker.html#VisualTreeAnalyzers_Core_VisualTreeWalker_Root

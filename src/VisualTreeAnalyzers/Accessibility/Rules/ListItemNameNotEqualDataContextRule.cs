@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using VisualTreeAnalyzers.Core;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Automation.Peers;
@@ -37,6 +33,10 @@ namespace VisualTreeAnalyzers.Accessibility.Rules
                 {
                     child = VisualTreeHelper.GetChild(child, 0) as FrameworkElement;
                 }
+                if(child.DataContext == null)
+                {
+                    return true;
+                }
                 return !peer.GetName().Contains(child?.DataContext?.GetType().ToString(), StringComparison.InvariantCultureIgnoreCase);
             }
             else if(element is GridViewItem)
@@ -46,6 +46,10 @@ namespace VisualTreeAnalyzers.Accessibility.Rules
                 if (child?.DataContext == null)
                 {
                     child = VisualTreeHelper.GetChild(child, 0) as FrameworkElement;
+                }
+                if (child.DataContext == null)
+                {
+                    return true;
                 }
                 return !peer.GetName().Contains(child?.DataContext?.GetType().ToString(), StringComparison.InvariantCultureIgnoreCase);
             }

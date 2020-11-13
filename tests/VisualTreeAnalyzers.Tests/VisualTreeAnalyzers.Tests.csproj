@@ -154,7 +154,6 @@
     <Compile Include="UnitTestApp.xaml.cs">
       <DependentUpon>UnitTestApp.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Utils\SampleLoader.cs" />
     <Compile Include="Core\VisualTreeWalkerTests.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -222,6 +221,9 @@
       <Project>{71d49058-4d49-4616-bdb7-a795823d9866}</Project>
       <Name>VisualTreeAnalyzers</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Utils\" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>

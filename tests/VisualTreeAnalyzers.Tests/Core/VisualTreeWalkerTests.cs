@@ -32,7 +32,7 @@ namespace VisualTreeAnalyzers.Tests.Core
         [UITestMethod]
         public void VerifyAllElementsVisitedFlatAndNested()
         {
-            VerifyElementsVisitedCount(new PageWithFlatAndNestedLayout(), 2102);
+            VerifyElementsVisitedCount(new PageWithFlatAndNestedLayout(), 6602);
         }
 
         [UITestMethod]
@@ -89,7 +89,6 @@ namespace VisualTreeAnalyzers.Tests.Core
             walker.ScanVisualTree();
 
             Assert.AreEqual(visitedNoteCount, visitedItems.Count, "Should have visited every element exactly once.");
-            App.Content = null;
         }
     }
 }

@@ -1,7 +1,12 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using System;
+using System.Diagnostics;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.VisualStudio.TestTools.UnitTesting.AppContainer;
+using Microsoft.VisualStudio.TestTools.UnitTesting.Logging;
 using VisualTreeAnalyzers.Accessibility;
 using VisualTreeAnalyzers.Accessibility.Rules;
+using VisualTreeAnalyzers.Core;
+using VisualTreeAnalyzers.Tests.DemoVisualTrees;
 using Windows.UI;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Automation;
@@ -48,6 +53,43 @@ namespace VisualTreeAnalyzers.Tests.Accessibility
             analyzer.Analyze(button);
 
             Assert.AreEqual(false, IsMarkedProblematic(button));
+        }
+
+        [UITestMethod]
+        public void VerifyPerformanceRepeated()
+        {
+            Stopwatch sw = new Stopwatch();
+            var element = new Button();
+            App.Content = element;
+            var analyzer = new AccessibilityAnalyzer();
+
+            sw.Start();
+            for (int i = 0; i < 1000; i++)
+            {
+                analyzer.Analyze(element);
+            }
+
+            sw.Stop();
+            // Verify that scanning 1000 items doesn't take too long.
+            Assert.IsTrue(sw.ElapsedMilliseconds < 1000);
+            Logger.LogMessage("Elapsed time: " + sw.ElapsedMilliseconds.ToString());
+        }
+
+        [UITestMethod]
+        public void VerifyPerformanceTreeWalker()
+        {
+            Stopwatch sw = new Stopwatch();
+            App.Content = new PageWithFlatAndNestedLayout();
+            var analyzer = new AccessibilityAnalyzer();
+            var walker = new VisualTreeWalker(App.Content, analyzer);
+
+            sw.Start();
+
+            walker.ScanVisualTree();
+
+            sw.Stop();
+            Assert.IsTrue(sw.ElapsedMilliseconds < 2000);
+            Logger.LogMessage("Elapsed time: " + sw.ElapsedMilliseconds.ToString());
         }
 
         [UITestMethod]

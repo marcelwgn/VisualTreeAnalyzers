@@ -134,7 +134,10 @@
     <Compile Include="Accessibility\Rules\SingleSelectionRule.cs" />
     <Compile Include="Core\AnalyzerHelper.cs" />
     <Compile Include="Core\IElementAnalyzer.cs" />
+    <Compile Include="Core\IVisualTreeWalker.cs" />
+    <Compile Include="Core\IVisualTreeWalkerTimer.cs" />
     <Compile Include="Core\VisualTreeWalker.cs" />
+    <Compile Include="Core\VisualTreeWalkerTimer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Core\RuleScanner.cs" />
   </ItemGroup>

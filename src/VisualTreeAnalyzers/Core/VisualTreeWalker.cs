@@ -12,7 +12,7 @@ namespace VisualTreeAnalyzers.Core
     /// 
     /// The VisualTreeWalker will always perform a breadth-first-search on the visual tree.
     /// </summary>
-    public sealed class VisualTreeWalker
+    public sealed class VisualTreeWalker : IVisualTreeWalker
     {
         /// <summary>
         /// The <see cref="FrameworkElement"/> indicating the root of the visual tree to analyze.
@@ -39,7 +39,6 @@ namespace VisualTreeAnalyzers.Core
         {
             Root = root;
         }
-
 
         /// <summary>
         /// Creates a new VisualTreeWalker object with the specified element as the root of the VisualTree to analyzer.

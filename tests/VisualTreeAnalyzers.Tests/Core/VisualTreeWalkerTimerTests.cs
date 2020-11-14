@@ -63,7 +63,7 @@ namespace VisualTreeAnalyzers.Tests.Core
                 timer = new VisualTreeWalkerTimer(walker, 10);
                 timer.StartTimer();
             });
-            RunOnUIThread.WaitMilliSeconds(100);
+            RunOnUIThread.WaitMilliSeconds(300);
             Assert.IsTrue(analyzer.AnalyzeCount >= 1);
 
             var oldCount = 0;

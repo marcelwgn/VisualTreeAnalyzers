@@ -1,5 +1,4 @@
-﻿using System;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.VisualStudio.TestTools.UnitTesting.AppContainer;
 using Microsoft.VisualStudio.TestTools.UnitTesting.Logging;
@@ -7,6 +6,7 @@ using VisualTreeAnalyzers.Accessibility;
 using VisualTreeAnalyzers.Accessibility.Rules;
 using VisualTreeAnalyzers.Core;
 using VisualTreeAnalyzers.Tests.DemoVisualTrees;
+using VisualTreeAnalyzers.Tests.Utils;
 using Windows.UI;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Automation;
@@ -75,68 +75,80 @@ namespace VisualTreeAnalyzers.Tests.Accessibility
             Logger.LogMessage("Elapsed time: " + sw.ElapsedMilliseconds.ToString());
         }
 
-        [UITestMethod]
+        [TestMethod]
+        [Timeout(10000)]
         public void VerifyPerformanceSameItemWithSkippingBehavior()
         {
-            Stopwatch sw = new Stopwatch();
-            var element = new Button();
-            App.Content = element;
-            var analyzer = new AccessibilityAnalyzer(false);
-            analyzer.Analyze(element);
-
-            sw.Start();
-            for (int i = 0; i < 10000; i++)
+            RunOnUIThread.Execute(() =>
             {
+                Stopwatch sw = new Stopwatch();
+                var element = new Button();
+                App.Content = element;
+                var analyzer = new AccessibilityAnalyzer(false);
                 analyzer.Analyze(element);
-            }
 
-            sw.Stop();
+                sw.Start();
+                for (int i = 0; i < 10000; i++)
+                {
+                    analyzer.Analyze(element);
+                }
 
-            // The item is already flagged, scanning it should take not much time.
-            Assert.IsTrue(AccessibilityAnalyzer.GetAccessibilityAnalyzerViolationCount(element) > 0);
-            Assert.IsTrue(sw.ElapsedMilliseconds < 50);
-            Logger.LogMessage("Elapsed time: " + sw.ElapsedMilliseconds.ToString());
+                sw.Stop();
+
+                // The item is already flagged, scanning it should take not much time.
+                Assert.IsTrue(AccessibilityAnalyzer.GetAccessibilityAnalyzerViolationCount(element) > 0);
+                Assert.IsTrue(sw.ElapsedMilliseconds < 50);
+                Logger.LogMessage("Elapsed time: " + sw.ElapsedMilliseconds.ToString());
+            });
         }
 
-        [UITestMethod]
+        [TestMethod]
+        [Timeout(10000)]
         public void VerifyPerformanceTreeWalker()
         {
-            Stopwatch sw = new Stopwatch();
-            App.Content = new PageWithFlatAndNestedLayout();
-            var analyzer = new AccessibilityAnalyzer();
-            var walker = new VisualTreeWalker(App.Content, analyzer);
+            RunOnUIThread.Execute(() =>
+            {
+                Stopwatch sw = new Stopwatch();
+                App.Content = new PageWithFlatAndNestedLayout();
+                var analyzer = new AccessibilityAnalyzer();
+                var walker = new VisualTreeWalker(App.Content, analyzer);
 
-            sw.Start();
-            walker.ScanVisualTree();
-            sw.Stop();
+                sw.Start();
+                walker.ScanVisualTree();
+                sw.Stop();
 
-            Logger.LogMessage("Elapsed time: " + sw.ElapsedMilliseconds.ToString());
-            Assert.IsTrue(sw.ElapsedMilliseconds < 2000);
+                Logger.LogMessage("Elapsed time: " + sw.ElapsedMilliseconds.ToString());
+                Assert.IsTrue(sw.ElapsedMilliseconds < 2000);
+            });
         }
 
-        [UITestMethod]
+        [TestMethod]
+        [Timeout(10000)]
         public void VerifyPerformanceTreeWalkerMultipleRunsWithSkipping()
         {
-            Stopwatch sw = new Stopwatch();
-            App.Content = new PageWithFlatAndNestedLayout();
-            var analyzer = new AccessibilityAnalyzer();
-            var walker = new VisualTreeWalker(App.Content, analyzer);
+            RunOnUIThread.Execute(() =>
+            {
+                Stopwatch sw = new Stopwatch();
+                App.Content = new PageWithFlatAndNestedLayout();
+                var analyzer = new AccessibilityAnalyzer();
+                var walker = new VisualTreeWalker(App.Content, analyzer);
 
-            sw.Start();
-            walker.ScanVisualTree();
-            sw.Stop();
+                sw.Start();
+                walker.ScanVisualTree();
+                sw.Stop();
 
-            var freshTimeElapsed = sw.ElapsedMilliseconds;
-            sw.Reset();
+                var freshTimeElapsed = sw.ElapsedMilliseconds;
+                sw.Reset();
 
-            sw.Start();
-            walker.ScanVisualTree();
-            sw.Stop();
+                sw.Start();
+                walker.ScanVisualTree();
+                sw.Stop();
 
-            Logger.LogMessage("Elapsed time, fresh run: " + freshTimeElapsed);
-            Logger.LogMessage("Elapsed time, second run: " + sw.ElapsedMilliseconds.ToString());
-            Assert.IsTrue(sw.ElapsedMilliseconds < 2000);
-            Assert.IsTrue(freshTimeElapsed - sw.ElapsedMilliseconds> 100);
+                Logger.LogMessage("Elapsed time, fresh run: " + freshTimeElapsed);
+                Logger.LogMessage("Elapsed time, second run: " + sw.ElapsedMilliseconds.ToString());
+                Assert.IsTrue(sw.ElapsedMilliseconds < 2000);
+                Assert.IsTrue(freshTimeElapsed - sw.ElapsedMilliseconds > 20);
+            });
         }
 
         [UITestMethod]

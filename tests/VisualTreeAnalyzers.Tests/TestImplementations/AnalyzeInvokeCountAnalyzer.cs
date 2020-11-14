@@ -5,7 +5,7 @@ namespace VisualTreeAnalyzers.Tests.TestImplementations
 {
     class AnalyzeInvokeCountAnalyzer : IElementAnalyzer
     {
-        public int AnalyzeCount { get; private set; } = 0;
+        public int AnalyzeCount { get; private set; }
         public void Analyze(FrameworkElement element)
         {
             AnalyzeCount++;

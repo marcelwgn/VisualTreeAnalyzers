@@ -14,7 +14,7 @@ namespace VisualTreeAnalyzers.Tests.Core
     public class VisualTreeWalkerTests
     {
         [TestMethod]
-        [Timeout(10000)]
+        [Timeout(20000)]
         public void VerifyAllElementsVisitedSimplePage()
         {
             RunOnUIThread.Execute(() =>
@@ -24,7 +24,7 @@ namespace VisualTreeAnalyzers.Tests.Core
         }
 
         [TestMethod]
-        [Timeout(10000)]
+        [Timeout(20000)]
         public void VerifyAllElementsVisitedFlatStructure()
         {
             RunOnUIThread.Execute(() =>
@@ -34,7 +34,7 @@ namespace VisualTreeAnalyzers.Tests.Core
         }
 
         [TestMethod]
-        [Timeout(10000)]
+        [Timeout(20000)]
         public void VerifyAllElementsVisitedDeepNesting()
         {
             RunOnUIThread.Execute(() =>
@@ -44,7 +44,7 @@ namespace VisualTreeAnalyzers.Tests.Core
         }
 
         [TestMethod]
-        [Timeout(10000)]
+        [Timeout(20000)]
         public void VerifyAllElementsVisitedFlatAndNested()
         {
             RunOnUIThread.Execute(() =>

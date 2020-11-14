@@ -3,6 +3,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.VisualStudio.TestTools.UnitTesting.AppContainer;
 using VisualTreeAnalyzers.Core;
 using VisualTreeAnalyzers.Tests.DemoVisualTrees;
+using VisualTreeAnalyzers.Tests.TestImplementations;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 

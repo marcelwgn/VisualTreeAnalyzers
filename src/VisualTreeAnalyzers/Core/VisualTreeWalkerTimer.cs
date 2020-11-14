@@ -28,9 +28,9 @@ namespace VisualTreeAnalyzers.Core
         /// <param name="milliSeconds">The amount of milliseconds between scans.</param>
         public VisualTreeWalkerTimer(IVisualTreeWalker visualTreeWalker, int milliSeconds)
         {
-            if(milliSeconds < 50)
+            if(milliSeconds <= 0)
             {
-                throw new ArgumentException("Parameter milliSeconds must have a reasonable value (>=50).", nameof(milliSeconds));
+                throw new ArgumentException("Parameter milliSeconds must be strictly positive.", nameof(milliSeconds));
             }
 
             this.visualTreeWalker = visualTreeWalker ?? throw new ArgumentNullException(nameof(visualTreeWalker));
@@ -53,7 +53,7 @@ namespace VisualTreeAnalyzers.Core
         /// </summary>
         public void StopTimer()
         {
-            timer.Start();
+            timer.Stop();
         }
 
         private void Timer_Tick(object sender, object e)

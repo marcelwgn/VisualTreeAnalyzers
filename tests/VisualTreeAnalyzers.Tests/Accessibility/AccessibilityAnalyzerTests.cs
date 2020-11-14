@@ -136,7 +136,7 @@ namespace VisualTreeAnalyzers.Tests.Accessibility
             Logger.LogMessage("Elapsed time, fresh run: " + freshTimeElapsed);
             Logger.LogMessage("Elapsed time, second run: " + sw.ElapsedMilliseconds.ToString());
             Assert.IsTrue(sw.ElapsedMilliseconds < 2000);
-            Assert.IsTrue(freshTimeElapsed - sw.ElapsedMilliseconds> 300);
+            Assert.IsTrue(freshTimeElapsed - sw.ElapsedMilliseconds> 100);
         }
 
         [UITestMethod]

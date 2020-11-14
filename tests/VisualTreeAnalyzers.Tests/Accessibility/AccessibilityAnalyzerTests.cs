@@ -103,27 +103,7 @@ namespace VisualTreeAnalyzers.Tests.Accessibility
         }
 
         [TestMethod]
-        [Timeout(10000)]
-        public void VerifyPerformanceTreeWalker()
-        {
-            RunOnUIThread.Execute(() =>
-            {
-                Stopwatch sw = new Stopwatch();
-                App.Content = new PageWithFlatAndNestedLayout();
-                var analyzer = new AccessibilityAnalyzer();
-                var walker = new VisualTreeWalker(App.Content, analyzer);
-
-                sw.Start();
-                walker.ScanVisualTree();
-                sw.Stop();
-
-                Logger.LogMessage("Elapsed time: " + sw.ElapsedMilliseconds.ToString());
-                Assert.IsTrue(sw.ElapsedMilliseconds < 2000);
-            });
-        }
-
-        [TestMethod]
-        [Timeout(10000)]
+        [Timeout(20000)]
         public void VerifyPerformanceTreeWalkerMultipleRunsWithSkipping()
         {
             RunOnUIThread.Execute(() =>

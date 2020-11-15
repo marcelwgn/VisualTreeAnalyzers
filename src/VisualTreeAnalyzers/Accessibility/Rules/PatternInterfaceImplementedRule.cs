@@ -12,6 +12,8 @@ namespace VisualTreeAnalyzers.Accessibility.Rules
     /// <remarks>
     /// This rule ignores <see cref="ITextProvider"/>, <see cref="ITextProvider2"/> and <see cref="ITextRangeProvider"/> 
     ///  as those are not implemented by Windows Runtime peers and would lead to false negatives.
+    /// 
+    /// This rule relies on reflection, results for this rule on native builds might not be entirely correct and contain false negatives.
     /// </remarks>
     [AccessibilityRule]
     public sealed class PatternInterfaceImplementedRule : IRule

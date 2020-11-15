@@ -43,7 +43,7 @@ namespace VisualTreeAnalyzers.Core
         /// <summary>
         /// Starts this timer.
         /// </summary>
-        public void StartTimer()
+        public void Start()
         {
             timer.Start();
         }
@@ -51,7 +51,7 @@ namespace VisualTreeAnalyzers.Core
         /// <summary>
         /// Stops this time.
         /// </summary>
-        public void StopTimer()
+        public void Stop()
         {
             timer.Stop();
         }

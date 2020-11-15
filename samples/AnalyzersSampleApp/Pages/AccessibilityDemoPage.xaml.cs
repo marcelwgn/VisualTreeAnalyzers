@@ -39,7 +39,7 @@ namespace AnalyzersSampleApp.Pages
             walker.ScanVisualTree();
 
             timer = new VisualTreeWalkerTimer(walker);
-            timer.StartTimer();
+            timer.Start();
         }
 
         private void AddInaccessibleControlButton_Click(object sender, RoutedEventArgs e)

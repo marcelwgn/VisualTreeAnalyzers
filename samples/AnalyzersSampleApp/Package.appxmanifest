@@ -9,7 +9,7 @@
   <Identity
     Name="665c70b8-e819-4553-937c-c81f2edb071d"
     Publisher="CN=Marcel"
-    Version="1.0.0.0" />
+    Version="1.0.1.0" />
 
   <mp:PhoneIdentity PhoneProductId="665c70b8-e819-4553-937c-c81f2edb071d" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 

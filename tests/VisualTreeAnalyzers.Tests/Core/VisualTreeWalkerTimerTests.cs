@@ -21,7 +21,7 @@ namespace VisualTreeAnalyzers.Tests.Core
             {
                 walker = new VisualTreeWalker(new Button(), analyzer);
                 timer = new VisualTreeWalkerTimer(walker, 10);
-                timer.StartTimer();
+                timer.Start();
             });
 
             RunOnUIThread.WaitMilliSeconds(100);
@@ -41,7 +41,7 @@ namespace VisualTreeAnalyzers.Tests.Core
             {
                 walker = new VisualTreeWalker(new Button(), analyzer);
                 timer = new VisualTreeWalkerTimer(walker, 10);
-                timer.StartTimer();
+                timer.Start();
             });
 
             RunOnUIThread.WaitMilliSeconds(500);
@@ -61,7 +61,7 @@ namespace VisualTreeAnalyzers.Tests.Core
             {
                 walker = new VisualTreeWalker(new Button(), analyzer);
                 timer = new VisualTreeWalkerTimer(walker, 10);
-                timer.StartTimer();
+                timer.Start();
             });
             RunOnUIThread.WaitMilliSeconds(300);
             Assert.IsTrue(analyzer.AnalyzeCount >= 1);
@@ -69,7 +69,7 @@ namespace VisualTreeAnalyzers.Tests.Core
             var oldCount = 0;
             RunOnUIThread.Execute(() =>
             {
-                timer.StopTimer();
+                timer.Stop();
                 Logger.LogMessage("Analyzer count before stopping: " + analyzer.AnalyzeCount);
                 oldCount = analyzer.AnalyzeCount;
             });

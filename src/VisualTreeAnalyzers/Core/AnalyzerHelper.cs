@@ -62,7 +62,7 @@ namespace VisualTreeAnalyzers.Core
                 ToolTipService.SetToolTip(element, message);
             }
         }
-    
+
         /// <summary>
         /// This method will call ResetState on all rules in the list.
         /// </summary>

@@ -2,17 +2,19 @@
 using VisualTreeAnalyzers.Core;
 using Windows.UI.Xaml;
 
-namespace VisualTreeAnalyzers.Tests
+namespace VisualTreeAnalyzers.Tests.TestImplementations
 {
     class CountingElementAnalyzer : IElementAnalyzer
     {
         private List<FrameworkElement> visitedElements;
-        private bool visitChildren;
+        private readonly bool visitChildren;
+        private readonly bool shouldThrowWhenVisited;
 
-        public CountingElementAnalyzer(List<FrameworkElement> elementCollection, bool shouldVisitChildren = true)
+        public CountingElementAnalyzer(List<FrameworkElement> elementCollection, bool shouldVisitChildren = true, bool shouldThrowWhenVisited = true)
         {
             visitedElements = elementCollection;
             visitChildren = shouldVisitChildren;
+            this.shouldThrowWhenVisited = shouldThrowWhenVisited;
         }
 
         public void Analyze(FrameworkElement element)
@@ -21,7 +23,7 @@ namespace VisualTreeAnalyzers.Tests
             {
                 visitedElements.Add(element);
             }
-            else
+            else if(shouldThrowWhenVisited)
             {
                 throw new System.InvalidOperationException("Error: Element already visited.");
             }

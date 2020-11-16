@@ -3,6 +3,8 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.VisualStudio.TestTools.UnitTesting.AppContainer;
 using VisualTreeAnalyzers.Core;
 using VisualTreeAnalyzers.Tests.DemoVisualTrees;
+using VisualTreeAnalyzers.Tests.TestImplementations;
+using VisualTreeAnalyzers.Tests.Utils;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 
@@ -11,28 +13,44 @@ namespace VisualTreeAnalyzers.Tests.Core
     [TestClass]
     public class VisualTreeWalkerTests
     {
-        [UITestMethod]
+        [TestMethod]
+        [Timeout(20000)]
         public void VerifyAllElementsVisitedSimplePage()
         {
-            VerifyElementsVisitedCount(new SimplePage(), 3);
+            RunOnUIThread.Execute(() =>
+            {
+                VerifyElementsVisitedCount(new SimplePage(), 3);
+            });
         }
 
-        [UITestMethod]
+        [TestMethod]
+        [Timeout(20000)]
         public void VerifyAllElementsVisitedFlatStructure()
         {
-            VerifyElementsVisitedCount(new PageWithFlatStructure(), 302);
+            RunOnUIThread.Execute(() =>
+            {
+                VerifyElementsVisitedCount(new PageWithFlatStructure(), 302);
+            });
         }
 
-        [UITestMethod]
+        [TestMethod]
+        [Timeout(20000)]
         public void VerifyAllElementsVisitedDeepNesting()
         {
-            VerifyElementsVisitedCount(new PageWithDeepNesting(), 203);
+            RunOnUIThread.Execute(() =>
+            {
+                VerifyElementsVisitedCount(new PageWithDeepNesting(), 203);
+            });
         }
 
-        [UITestMethod]
+        [TestMethod]
+        [Timeout(20000)]
         public void VerifyAllElementsVisitedFlatAndNested()
         {
-            VerifyElementsVisitedCount(new PageWithFlatAndNestedLayout(), 2102);
+            RunOnUIThread.Execute(() =>
+            {
+                VerifyElementsVisitedCount(new PageWithFlatAndNestedLayout(), 6602);
+            });
         }
 
         [UITestMethod]
@@ -89,7 +107,6 @@ namespace VisualTreeAnalyzers.Tests.Core
             walker.ScanVisualTree();
 
             Assert.AreEqual(visitedNoteCount, visitedItems.Count, "Should have visited every element exactly once.");
-            App.Content = null;
         }
     }
 }

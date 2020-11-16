@@ -19,6 +19,12 @@ references:
   commentId: M:VisualTreeAnalyzers.Accessibility.AccessibilityAnalyzer.#ctor
   fullName: VisualTreeAnalyzers.Accessibility.AccessibilityAnalyzer.AccessibilityAnalyzer()
   nameWithType: AccessibilityAnalyzer.AccessibilityAnalyzer()
+- uid: VisualTreeAnalyzers.Accessibility.AccessibilityAnalyzer.#ctor(System.Boolean)
+  name: AccessibilityAnalyzer(Boolean)
+  href: api/VisualTreeAnalyzers.Accessibility.AccessibilityAnalyzer.html#VisualTreeAnalyzers_Accessibility_AccessibilityAnalyzer__ctor_System_Boolean_
+  commentId: M:VisualTreeAnalyzers.Accessibility.AccessibilityAnalyzer.#ctor(System.Boolean)
+  fullName: VisualTreeAnalyzers.Accessibility.AccessibilityAnalyzer.AccessibilityAnalyzer(System.Boolean)
+  nameWithType: AccessibilityAnalyzer.AccessibilityAnalyzer(Boolean)
 - uid: VisualTreeAnalyzers.Accessibility.AccessibilityAnalyzer.#ctor*
   name: AccessibilityAnalyzer
   href: api/VisualTreeAnalyzers.Accessibility.AccessibilityAnalyzer.html#VisualTreeAnalyzers_Accessibility_AccessibilityAnalyzer__ctor_
@@ -78,6 +84,19 @@ references:
   isSpec: "True"
   fullName: VisualTreeAnalyzers.Accessibility.AccessibilityAnalyzer.ErrorBrushThickness
   nameWithType: AccessibilityAnalyzer.ErrorBrushThickness
+- uid: VisualTreeAnalyzers.Accessibility.AccessibilityAnalyzer.GetAccessibilityAnalyzerViolationCount(Windows.UI.Xaml.DependencyObject)
+  name: GetAccessibilityAnalyzerViolationCount(DependencyObject)
+  href: api/VisualTreeAnalyzers.Accessibility.AccessibilityAnalyzer.html#VisualTreeAnalyzers_Accessibility_AccessibilityAnalyzer_GetAccessibilityAnalyzerViolationCount_Windows_UI_Xaml_DependencyObject_
+  commentId: M:VisualTreeAnalyzers.Accessibility.AccessibilityAnalyzer.GetAccessibilityAnalyzerViolationCount(Windows.UI.Xaml.DependencyObject)
+  fullName: VisualTreeAnalyzers.Accessibility.AccessibilityAnalyzer.GetAccessibilityAnalyzerViolationCount(Windows.UI.Xaml.DependencyObject)
+  nameWithType: AccessibilityAnalyzer.GetAccessibilityAnalyzerViolationCount(DependencyObject)
+- uid: VisualTreeAnalyzers.Accessibility.AccessibilityAnalyzer.GetAccessibilityAnalyzerViolationCount*
+  name: GetAccessibilityAnalyzerViolationCount
+  href: api/VisualTreeAnalyzers.Accessibility.AccessibilityAnalyzer.html#VisualTreeAnalyzers_Accessibility_AccessibilityAnalyzer_GetAccessibilityAnalyzerViolationCount_
+  commentId: Overload:VisualTreeAnalyzers.Accessibility.AccessibilityAnalyzer.GetAccessibilityAnalyzerViolationCount
+  isSpec: "True"
+  fullName: VisualTreeAnalyzers.Accessibility.AccessibilityAnalyzer.GetAccessibilityAnalyzerViolationCount
+  nameWithType: AccessibilityAnalyzer.GetAccessibilityAnalyzerViolationCount
 - uid: VisualTreeAnalyzers.Accessibility.AccessibilityAnalyzer.ResetState
   name: ResetState()
   href: api/VisualTreeAnalyzers.Accessibility.AccessibilityAnalyzer.html#VisualTreeAnalyzers_Accessibility_AccessibilityAnalyzer_ResetState
@@ -826,6 +845,70 @@ references:
   isSpec: "True"
   fullName: VisualTreeAnalyzers.Core.IRule.ResetState
   nameWithType: IRule.ResetState
+- uid: VisualTreeAnalyzers.Core.IVisualTreeWalker
+  name: IVisualTreeWalker
+  href: api/VisualTreeAnalyzers.Core.IVisualTreeWalker.html
+  commentId: T:VisualTreeAnalyzers.Core.IVisualTreeWalker
+  fullName: VisualTreeAnalyzers.Core.IVisualTreeWalker
+  nameWithType: IVisualTreeWalker
+- uid: VisualTreeAnalyzers.Core.IVisualTreeWalker.Root
+  name: Root
+  href: api/VisualTreeAnalyzers.Core.IVisualTreeWalker.html#VisualTreeAnalyzers_Core_IVisualTreeWalker_Root
+  commentId: P:VisualTreeAnalyzers.Core.IVisualTreeWalker.Root
+  fullName: VisualTreeAnalyzers.Core.IVisualTreeWalker.Root
+  nameWithType: IVisualTreeWalker.Root
+- uid: VisualTreeAnalyzers.Core.IVisualTreeWalker.Root*
+  name: Root
+  href: api/VisualTreeAnalyzers.Core.IVisualTreeWalker.html#VisualTreeAnalyzers_Core_IVisualTreeWalker_Root_
+  commentId: Overload:VisualTreeAnalyzers.Core.IVisualTreeWalker.Root
+  isSpec: "True"
+  fullName: VisualTreeAnalyzers.Core.IVisualTreeWalker.Root
+  nameWithType: IVisualTreeWalker.Root
+- uid: VisualTreeAnalyzers.Core.IVisualTreeWalker.ScanVisualTree
+  name: ScanVisualTree()
+  href: api/VisualTreeAnalyzers.Core.IVisualTreeWalker.html#VisualTreeAnalyzers_Core_IVisualTreeWalker_ScanVisualTree
+  commentId: M:VisualTreeAnalyzers.Core.IVisualTreeWalker.ScanVisualTree
+  fullName: VisualTreeAnalyzers.Core.IVisualTreeWalker.ScanVisualTree()
+  nameWithType: IVisualTreeWalker.ScanVisualTree()
+- uid: VisualTreeAnalyzers.Core.IVisualTreeWalker.ScanVisualTree*
+  name: ScanVisualTree
+  href: api/VisualTreeAnalyzers.Core.IVisualTreeWalker.html#VisualTreeAnalyzers_Core_IVisualTreeWalker_ScanVisualTree_
+  commentId: Overload:VisualTreeAnalyzers.Core.IVisualTreeWalker.ScanVisualTree
+  isSpec: "True"
+  fullName: VisualTreeAnalyzers.Core.IVisualTreeWalker.ScanVisualTree
+  nameWithType: IVisualTreeWalker.ScanVisualTree
+- uid: VisualTreeAnalyzers.Core.IVisualTreeWalkerTimer
+  name: IVisualTreeWalkerTimer
+  href: api/VisualTreeAnalyzers.Core.IVisualTreeWalkerTimer.html
+  commentId: T:VisualTreeAnalyzers.Core.IVisualTreeWalkerTimer
+  fullName: VisualTreeAnalyzers.Core.IVisualTreeWalkerTimer
+  nameWithType: IVisualTreeWalkerTimer
+- uid: VisualTreeAnalyzers.Core.IVisualTreeWalkerTimer.Start
+  name: Start()
+  href: api/VisualTreeAnalyzers.Core.IVisualTreeWalkerTimer.html#VisualTreeAnalyzers_Core_IVisualTreeWalkerTimer_Start
+  commentId: M:VisualTreeAnalyzers.Core.IVisualTreeWalkerTimer.Start
+  fullName: VisualTreeAnalyzers.Core.IVisualTreeWalkerTimer.Start()
+  nameWithType: IVisualTreeWalkerTimer.Start()
+- uid: VisualTreeAnalyzers.Core.IVisualTreeWalkerTimer.Start*
+  name: Start
+  href: api/VisualTreeAnalyzers.Core.IVisualTreeWalkerTimer.html#VisualTreeAnalyzers_Core_IVisualTreeWalkerTimer_Start_
+  commentId: Overload:VisualTreeAnalyzers.Core.IVisualTreeWalkerTimer.Start
+  isSpec: "True"
+  fullName: VisualTreeAnalyzers.Core.IVisualTreeWalkerTimer.Start
+  nameWithType: IVisualTreeWalkerTimer.Start
+- uid: VisualTreeAnalyzers.Core.IVisualTreeWalkerTimer.Stop
+  name: Stop()
+  href: api/VisualTreeAnalyzers.Core.IVisualTreeWalkerTimer.html#VisualTreeAnalyzers_Core_IVisualTreeWalkerTimer_Stop
+  commentId: M:VisualTreeAnalyzers.Core.IVisualTreeWalkerTimer.Stop
+  fullName: VisualTreeAnalyzers.Core.IVisualTreeWalkerTimer.Stop()
+  nameWithType: IVisualTreeWalkerTimer.Stop()
+- uid: VisualTreeAnalyzers.Core.IVisualTreeWalkerTimer.Stop*
+  name: Stop
+  href: api/VisualTreeAnalyzers.Core.IVisualTreeWalkerTimer.html#VisualTreeAnalyzers_Core_IVisualTreeWalkerTimer_Stop_
+  commentId: Overload:VisualTreeAnalyzers.Core.IVisualTreeWalkerTimer.Stop
+  isSpec: "True"
+  fullName: VisualTreeAnalyzers.Core.IVisualTreeWalkerTimer.Stop
+  nameWithType: IVisualTreeWalkerTimer.Stop
 - uid: VisualTreeAnalyzers.Core.VisualTreeWalker
   name: VisualTreeWalker
   href: api/VisualTreeAnalyzers.Core.VisualTreeWalker.html
@@ -903,3 +986,54 @@ references:
   isSpec: "True"
   fullName: VisualTreeAnalyzers.Core.VisualTreeWalker.ScanVisualTree
   nameWithType: VisualTreeWalker.ScanVisualTree
+- uid: VisualTreeAnalyzers.Core.VisualTreeWalkerTimer
+  name: VisualTreeWalkerTimer
+  href: api/VisualTreeAnalyzers.Core.VisualTreeWalkerTimer.html
+  commentId: T:VisualTreeAnalyzers.Core.VisualTreeWalkerTimer
+  fullName: VisualTreeAnalyzers.Core.VisualTreeWalkerTimer
+  nameWithType: VisualTreeWalkerTimer
+- uid: VisualTreeAnalyzers.Core.VisualTreeWalkerTimer.#ctor(VisualTreeAnalyzers.Core.IVisualTreeWalker)
+  name: VisualTreeWalkerTimer(IVisualTreeWalker)
+  href: api/VisualTreeAnalyzers.Core.VisualTreeWalkerTimer.html#VisualTreeAnalyzers_Core_VisualTreeWalkerTimer__ctor_VisualTreeAnalyzers_Core_IVisualTreeWalker_
+  commentId: M:VisualTreeAnalyzers.Core.VisualTreeWalkerTimer.#ctor(VisualTreeAnalyzers.Core.IVisualTreeWalker)
+  fullName: VisualTreeAnalyzers.Core.VisualTreeWalkerTimer.VisualTreeWalkerTimer(VisualTreeAnalyzers.Core.IVisualTreeWalker)
+  nameWithType: VisualTreeWalkerTimer.VisualTreeWalkerTimer(IVisualTreeWalker)
+- uid: VisualTreeAnalyzers.Core.VisualTreeWalkerTimer.#ctor(VisualTreeAnalyzers.Core.IVisualTreeWalker,System.Int32)
+  name: VisualTreeWalkerTimer(IVisualTreeWalker, Int32)
+  href: api/VisualTreeAnalyzers.Core.VisualTreeWalkerTimer.html#VisualTreeAnalyzers_Core_VisualTreeWalkerTimer__ctor_VisualTreeAnalyzers_Core_IVisualTreeWalker_System_Int32_
+  commentId: M:VisualTreeAnalyzers.Core.VisualTreeWalkerTimer.#ctor(VisualTreeAnalyzers.Core.IVisualTreeWalker,System.Int32)
+  fullName: VisualTreeAnalyzers.Core.VisualTreeWalkerTimer.VisualTreeWalkerTimer(VisualTreeAnalyzers.Core.IVisualTreeWalker, System.Int32)
+  nameWithType: VisualTreeWalkerTimer.VisualTreeWalkerTimer(IVisualTreeWalker, Int32)
+- uid: VisualTreeAnalyzers.Core.VisualTreeWalkerTimer.#ctor*
+  name: VisualTreeWalkerTimer
+  href: api/VisualTreeAnalyzers.Core.VisualTreeWalkerTimer.html#VisualTreeAnalyzers_Core_VisualTreeWalkerTimer__ctor_
+  commentId: Overload:VisualTreeAnalyzers.Core.VisualTreeWalkerTimer.#ctor
+  isSpec: "True"
+  fullName: VisualTreeAnalyzers.Core.VisualTreeWalkerTimer.VisualTreeWalkerTimer
+  nameWithType: VisualTreeWalkerTimer.VisualTreeWalkerTimer
+- uid: VisualTreeAnalyzers.Core.VisualTreeWalkerTimer.Start
+  name: Start()
+  href: api/VisualTreeAnalyzers.Core.VisualTreeWalkerTimer.html#VisualTreeAnalyzers_Core_VisualTreeWalkerTimer_Start
+  commentId: M:VisualTreeAnalyzers.Core.VisualTreeWalkerTimer.Start
+  fullName: VisualTreeAnalyzers.Core.VisualTreeWalkerTimer.Start()
+  nameWithType: VisualTreeWalkerTimer.Start()
+- uid: VisualTreeAnalyzers.Core.VisualTreeWalkerTimer.Start*
+  name: Start
+  href: api/VisualTreeAnalyzers.Core.VisualTreeWalkerTimer.html#VisualTreeAnalyzers_Core_VisualTreeWalkerTimer_Start_
+  commentId: Overload:VisualTreeAnalyzers.Core.VisualTreeWalkerTimer.Start
+  isSpec: "True"
+  fullName: VisualTreeAnalyzers.Core.VisualTreeWalkerTimer.Start
+  nameWithType: VisualTreeWalkerTimer.Start
+- uid: VisualTreeAnalyzers.Core.VisualTreeWalkerTimer.Stop
+  name: Stop()
+  href: api/VisualTreeAnalyzers.Core.VisualTreeWalkerTimer.html#VisualTreeAnalyzers_Core_VisualTreeWalkerTimer_Stop
+  commentId: M:VisualTreeAnalyzers.Core.VisualTreeWalkerTimer.Stop
+  fullName: VisualTreeAnalyzers.Core.VisualTreeWalkerTimer.Stop()
+  nameWithType: VisualTreeWalkerTimer.Stop()
+- uid: VisualTreeAnalyzers.Core.VisualTreeWalkerTimer.Stop*
+  name: Stop
+  href: api/VisualTreeAnalyzers.Core.VisualTreeWalkerTimer.html#VisualTreeAnalyzers_Core_VisualTreeWalkerTimer_Stop_
+  commentId: Overload:VisualTreeAnalyzers.Core.VisualTreeWalkerTimer.Stop
+  isSpec: "True"
+  fullName: VisualTreeAnalyzers.Core.VisualTreeWalkerTimer.Stop
+  nameWithType: VisualTreeWalkerTimer.Stop

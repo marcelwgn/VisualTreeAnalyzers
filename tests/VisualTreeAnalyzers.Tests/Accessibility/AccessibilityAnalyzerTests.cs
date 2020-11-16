@@ -1,7 +1,12 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using System.Diagnostics;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.VisualStudio.TestTools.UnitTesting.AppContainer;
+using Microsoft.VisualStudio.TestTools.UnitTesting.Logging;
 using VisualTreeAnalyzers.Accessibility;
 using VisualTreeAnalyzers.Accessibility.Rules;
+using VisualTreeAnalyzers.Core;
+using VisualTreeAnalyzers.Tests.DemoVisualTrees;
+using VisualTreeAnalyzers.Tests.Utils;
 using Windows.UI;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Automation;
@@ -48,6 +53,33 @@ namespace VisualTreeAnalyzers.Tests.Accessibility
             analyzer.Analyze(button);
 
             Assert.AreEqual(false, IsMarkedProblematic(button));
+        }
+
+        [TestMethod]
+        [Timeout(10000)]
+        public void VerifyPerformanceSameItemWithSkippingBehavior()
+        {
+            RunOnUIThread.Execute(() =>
+            {
+                Stopwatch sw = new Stopwatch();
+                var element = new Button();
+                App.Content = element;
+                var analyzer = new AccessibilityAnalyzer(false);
+                analyzer.Analyze(element);
+
+                sw.Start();
+                for (int i = 0; i < 10000; i++)
+                {
+                    analyzer.Analyze(element);
+                }
+
+                sw.Stop();
+
+                // The item is already flagged, scanning it should take not much time.
+                Assert.IsTrue(AccessibilityAnalyzer.GetAccessibilityAnalyzerViolationCount(element) > 0);
+                Assert.IsTrue(sw.ElapsedMilliseconds < 200);
+                Logger.LogMessage("Elapsed time: " + sw.ElapsedMilliseconds.ToString());
+            });
         }
 
         [UITestMethod]

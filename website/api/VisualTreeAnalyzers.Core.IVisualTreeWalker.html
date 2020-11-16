@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Namespace VisualTreeAnalyzers.Accessibility
+    <title>Interface IVisualTreeWalker
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Namespace VisualTreeAnalyzers.Accessibility
+    <meta name="title" content="Interface IVisualTreeWalker
    ">
     <meta name="generator" content="docfx 2.56.5.0">
     
@@ -68,18 +68,57 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="VisualTreeAnalyzers.Accessibility">
+            <article class="content wrap" id="_content" data-uid="VisualTreeAnalyzers.Core.IVisualTreeWalker">
   
-  <h1 id="VisualTreeAnalyzers_Accessibility" data-uid="VisualTreeAnalyzers.Accessibility" class="text-break">Namespace VisualTreeAnalyzers.Accessibility
+  
+  <h1 id="VisualTreeAnalyzers_Core_IVisualTreeWalker" data-uid="VisualTreeAnalyzers.Core.IVisualTreeWalker" class="text-break">Interface IVisualTreeWalker
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>The default interface for visual tree walker objects.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
-  <div class="markdown level0 remarks"></div>
-    <h3 id="classes">Classes
+  <h6><strong>Namespace</strong>: <a class="xref" href="VisualTreeAnalyzers.Core.html">VisualTreeAnalyzers.Core</a></h6>
+  <h6><strong>Assembly</strong>: VisualTreeAnalyzers.dll</h6>
+  <h5 id="VisualTreeAnalyzers_Core_IVisualTreeWalker_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IVisualTreeWalker</code></pre>
+  </div>
+  <h3 id="properties">Properties
   </h3>
-      <h4><a class="xref" href="VisualTreeAnalyzers.Accessibility.AccessibilityAnalyzer.html">AccessibilityAnalyzer</a></h4>
-      <section><p>The accessibility analyzer provides a range of accessibility rules such as missing names or misaligned control types.</p>
-</section>
+  <a id="VisualTreeAnalyzers_Core_IVisualTreeWalker_Root_" data-uid="VisualTreeAnalyzers.Core.IVisualTreeWalker.Root*"></a>
+  <h4 id="VisualTreeAnalyzers_Core_IVisualTreeWalker_Root" data-uid="VisualTreeAnalyzers.Core.IVisualTreeWalker.Root">Root</h4>
+  <div class="markdown level1 summary"><p>The <span class="xref">Windows.UI.Xaml.FrameworkElement</span> indicating the root of the visual tree to analyze.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">FrameworkElement Root { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Windows.UI.Xaml.FrameworkElement</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <a id="VisualTreeAnalyzers_Core_IVisualTreeWalker_ScanVisualTree_" data-uid="VisualTreeAnalyzers.Core.IVisualTreeWalker.ScanVisualTree*"></a>
+  <h4 id="VisualTreeAnalyzers_Core_IVisualTreeWalker_ScanVisualTree" data-uid="VisualTreeAnalyzers.Core.IVisualTreeWalker.ScanVisualTree">ScanVisualTree()</h4>
+  <div class="markdown level1 summary"><p>Scans the visual tree starting with the <a class="xref" href="VisualTreeAnalyzers.Core.IVisualTreeWalker.html#VisualTreeAnalyzers_Core_IVisualTreeWalker_Root">Root</a> element specified for this object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void ScanVisualTree()</code></pre>
+  </div>
 </article>
           </div>
           

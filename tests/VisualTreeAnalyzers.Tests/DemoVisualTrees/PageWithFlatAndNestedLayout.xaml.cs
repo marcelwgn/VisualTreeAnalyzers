@@ -26,11 +26,11 @@ namespace VisualTreeAnalyzers.Tests.DemoVisualTrees
         {
             this.InitializeComponent();
 
-            for (int i = 0; i < 50; i++)
+            for (int i = 0; i < 300; i++)
             {
                 var lastElement = new Button();
                 var rootButton = lastElement;
-                for (int j = 0; j < 20; j++)
+                for (int j = 0; j < 10; j++)
                 {
                     lastElement.Content = new Button();
                     lastElement = lastElement.Content as Button;
@@ -40,4 +40,5 @@ namespace VisualTreeAnalyzers.Tests.DemoVisualTrees
             }
         }
     }
+
 }

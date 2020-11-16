@@ -28,6 +28,8 @@
   <Library Name="VisualTreeAnalyzers">
 
   	<!-- add directives for your library here -->
-
-  </Library>
+	<Namespace Name="Windows.UI.Xaml.Automation.Provider" Dynamic="All"/>
+    <Namespace Name="VisualTreeAnalyzers.Accessibility" Dynamic="All"/>
+    <Namespace Name="VisualTreeAnalyzers.Accessibility.Rules" Dynamic="All"/>
+</Library>
 </Directives>

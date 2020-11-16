@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace VisualTreeAnalyzers.Core
    ">
-    <meta name="generator" content="docfx 2.56.4.0">
+    <meta name="generator" content="docfx 2.56.5.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -86,6 +86,10 @@ Every analyzer added to the VisualTreeWalker will be called on all elements visi
 The tree walker might not visit all nodes if no analyzer requests to visit the children of a specific element.</p>
 <p>The VisualTreeWalker will always perform a breadth-first-search on the visual tree.</p>
 </section>
+      <h4><a class="xref" href="VisualTreeAnalyzers.Core.VisualTreeWalkerTimer.html">VisualTreeWalkerTimer</a></h4>
+      <section><p>This timer allows to periodically scan the visual tree of the current root.
+Due to performance reasons, listening to changes is no option to have &quot;live&quot; scanning.</p>
+</section>
     <h3 id="interfaces">Interfaces
   </h3>
       <h4><a class="xref" href="VisualTreeAnalyzers.Core.IElementAnalyzer.html">IElementAnalyzer</a></h4>
@@ -95,6 +99,12 @@ To improve performance, element analyzers can opt out of visiting the children o
       <h4><a class="xref" href="VisualTreeAnalyzers.Core.IRule.html">IRule</a></h4>
       <section><p>This is the standard interface for rule objects to be used by the different analyzers.
 Every rule must provide a failure message that analyzers can use to notify users why this element failed the given rule.</p>
+</section>
+      <h4><a class="xref" href="VisualTreeAnalyzers.Core.IVisualTreeWalker.html">IVisualTreeWalker</a></h4>
+      <section><p>The default interface for visual tree walker objects.</p>
+</section>
+      <h4><a class="xref" href="VisualTreeAnalyzers.Core.IVisualTreeWalkerTimer.html">IVisualTreeWalkerTimer</a></h4>
+      <section><p>Default interface for <a class="xref" href="VisualTreeAnalyzers.Core.VisualTreeWalkerTimer.html">VisualTreeWalkerTimer</a> timer.</p>
 </section>
 </article>
           </div>

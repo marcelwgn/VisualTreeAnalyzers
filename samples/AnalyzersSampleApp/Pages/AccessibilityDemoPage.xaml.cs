@@ -17,6 +17,8 @@ namespace AnalyzersSampleApp.Pages
     {
         private readonly List<NumberItem> numbers = new List<NumberItem>();
 
+        private VisualTreeWalkerTimer timer;
+
         public AccessibilityDemoPage()
         {
             foreach(int i in Enumerable.Range(0,100))
@@ -35,6 +37,32 @@ namespace AnalyzersSampleApp.Pages
             var walker = new VisualTreeWalker(this, analyzer);
 
             walker.ScanVisualTree();
+
+            timer = new VisualTreeWalkerTimer(walker);
+            timer.Start();
+        }
+
+        private void AddInaccessibleControlButton_Click(object sender, RoutedEventArgs e)
+        {
+
+            ButtonCollection.Children.Add(
+                new Button()
+                {
+                    Width = 100,
+                    Height = 30
+                }
+            );
+        }
+        private void AddAccessibleControlButton_Click(object sender, RoutedEventArgs e)
+        {
+            ButtonCollection.Children.Add(
+                new Button()
+                {
+                    Width = 100,
+                    Height = 30,
+                    Content = "button"
+                }
+            );
         }
     }
 }

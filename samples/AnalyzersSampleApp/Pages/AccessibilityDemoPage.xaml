@@ -11,10 +11,8 @@
     <Page.Resources>
         <DataTemplate x:Key="NumberItemTemplate">
             <StackPanel>
-                <StackPanel>
-                    <TextBlock Text="{Binding Name}"/>
-                    <TextBlock Text="{Binding Number}"/>
-                </StackPanel>
+                <TextBlock Text="{Binding Name}"/>
+                <TextBlock Text="{Binding Number}"/>
             </StackPanel>
         </DataTemplate>
     </Page.Resources>
@@ -22,7 +20,7 @@
         <StackPanel Padding="10" Spacing="8">
             <TextBlock Text="Accessibility Analyzer" Style="{ThemeResource HeaderTextBlockStyle}"/>
             <TextBlock TextWrapping="WrapWholeWords"
-                Text="This is a demo page showcasing the Accessibility analyzer. Elements on this page are inacessible for different reasons and are marked because of that."/>
+                Text="This is a demo page showcasing the Accessibility analyzer. Elements on this page are inaccessible for different reasons and are marked because of that."/>
 
             <StackPanel>
                 <TextBlock></TextBlock>

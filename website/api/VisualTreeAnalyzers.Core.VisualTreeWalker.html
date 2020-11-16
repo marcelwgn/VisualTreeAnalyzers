@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class VisualTreeWalker
    ">
-    <meta name="generator" content="docfx 2.56.4.0">
+    <meta name="generator" content="docfx 2.56.5.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -84,6 +84,10 @@ The tree walker might not visit all nodes if no analyzer requests to visit the c
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">VisualTreeWalker</span></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="VisualTreeAnalyzers.Core.IVisualTreeWalker.html">IVisualTreeWalker</a></div>
+  </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
@@ -112,7 +116,7 @@ The tree walker might not visit all nodes if no analyzer requests to visit the c
   <h6><strong>Assembly</strong>: VisualTreeAnalyzers.dll</h6>
   <h5 id="VisualTreeAnalyzers_Core_VisualTreeWalker_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class VisualTreeWalker</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class VisualTreeWalker : IVisualTreeWalker</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -261,6 +265,10 @@ This also adds the specified analyzer to list of analyzers.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void ScanVisualTree()</code></pre>
+  </div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="VisualTreeAnalyzers.Core.IVisualTreeWalker.html">IVisualTreeWalker</a>
   </div>
 </article>
           </div>

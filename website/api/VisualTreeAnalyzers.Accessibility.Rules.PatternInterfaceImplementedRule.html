@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class PatternInterfaceImplementedRule
    ">
-    <meta name="generator" content="docfx 2.56.4.0">
+    <meta name="generator" content="docfx 2.56.5.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -118,13 +118,13 @@
   <h5 id="VisualTreeAnalyzers_Accessibility_Rules_PatternInterfaceImplementedRule_remarks"><strong>Remarks</strong></h5>
   <div class="markdown level0 remarks"><p>This rule ignores <span class="xref">Windows.UI.Xaml.Automation.Provider.ITextProvider</span>, <span class="xref">Windows.UI.Xaml.Automation.Provider.ITextProvider2</span> and <span class="xref">Windows.UI.Xaml.Automation.Provider.ITextRangeProvider</span>
 as those are not implemented by Windows Runtime peers and would lead to false negatives.</p>
+<p>This rule relies on reflection, results for this rule on native builds might not be entirely correct and contain false negatives.</p>
 </div>
   <h3 id="properties">Properties
   </h3>
   <a id="VisualTreeAnalyzers_Accessibility_Rules_PatternInterfaceImplementedRule_FailureMessage_" data-uid="VisualTreeAnalyzers.Accessibility.Rules.PatternInterfaceImplementedRule.FailureMessage*"></a>
   <h4 id="VisualTreeAnalyzers_Accessibility_Rules_PatternInterfaceImplementedRule_FailureMessage" data-uid="VisualTreeAnalyzers.Accessibility.Rules.PatternInterfaceImplementedRule.FailureMessage">FailureMessage</h4>
-  <div class="markdown level1 summary"><p>Returns the failure message for this rule.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -141,8 +141,7 @@ as those are not implemented by Windows Runtime peers and would lead to false ne
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td><p>The failure message.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -150,8 +149,7 @@ as those are not implemented by Windows Runtime peers and would lead to false ne
   </h3>
   <a id="VisualTreeAnalyzers_Accessibility_Rules_PatternInterfaceImplementedRule_IsValid_" data-uid="VisualTreeAnalyzers.Accessibility.Rules.PatternInterfaceImplementedRule.IsValid*"></a>
   <h4 id="VisualTreeAnalyzers_Accessibility_Rules_PatternInterfaceImplementedRule_IsValid_Windows_UI_Xaml_FrameworkElement_Windows_UI_Xaml_Automation_Peers_AutomationPeer_" data-uid="VisualTreeAnalyzers.Accessibility.Rules.PatternInterfaceImplementedRule.IsValid(Windows.UI.Xaml.FrameworkElement,Windows.UI.Xaml.Automation.Peers.AutomationPeer)">IsValid(FrameworkElement, AutomationPeer)</h4>
-  <div class="markdown level1 summary"><p>Checks if the element and peer are valid for this rule.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -170,14 +168,12 @@ as those are not implemented by Windows Runtime peers and would lead to false ne
       <tr>
         <td><span class="xref">Windows.UI.Xaml.FrameworkElement</span></td>
         <td><span class="parametername">element</span></td>
-        <td><p>The element to check.</p>
-</td>
+        <td></td>
       </tr>
       <tr>
         <td><span class="xref">Windows.UI.Xaml.Automation.Peers.AutomationPeer</span></td>
         <td><span class="parametername">peer</span></td>
-        <td><p>The peer to check.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -192,15 +188,13 @@ as those are not implemented by Windows Runtime peers and would lead to false ne
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td><p>True if the element and peer are valid for this rule, false otherwise,.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
   <a id="VisualTreeAnalyzers_Accessibility_Rules_PatternInterfaceImplementedRule_ResetState_" data-uid="VisualTreeAnalyzers.Accessibility.Rules.PatternInterfaceImplementedRule.ResetState*"></a>
   <h4 id="VisualTreeAnalyzers_Accessibility_Rules_PatternInterfaceImplementedRule_ResetState" data-uid="VisualTreeAnalyzers.Accessibility.Rules.PatternInterfaceImplementedRule.ResetState">ResetState()</h4>
-  <div class="markdown level1 summary"><p>Resets the state of this rule. This method will usually be called by analyzers when a new scan has been started.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

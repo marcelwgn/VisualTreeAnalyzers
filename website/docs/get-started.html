@@ -8,7 +8,7 @@
     <title>Getting started </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Getting started ">
-    <meta name="generator" content="docfx 2.56.4.0">
+    <meta name="generator" content="docfx 2.56.5.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -93,7 +93,19 @@ private void PageLoaded(object sender, RoutedEventArgs e)
     walker.ScanVisualTree();
 }
 </code></pre>
-<p>Note that currently, the VisualTreeAnalyzers only perform a scan once, similar to Axe.Windows. If the visual tree changed, you will need to rerun the scan.</p>
+<p>Note that the VisualTreeAnalyzers only perform a scan once, similar to <a href="https://github.com/microsoft/axe-windows">Axe.Windows</a>. To rerun tests after a certain amount of time, you can use the <a class="xref" href="../api/VisualTreeAnalyzers.Core.VisualTreeWalkerTimer.html">VisualTreeWalkerTimer</a>:</p>
+<pre><code class="lang-c#">// Create a new analyzer.
+var analyzer = new AccessibilityAnalyzer();
+// Associate analyzer with a VisualTreeWalker.
+var walker = new VisualTreeWalker(this, analyzer);
+// Scan tree once.
+walker.ScanVisualTree();
+
+// Create a new timer with default interval of 5 seconds.
+timer = new VisualTreeWalkerTimer(walker);
+// Start timer.
+timer.Start();
+</code></pre>
 </article>
           </div>
           

@@ -27,4 +27,18 @@ private void PageLoaded(object sender, RoutedEventArgs e)
 }
 ```
 
-Note that currently, the VisualTreeAnalyzers only perform a scan once, similar to Axe.Windows. If the visual tree changed, you will need to rerun the scan.
+Note that the VisualTreeAnalyzers only perform a scan once, similar to [Axe.Windows](https://github.com/microsoft/axe-windows). To rerun tests after a certain amount of time, you can use the [VisualTreeWalkerTimer](xref:VisualTreeAnalyzers.Core.VisualTreeWalkerTimer):
+
+```c#
+// Create a new analyzer.
+var analyzer = new AccessibilityAnalyzer();
+// Associate analyzer with a VisualTreeWalker.
+var walker = new VisualTreeWalker(this, analyzer);
+// Scan tree once.
+walker.ScanVisualTree();
+
+// Create a new timer with default interval of 5 seconds.
+timer = new VisualTreeWalkerTimer(walker);
+// Start timer.
+timer.Start();
+```

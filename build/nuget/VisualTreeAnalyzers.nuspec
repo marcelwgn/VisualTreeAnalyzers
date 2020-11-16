@@ -12,10 +12,10 @@
             In addition to that, the library also allows easy writing of visual tree snapshot tests.
         </description>
         <title>VisualTreeAnalyzers</title>
-        <tags>c# uwp accesibility visualtree analyzer</tags>
+        <tags>c# uwp accessibility visualtree analyzer a11y</tags>
         <repository type="git" url="https://github.com/chingucoding/VisualTreeAnalyzers" branch="main"/>
         <projectUrl>https://chingucoding.github.io/VisualTreeAnalyzers/website/index.html</projectUrl>
-        <version>0.1.2</version>
+        <version>0.1.3</version>
         <!-- <icon>./icon.png</icon> -->
         <!-- Optional elements -->
         <!-- ... -->

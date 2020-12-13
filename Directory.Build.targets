@@ -15,8 +15,10 @@
 
       CA1716: Identifiers should not match keywords.
       Ignore reason: Where identifiers match keywords, they are extremely unlikely to be mistaken for the keyword. 
+      
+      CA9998: FxCopAnalyzers package has been deprecated in favor of 'Microsoft.CodeAnalysis.NetAnalyzers'
+      Ignore reason: They don't seem to work well with UWP.
       -->
-
-    <NoWarn>;$(NoWarn);CA1303;CA1305;WMC1501;CS8305;CA1716</NoWarn>
+    <NoWarn>;$(NoWarn);CA1303;CA1305;WMC1501;CS8305;CA1716;CA9998</NoWarn>
   </PropertyGroup>
 </Project>

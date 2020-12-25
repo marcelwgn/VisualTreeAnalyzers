@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class VisualTreeWalker
+    <title>Class ElementSnapshot
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class VisualTreeWalker
+    <meta name="title" content="Class ElementSnapshot
    ">
     <meta name="generator" content="docfx 2.56.6.0">
     
@@ -68,25 +68,24 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="VisualTreeAnalyzers.Core.VisualTreeWalker">
+            <article class="content wrap" id="_content" data-uid="VisualTreeAnalyzers.Snapshot.ElementSnapshot">
   
   
-  <h1 id="VisualTreeAnalyzers_Core_VisualTreeWalker" data-uid="VisualTreeAnalyzers.Core.VisualTreeWalker" class="text-break">Class VisualTreeWalker
+  <h1 id="VisualTreeAnalyzers_Snapshot_ElementSnapshot" data-uid="VisualTreeAnalyzers.Snapshot.ElementSnapshot" class="text-break">Class ElementSnapshot
   </h1>
-  <div class="markdown level0 summary"><p>The VisualTreeWalker can be used to scan entire subtrees of the VisualTree.
-Every analyzer added to the VisualTreeWalker will be called on all elements visited.
-The tree walker might not visit all nodes if no analyzer requests to visit the children of a specific element.</p>
-<p>The VisualTreeWalker will always perform a breadth-first-search on the visual tree.</p>
+  <div class="markdown level0 summary"><p>Class representing a the snapshot of a visual tree.
+Every snapshot contains basic informations about the element such as its type name or element name but also contains a reference to its children elements.
+In addition to that, a snapshot contains a list of property names and values which are usually set by the <a class="xref" href="VisualTreeAnalyzers.Snapshot.ElementSnapshotCreator.html">ElementSnapshotCreator</a>.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">VisualTreeWalker</span></div>
+    <div class="level1"><span class="xref">ElementSnapshot</span></div>
   </div>
   <div classs="implements">
     <h5>Implements</h5>
-    <div><a class="xref" href="VisualTreeAnalyzers.Core.IVisualTreeWalker.html">IVisualTreeWalker</a></div>
+    <div><a class="xref" href="VisualTreeAnalyzers.Snapshot.IElementSnapshot.html">IElementSnapshot</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -112,22 +111,22 @@ The tree walker might not visit all nodes if no analyzer requests to visit the c
       <span class="xref">System.Object.ToString()</span>
     </div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="VisualTreeAnalyzers.Core.html">VisualTreeAnalyzers.Core</a></h6>
+  <h6><strong>Namespace</strong>: <a class="xref" href="VisualTreeAnalyzers.Snapshot.html">VisualTreeAnalyzers.Snapshot</a></h6>
   <h6><strong>Assembly</strong>: VisualTreeAnalyzers.dll</h6>
-  <h5 id="VisualTreeAnalyzers_Core_VisualTreeWalker_syntax">Syntax</h5>
+  <h5 id="VisualTreeAnalyzers_Snapshot_ElementSnapshot_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class VisualTreeWalker : IVisualTreeWalker</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class ElementSnapshot : IElementSnapshot</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
-  <a id="VisualTreeAnalyzers_Core_VisualTreeWalker__ctor_" data-uid="VisualTreeAnalyzers.Core.VisualTreeWalker.#ctor*"></a>
-  <h4 id="VisualTreeAnalyzers_Core_VisualTreeWalker__ctor_Windows_UI_Xaml_FrameworkElement_" data-uid="VisualTreeAnalyzers.Core.VisualTreeWalker.#ctor(Windows.UI.Xaml.FrameworkElement)">VisualTreeWalker(FrameworkElement)</h4>
-  <div class="markdown level1 summary"><p>Creates a new VisualTreeWalker object with the specified element as the root of the VisualTree to analyzer.</p>
+  <a id="VisualTreeAnalyzers_Snapshot_ElementSnapshot__ctor_" data-uid="VisualTreeAnalyzers.Snapshot.ElementSnapshot.#ctor*"></a>
+  <h4 id="VisualTreeAnalyzers_Snapshot_ElementSnapshot__ctor_System_Collections_Generic_IList_VisualTreeAnalyzers_Snapshot_IElementSnapshot__System_String_System_String_System_Collections_Generic_IList_System_String__System_Collections_Generic_IList_System_Object__" data-uid="VisualTreeAnalyzers.Snapshot.ElementSnapshot.#ctor(System.Collections.Generic.IList{VisualTreeAnalyzers.Snapshot.IElementSnapshot},System.String,System.String,System.Collections.Generic.IList{System.String},System.Collections.Generic.IList{System.Object})">ElementSnapshot(IList&lt;IElementSnapshot&gt;, String, String, IList&lt;String&gt;, IList&lt;Object&gt;)</h4>
+  <div class="markdown level1 summary"><p>Creates a new ElementSnapshot instance using the passed parameters.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public VisualTreeWalker(FrameworkElement root)</code></pre>
+    <pre><code class="lang-csharp hljs">public ElementSnapshot(IList&lt;IElementSnapshot&gt; children, string typeName, string elementName, IList&lt;string&gt; propertyNames, IList&lt;object&gt; propertyValues)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -140,57 +139,46 @@ The tree walker might not visit all nodes if no analyzer requests to visit the c
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Windows.UI.Xaml.FrameworkElement</span></td>
-        <td><span class="parametername">root</span></td>
-        <td><p>The root of the visual tree that will be processed.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="VisualTreeAnalyzers_Core_VisualTreeWalker__ctor_" data-uid="VisualTreeAnalyzers.Core.VisualTreeWalker.#ctor*"></a>
-  <h4 id="VisualTreeAnalyzers_Core_VisualTreeWalker__ctor_Windows_UI_Xaml_FrameworkElement_VisualTreeAnalyzers_Core_IElementAnalyzer_" data-uid="VisualTreeAnalyzers.Core.VisualTreeWalker.#ctor(Windows.UI.Xaml.FrameworkElement,VisualTreeAnalyzers.Core.IElementAnalyzer)">VisualTreeWalker(FrameworkElement, IElementAnalyzer)</h4>
-  <div class="markdown level1 summary"><p>Creates a new VisualTreeWalker object with the specified element as the root of the VisualTree to analyzer.
-This also adds the specified analyzer to list of analyzers.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public VisualTreeWalker(FrameworkElement root, IElementAnalyzer analyzer)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Windows.UI.Xaml.FrameworkElement</span></td>
-        <td><span class="parametername">root</span></td>
-        <td><p>The root of the visual tree that will be processed.</p>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="VisualTreeAnalyzers.Snapshot.IElementSnapshot.html">IElementSnapshot</a>&gt;</td>
+        <td><span class="parametername">children</span></td>
+        <td><p>List of children elements.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="VisualTreeAnalyzers.Core.IElementAnalyzer.html">IElementAnalyzer</a></td>
-        <td><span class="parametername">analyzer</span></td>
-        <td><p>The analyzer that will be added to the collection of analyzers.</p>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">typeName</span></td>
+        <td><p>Name of this elements type.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">elementName</span></td>
+        <td><p>Name of the visual tree element.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">propertyNames</span></td>
+        <td><p>List of names of the properties saved by this snapshot.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<span class="xref">System.Object</span>&gt;</td>
+        <td><span class="parametername">propertyValues</span></td>
+        <td><p>List of the property values.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <h3 id="properties">Properties
   </h3>
-  <a id="VisualTreeAnalyzers_Core_VisualTreeWalker_Analyzers_" data-uid="VisualTreeAnalyzers.Core.VisualTreeWalker.Analyzers*"></a>
-  <h4 id="VisualTreeAnalyzers_Core_VisualTreeWalker_Analyzers" data-uid="VisualTreeAnalyzers.Core.VisualTreeWalker.Analyzers">Analyzers</h4>
-  <div class="markdown level1 summary"><p>The collection of analyzers used by this VisualTreeWalker.</p>
-</div>
+  <a id="VisualTreeAnalyzers_Snapshot_ElementSnapshot_Children_" data-uid="VisualTreeAnalyzers.Snapshot.ElementSnapshot.Children*"></a>
+  <h4 id="VisualTreeAnalyzers_Snapshot_ElementSnapshot_Children" data-uid="VisualTreeAnalyzers.Snapshot.ElementSnapshot.Children">Children</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IList&lt;IElementAnalyzer&gt; Analyzers { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public IList&lt;IElementSnapshot&gt; Children { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -202,19 +190,18 @@ This also adds the specified analyzer to list of analyzers.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="VisualTreeAnalyzers.Core.IElementAnalyzer.html">IElementAnalyzer</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="VisualTreeAnalyzers.Snapshot.IElementSnapshot.html">IElementSnapshot</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <a id="VisualTreeAnalyzers_Core_VisualTreeWalker_OnlyWithDebugger_" data-uid="VisualTreeAnalyzers.Core.VisualTreeWalker.OnlyWithDebugger*"></a>
-  <h4 id="VisualTreeAnalyzers_Core_VisualTreeWalker_OnlyWithDebugger" data-uid="VisualTreeAnalyzers.Core.VisualTreeWalker.OnlyWithDebugger">OnlyWithDebugger</h4>
-  <div class="markdown level1 summary"><p>Indicates whether analyzing elements should be skipped if no debugger is attached.</p>
-</div>
+  <a id="VisualTreeAnalyzers_Snapshot_ElementSnapshot_ElementName_" data-uid="VisualTreeAnalyzers.Snapshot.ElementSnapshot.ElementName*"></a>
+  <h4 id="VisualTreeAnalyzers_Snapshot_ElementSnapshot_ElementName" data-uid="VisualTreeAnalyzers.Snapshot.ElementSnapshot.ElementName">ElementName</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool OnlyWithDebugger { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string ElementName { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -226,19 +213,18 @@ This also adds the specified analyzer to list of analyzers.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <a id="VisualTreeAnalyzers_Core_VisualTreeWalker_Root_" data-uid="VisualTreeAnalyzers.Core.VisualTreeWalker.Root*"></a>
-  <h4 id="VisualTreeAnalyzers_Core_VisualTreeWalker_Root" data-uid="VisualTreeAnalyzers.Core.VisualTreeWalker.Root">Root</h4>
-  <div class="markdown level1 summary"><p>The <span class="xref">Windows.UI.Xaml.FrameworkElement</span> indicating the root of the visual tree to analyze.</p>
-</div>
+  <a id="VisualTreeAnalyzers_Snapshot_ElementSnapshot_PropertyNames_" data-uid="VisualTreeAnalyzers.Snapshot.ElementSnapshot.PropertyNames*"></a>
+  <h4 id="VisualTreeAnalyzers_Snapshot_ElementSnapshot_PropertyNames" data-uid="VisualTreeAnalyzers.Snapshot.ElementSnapshot.PropertyNames">PropertyNames</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public FrameworkElement Root { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public IList&lt;string&gt; PropertyNames { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -250,25 +236,60 @@ This also adds the specified analyzer to list of analyzers.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Windows.UI.Xaml.FrameworkElement</span></td>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h3 id="methods">Methods
-  </h3>
-  <a id="VisualTreeAnalyzers_Core_VisualTreeWalker_ScanVisualTree_" data-uid="VisualTreeAnalyzers.Core.VisualTreeWalker.ScanVisualTree*"></a>
-  <h4 id="VisualTreeAnalyzers_Core_VisualTreeWalker_ScanVisualTree" data-uid="VisualTreeAnalyzers.Core.VisualTreeWalker.ScanVisualTree">ScanVisualTree()</h4>
-  <div class="markdown level1 summary"><p>Scans the visual tree with the <a class="xref" href="VisualTreeAnalyzers.Core.VisualTreeWalker.html#VisualTreeAnalyzers_Core_VisualTreeWalker_Root">Root</a> as the starting point of the tree scan.</p>
-</div>
+  <a id="VisualTreeAnalyzers_Snapshot_ElementSnapshot_PropertyValues_" data-uid="VisualTreeAnalyzers.Snapshot.ElementSnapshot.PropertyValues*"></a>
+  <h4 id="VisualTreeAnalyzers_Snapshot_ElementSnapshot_PropertyValues" data-uid="VisualTreeAnalyzers.Snapshot.ElementSnapshot.PropertyValues">PropertyValues</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void ScanVisualTree()</code></pre>
+    <pre><code class="lang-csharp hljs">public IList&lt;object&gt; PropertyValues { get; }</code></pre>
   </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<span class="xref">System.Object</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="VisualTreeAnalyzers_Snapshot_ElementSnapshot_TypeName_" data-uid="VisualTreeAnalyzers.Snapshot.ElementSnapshot.TypeName*"></a>
+  <h4 id="VisualTreeAnalyzers_Snapshot_ElementSnapshot_TypeName" data-uid="VisualTreeAnalyzers.Snapshot.ElementSnapshot.TypeName">TypeName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string TypeName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="implements">Implements</h3>
   <div>
-      <a class="xref" href="VisualTreeAnalyzers.Core.IVisualTreeWalker.html">IVisualTreeWalker</a>
+      <a class="xref" href="VisualTreeAnalyzers.Snapshot.IElementSnapshot.html">IElementSnapshot</a>
   </div>
 </article>
           </div>

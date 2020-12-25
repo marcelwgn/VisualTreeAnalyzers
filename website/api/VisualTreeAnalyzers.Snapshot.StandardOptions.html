@@ -5,9 +5,11 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Getting started </title>
+    <title>Class StandardOptions
+   </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Getting started ">
+    <meta name="title" content="Class StandardOptions
+   ">
     <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -66,58 +68,75 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="">
-<h1 id="getting-started">Getting started</h1>
-
-<p>The VisualTreeAnalyzers package contains multiple different functionalities for different kinds of visual tree processing. Below are a few different ways to use the VisualTreeAnalyzers package.
-The package is available on <a href="https://www.nuget.org/packages/VisualTreeAnalyzers/">NuGet.org</a> or download it with Visual Studio by searching for &quot;VisualTreeAnalyzers&quot; in the NuGet package manager.</p>
-<h3 id="using-the-accessibility-analzyer">Using the Accessibility Analzyer</h3>
-<p>To scan the current page for accessibility issues such as missing element names, you can leverage the <a class="xref" href="../api/VisualTreeAnalyzers.Accessibility.AccessibilityAnalyzer.html">AccessibilityAnalyzer</a>. Below is an example of integrating the AccessibilityAnalyzer into an existing page:</p>
-<pre><code class="lang-c#">public CustomPage()
-{
-    this.InitializeComponents();
-
-    // Wait for the page to be loaded to have the visual tree be complete.
-    this.Loaded += PageLoaded;
-}
-
-private void PageLoaded(object sender, RoutedEventArgs e)
-{
-    // Create a new analyzer.
-    var analyzer = new AccessibilityAnalyzer();
-    // Associate analyzer with a VisualTreeWalker.
-    var walker = new VisualTreeWalker(this, analyzer);
-    // Optional: Specify that scanning should only be done when a debugger is attached:
-    walker.OnlyWithDebugger = true;
-    // Scan the current page.
-    walker.ScanVisualTree();
-}
-</code></pre>
-<p>Note that the VisualTreeAnalyzers only perform a scan once, similar to <a href="https://github.com/microsoft/axe-windows">Axe.Windows</a>. To rerun tests after a certain amount of time, you can use the <a class="xref" href="../api/VisualTreeAnalyzers.Core.VisualTreeWalkerTimer.html">VisualTreeWalkerTimer</a>:</p>
-<pre><code class="lang-c#">// Create a new analyzer.
-var analyzer = new AccessibilityAnalyzer();
-// Associate analyzer with a VisualTreeWalker.
-var walker = new VisualTreeWalker(this, analyzer);
-// Scan tree once.
-walker.ScanVisualTree();
-
-// Create a new timer with default interval of 5 seconds.
-timer = new VisualTreeWalkerTimer(walker);
-// Start timer.
-timer.Start();
-</code></pre>
-<h3 id="creating-visual-tree-snapshots">Creating visual tree snapshots</h3>
-<p>To take a snapshot of an element and its visual tree with the standard options, you need to create a new <a class="xref" href="../api/VisualTreeAnalyzers.Snapshot.ElementSnapshotCreator.html">ElementSnapshotCreator</a> object. The standard options include a list of commmon properties to include to make it easier getting started with visual tree snapshotting.</p>
-<p>Then you can just call <code>CreateSnapshot</code>to generate the snapshot object for the visual tree:</p>
-<pre><code class="lang-c#">var element = ...; // The element you want a snapshot of
-
-// Create a new snapshot creator object
-var snapshotCreator = new ElementSnapshotCreator(StandardOptions.StandardPropertyNames, element);
-
-// Get snapshot
-var elementSnapshot = snapshotCreator.CreateSnapshot();
-</code></pre>
-<p>To learn more about snapshot customization and exporting snapshots into other formats, see <a href="snapshot-testing.html">snapshot testing</a>.</p>
+            <article class="content wrap" id="_content" data-uid="VisualTreeAnalyzers.Snapshot.StandardOptions">
+  
+  
+  <h1 id="VisualTreeAnalyzers_Snapshot_StandardOptions" data-uid="VisualTreeAnalyzers.Snapshot.StandardOptions" class="text-break">Class StandardOptions
+  </h1>
+  <div class="markdown level0 summary"><p>This class holds default options that aim to make using the <a class="xref" href="VisualTreeAnalyzers.Snapshot.html">VisualTreeAnalyzers.Snapshot</a> namespace easier.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">StandardOptions</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="VisualTreeAnalyzers.Snapshot.html">VisualTreeAnalyzers.Snapshot</a></h6>
+  <h6><strong>Assembly</strong>: VisualTreeAnalyzers.dll</h6>
+  <h5 id="VisualTreeAnalyzers_Snapshot_StandardOptions_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class StandardOptions</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <a id="VisualTreeAnalyzers_Snapshot_StandardOptions_StandardPropertyNames_" data-uid="VisualTreeAnalyzers.Snapshot.StandardOptions.StandardPropertyNames*"></a>
+  <h4 id="VisualTreeAnalyzers_Snapshot_StandardOptions_StandardPropertyNames" data-uid="VisualTreeAnalyzers.Snapshot.StandardOptions.StandardPropertyNames">StandardPropertyNames</h4>
+  <div class="markdown level1 summary"><p>The list of common properties to include in visual tree snapshots.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IList&lt;string&gt; StandardPropertyNames { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
 </article>
           </div>
           

@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Getting started </title>
+    <title>Snapshot testing </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Getting started ">
+    <meta name="title" content="Snapshot testing ">
     <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -67,48 +67,14 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="getting-started">Getting started</h1>
+<h1 id="snapshot-testing">Snapshot testing</h1>
 
-<p>The VisualTreeAnalyzers package contains multiple different functionalities for different kinds of visual tree processing. Below are a few different ways to use the VisualTreeAnalyzers package.
-The package is available on <a href="https://www.nuget.org/packages/VisualTreeAnalyzers/">NuGet.org</a> or download it with Visual Studio by searching for &quot;VisualTreeAnalyzers&quot; in the NuGet package manager.</p>
-<h3 id="using-the-accessibility-analzyer">Using the Accessibility Analzyer</h3>
-<p>To scan the current page for accessibility issues such as missing element names, you can leverage the <a class="xref" href="../api/VisualTreeAnalyzers.Accessibility.AccessibilityAnalyzer.html">AccessibilityAnalyzer</a>. Below is an example of integrating the AccessibilityAnalyzer into an existing page:</p>
-<pre><code class="lang-c#">public CustomPage()
-{
-    this.InitializeComponents();
-
-    // Wait for the page to be loaded to have the visual tree be complete.
-    this.Loaded += PageLoaded;
-}
-
-private void PageLoaded(object sender, RoutedEventArgs e)
-{
-    // Create a new analyzer.
-    var analyzer = new AccessibilityAnalyzer();
-    // Associate analyzer with a VisualTreeWalker.
-    var walker = new VisualTreeWalker(this, analyzer);
-    // Optional: Specify that scanning should only be done when a debugger is attached:
-    walker.OnlyWithDebugger = true;
-    // Scan the current page.
-    walker.ScanVisualTree();
-}
-</code></pre>
-<p>Note that the VisualTreeAnalyzers only perform a scan once, similar to <a href="https://github.com/microsoft/axe-windows">Axe.Windows</a>. To rerun tests after a certain amount of time, you can use the <a class="xref" href="../api/VisualTreeAnalyzers.Core.VisualTreeWalkerTimer.html">VisualTreeWalkerTimer</a>:</p>
-<pre><code class="lang-c#">// Create a new analyzer.
-var analyzer = new AccessibilityAnalyzer();
-// Associate analyzer with a VisualTreeWalker.
-var walker = new VisualTreeWalker(this, analyzer);
-// Scan tree once.
-walker.ScanVisualTree();
-
-// Create a new timer with default interval of 5 seconds.
-timer = new VisualTreeWalkerTimer(walker);
-// Start timer.
-timer.Start();
-</code></pre>
-<h3 id="creating-visual-tree-snapshots">Creating visual tree snapshots</h3>
-<p>To take a snapshot of an element and its visual tree with the standard options, you need to create a new <a class="xref" href="../api/VisualTreeAnalyzers.Snapshot.ElementSnapshotCreator.html">ElementSnapshotCreator</a> object. The standard options include a list of commmon properties to include to make it easier getting started with visual tree snapshotting.</p>
-<p>Then you can just call <code>CreateSnapshot</code>to generate the snapshot object for the visual tree:</p>
+<p>This document explains how to use create snapshots of the visual tree and how to export visual tree snapshots in human readable formats.</p>
+<h3 id="what-is-snapshot-testing">What is snapshot testing?</h3>
+<p>Snapshot testing is a way of verifying that control and rendering output did not suddenly change. Snapshot tests compare the current rendering output of a control/visual tree against an already saved rendering output that has been saved earlier as correct rendering output. The <a class="xref" href="../api/VisualTreeAnalyzers.Snapshot.html">Snapshot namespace</a> contains classes that help in generating snapshots of a visual tree and also include helpers to export the snapshot in human readable formats.</p>
+<h3 id="creating-a-raw-snapshot">Creating a raw snapshot</h3>
+<p>Before taking a snapshot, you will first need to determine what properties should be included inside the snapshot. The <a class="xref" href="../api/VisualTreeAnalyzers.Snapshot.html">Snapshot namespace</a> also includes the <a class="xref" href="../api/VisualTreeAnalyzers.Snapshot.StandardOptions.html">StandardOptions</a> which provides a list of common properties to use for snapshot testing. The explicit list of properties can be seen in the <a href="https://github.com/chingucoding/VisualTreeAnalyzers/tree/main/src/VisualTreeAnalyzers/Snapshot/StandardOptions.cs">source code</a>.</p>
+<p>To take a snapshot of an element and its visual tree with the standard options, you need to create a new <a class="xref" href="../api/VisualTreeAnalyzers.Snapshot.ElementSnapshotCreator.html">ElementSnapshotCreator</a> object. Then you can just call <code>CreateSnapshot</code>to generate the snapshot object for the visual tree:</p>
 <pre><code class="lang-c#">var element = ...; // The element you want a snapshot of
 
 // Create a new snapshot creator object
@@ -117,7 +83,35 @@ var snapshotCreator = new ElementSnapshotCreator(StandardOptions.StandardPropert
 // Get snapshot
 var elementSnapshot = snapshotCreator.CreateSnapshot();
 </code></pre>
-<p>To learn more about snapshot customization and exporting snapshots into other formats, see <a href="snapshot-testing.html">snapshot testing</a>.</p>
+<p>To use an ElementSnapshotCreator on multiple elements, you can omit the second parameter and call <code>CreateSnapshot</code> with the element as parameter:</p>
+<pre><code class="lang-c#">// Create a new snapshot creator object
+var snapshotCreator = new ElementSnapshotCreator(StandardOptions.StandardPropertyNames);
+
+// Get snapshots
+var firstElementSnapshot = snapshotCreator.CreateSnapshot(firstElement);
+var secondElementSnapshot = snapshotCreator.CreateSnapshot(secondElement);
+</code></pre>
+<p>If you wish to use a different set of properties to include in the visual tree snapshot, you can also pass your own list of properties to the snapshot creator.
+Properties are being accessed using reflection and the passed names, so spelling of properties must equal the property on the controls.
+Below is an example of how to use a custom set of properties with the snapshot creator:</p>
+<pre><code class="lang-c#">// List of custom properties
+var properties = new string[]
+{
+    &quot;Background&quot;,
+    &quot;Foreground&quot;,
+    &quot;FontSize&quot;,
+    &quot;FontFamily&quot;,
+    &quot;Text&quot;
+};
+
+var element = ...; // The element you want a snapshot of
+
+// Create a new snapshot creator object
+var snapshotCreator = new ElementSnapshotCreator(properties, name);
+
+// Get snapshot
+var elementSnapshot = snapshotCreator.CreateSnapshot();
+</code></pre>
 </article>
           </div>
           

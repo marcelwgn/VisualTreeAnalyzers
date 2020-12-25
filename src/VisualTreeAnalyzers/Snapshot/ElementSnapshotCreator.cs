@@ -1,65 +1,50 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Reflection;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Media;
 
 namespace VisualTreeAnalyzers.Snapshot
 {
-    public sealed class ElementSnapshotCreator
+    public sealed class ElementSnapshotCreator : IElementSnapshotCreator
     {
-        public FrameworkElement Root { get; set; }
-        public IList<DependencyProperty> PropertiesToSnapshot { get; }
+        public DependencyObject Element { get; set; }
+        public IList<string> PropertyNames { get; }
 
-        private readonly IList<string> propertyNames;
+        public ElementSnapshotCreator(IList<string> propertyNames) : this(propertyNames, null) { }
 
-        public ElementSnapshotCreator(FrameworkElement root, IList<DependencyProperty> properties, IList<string> propertyNames)
+        public ElementSnapshotCreator(IList<string> propertyNames, DependencyObject element)
         {
-            if (root == null) throw new ArgumentNullException(nameof(root));
-            if (properties == null) throw new ArgumentNullException(nameof(root));
-            if (propertyNames == null) throw new ArgumentNullException(nameof(root));
-            if (properties.Count != propertyNames.Count)
-            {
-                throw new ArgumentException("Property count and property name cound did not match.");
-            }
-
-            Root = root;
-            PropertiesToSnapshot = properties;
-            this.propertyNames = propertyNames;
+            Element = element;
+            PropertyNames = propertyNames ?? throw new ArgumentNullException(nameof(propertyNames));
         }
 
-        public ElementSnapshot CreateTreeSnapshot()
+        public IElementSnapshot CreateSnapshot()
         {
-            return GetSnapshot(Root);
+            return CreateSnapshot(Element);
         }
 
-        private ElementSnapshot GetSnapshot(DependencyObject element)
+        public IElementSnapshot CreateSnapshot(DependencyObject element)
         {
+            if (element is null) throw new ArgumentNullException(nameof(element));
             var childCount = VisualTreeHelper.GetChildrenCount(element);
-            var propertyValues = new object[propertyNames.Count];
-            for (int i = 0; i < propertyNames.Count; i++)
+            var propertyValues = new object[PropertyNames.Count];
+            for (int i = 0; i < PropertyNames.Count; i++)
             {
-                try
+                if (element?.GetType().GetProperty(PropertyNames[i]) is PropertyInfo propertyInfo)
                 {
-                    // Sometimes, get value might crash, e.g. when trying to access properties not present on 
-                    // an object such as TextBlock.Text on a Grid
-                    propertyValues[i] = element.GetValue(PropertiesToSnapshot[i]);
-                }
-#pragma warning disable CA1031 // Do not catch general exception types
-                catch (System.Exception)
-#pragma warning restore CA1031 // Do not catch general exception types
-                {
-
+                    propertyValues[i] = propertyInfo.GetValue(element);
                 }
             }
-            var childrenSnapshots = new ElementSnapshot[childCount];
+            var childrenSnapshots = new IElementSnapshot[childCount];
             for (int i = 0; i < childCount; i++)
             {
-                childrenSnapshots[i] = GetSnapshot(VisualTreeHelper.GetChild(element, i));
+                childrenSnapshots[i] = CreateSnapshot(VisualTreeHelper.GetChild(element, i));
             }
 
             return new ElementSnapshot(childrenSnapshots, element.GetType().Name,
                 element is FrameworkElement fwElement ? fwElement.Name : "Unknown",
-                propertyNames, propertyValues);
+                PropertyNames, propertyValues);
         }
 
     }

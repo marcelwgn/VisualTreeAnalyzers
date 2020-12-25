@@ -152,6 +152,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Accessibility\AccessibilityAnalyzerTests.cs" />
     <Compile Include="Snapshot\ElementSnapshotCreatorTests.cs" />
+    <Compile Include="Snapshot\StandardOptionsTests.cs" />
     <Compile Include="TestImplementations\AnalyzeInvokeCountAnalyzer.cs" />
     <Compile Include="TestImplementations\CountingElementAnalyzer.cs" />
     <Compile Include="UnitTestApp.xaml.cs">

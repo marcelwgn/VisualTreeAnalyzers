@@ -1,6 +1,6 @@
 # Getting started
 The VisualTreeAnalyzers package contains multiple different functionalities for different kinds of visual tree processing. Below are a few different ways to use the VisualTreeAnalyzers package.
-The package is available on [NuGet.org](https://www.nuget.org/packages/VisualTreeAnalyzers/) or download it with Visual Studio by searching for "VisualTreeAnalyzers".
+The package is available on [NuGet.org](https://www.nuget.org/packages/VisualTreeAnalyzers/) or download it with Visual Studio by searching for "VisualTreeAnalyzers" in the NuGet package manager.
 
 ### Using the Accessibility Analzyer
 To scan the current page for accessibility issues such as missing element names, you can leverage the [AccessibilityAnalyzer](xref:VisualTreeAnalyzers.Accessibility.AccessibilityAnalyzer). Below is an example of integrating the AccessibilityAnalyzer into an existing page:
@@ -42,3 +42,20 @@ timer = new VisualTreeWalkerTimer(walker);
 // Start timer.
 timer.Start();
 ```
+
+### Creating visual tree snapshots
+To take a snapshot of an element and its visual tree with the standard options, you need to create a new [ElementSnapshotCreator](xref:VisualTreeAnalyzers.Snapshot.ElementSnapshotCreator) object. The standard options include a list of commmon properties to include to make it easier getting started with visual tree snapshotting.
+
+Then you can just call `CreateSnapshot`to generate the snapshot object for the visual tree:
+
+```c#
+var element = ...; // The element you want a snapshot of
+
+// Create a new snapshot creator object
+var snapshotCreator = new ElementSnapshotCreator(StandardOptions.StandardPropertyNames, element);
+
+// Get snapshot
+var elementSnapshot = snapshotCreator.CreateSnapshot();
+```
+
+To learn more about snapshot customization and exporting snapshots into other formats, see [snapshot testing](./snapshot-testing.md).

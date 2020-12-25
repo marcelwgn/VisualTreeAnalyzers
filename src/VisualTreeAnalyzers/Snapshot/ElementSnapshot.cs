@@ -1,21 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace VisualTreeAnalyzers.Snapshot
 {
-    public sealed class ElementSnapshot
+    public sealed class ElementSnapshot : IElementSnapshot
     {
-
-        public IList<ElementSnapshot> Children { get; private set; }
+        public IList<IElementSnapshot> Children { get; private set; }
         public string TypeName { get; }
         public string ElementName { get; }
         public IList<string> PropertyNames { get; }
         public IList<object> PropertyValues { get; }
 
-        public ElementSnapshot(IList<ElementSnapshot> children, string typeName, string elementName, IList<string> propertyNames, IList<object> propertyValues)
+        public ElementSnapshot(IList<IElementSnapshot> children, string typeName, string elementName, IList<string> propertyNames, IList<object> propertyValues)
         {
             Children = children;
             TypeName = typeName;

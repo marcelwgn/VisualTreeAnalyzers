@@ -60,7 +60,7 @@ namespace VisualTreeAnalyzers.Snapshot
                 childrenSnapshots[i] = CreateSnapshot(VisualTreeHelper.GetChild(element, i));
             }
 
-            return new ElementSnapshot(childrenSnapshots, element.GetType().Name,
+            return new ElementSnapshot(childrenSnapshots, element.GetType().FullName,
                 element is FrameworkElement fwElement ? fwElement.Name : "Unknown",
                 PropertyNames, propertyValues);
         }

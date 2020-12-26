@@ -14,7 +14,7 @@ namespace VisualTreeAnalyzers.Snapshot
         public IList<IElementSnapshot> Children { get; private set; }
 
         /// <inheritdoc/>
-        public string TypeName { get; }
+        public string FullTypeName { get; }
 
         /// <inheritdoc/>
         public string ElementName { get; }
@@ -36,7 +36,7 @@ namespace VisualTreeAnalyzers.Snapshot
         public ElementSnapshot(IList<IElementSnapshot> children, string typeName, string elementName, IList<string> propertyNames, IList<object> propertyValues)
         {
             Children = children;
-            TypeName = typeName;
+            FullTypeName = typeName;
             ElementName = elementName;
             PropertyNames = propertyNames ?? Array.Empty<string>();
             PropertyValues = propertyValues ?? Array.Empty<object>();

@@ -34,20 +34,20 @@ namespace VisualTreeAnalyzers.Tests.Snapshot
             var pageSnapshot = snapshotCreator.CreateSnapshot();
             Assert.AreEqual(testPropertyNames, pageSnapshot.PropertyNames);
             Assert.AreEqual("SimplePageName", pageSnapshot.ElementName);
-            Assert.AreEqual("SimplePage", pageSnapshot.TypeName);
+            Assert.AreEqual("VisualTreeAnalyzers.Tests.DemoVisualTrees.SimplePage", pageSnapshot.FullTypeName);
             Assert.AreEqual(1, pageSnapshot.Children.Count);
 
             var gridSnapshot = pageSnapshot.Children[0];
             Assert.AreEqual(testPropertyNames, gridSnapshot.PropertyNames);
             Assert.AreEqual("RootGrid", gridSnapshot.ElementName);
-            Assert.AreEqual("Grid", gridSnapshot.TypeName);
+            Assert.AreEqual("Windows.UI.Xaml.Controls.Grid", gridSnapshot.FullTypeName);
             Assert.AreEqual(1, gridSnapshot.Children.Count);
             Assert.AreEqual("#FFD3D3D3", (gridSnapshot.PropertyValues[3] as SolidColorBrush).Color.ToString());
 
             var textBlockSnapshot = gridSnapshot.Children[0];
             Assert.AreEqual(testPropertyNames, textBlockSnapshot.PropertyNames);
             Assert.AreEqual("ExampleTextBlock", textBlockSnapshot.ElementName);
-            Assert.AreEqual("TextBlock", textBlockSnapshot.TypeName);
+            Assert.AreEqual("Windows.UI.Xaml.Controls.TextBlock", textBlockSnapshot.FullTypeName);
             Assert.AreEqual(0, textBlockSnapshot.Children.Count);
             Assert.AreEqual("#FF006400", (textBlockSnapshot.PropertyValues[4] as SolidColorBrush).Color.ToString());
             Assert.AreEqual("Some text", textBlockSnapshot.PropertyValues[5]);

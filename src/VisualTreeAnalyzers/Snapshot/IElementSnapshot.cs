@@ -21,9 +21,9 @@ namespace VisualTreeAnalyzers.Snapshot
         string ElementName { get; }
 
         /// <summary>
-        /// The name of the elements type.
+        /// The full name of the elements type including the namespace.
         /// </summary>
-        string TypeName { get; }
+        string FullTypeName { get; }
 
         /// <summary>
         /// List of the properties names saved in this snapshot.

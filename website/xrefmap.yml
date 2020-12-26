@@ -1091,6 +1091,19 @@ references:
   isSpec: "True"
   fullName: VisualTreeAnalyzers.Snapshot.ElementSnapshot.ElementName
   nameWithType: ElementSnapshot.ElementName
+- uid: VisualTreeAnalyzers.Snapshot.ElementSnapshot.FullTypeName
+  name: FullTypeName
+  href: api/VisualTreeAnalyzers.Snapshot.ElementSnapshot.html#VisualTreeAnalyzers_Snapshot_ElementSnapshot_FullTypeName
+  commentId: P:VisualTreeAnalyzers.Snapshot.ElementSnapshot.FullTypeName
+  fullName: VisualTreeAnalyzers.Snapshot.ElementSnapshot.FullTypeName
+  nameWithType: ElementSnapshot.FullTypeName
+- uid: VisualTreeAnalyzers.Snapshot.ElementSnapshot.FullTypeName*
+  name: FullTypeName
+  href: api/VisualTreeAnalyzers.Snapshot.ElementSnapshot.html#VisualTreeAnalyzers_Snapshot_ElementSnapshot_FullTypeName_
+  commentId: Overload:VisualTreeAnalyzers.Snapshot.ElementSnapshot.FullTypeName
+  isSpec: "True"
+  fullName: VisualTreeAnalyzers.Snapshot.ElementSnapshot.FullTypeName
+  nameWithType: ElementSnapshot.FullTypeName
 - uid: VisualTreeAnalyzers.Snapshot.ElementSnapshot.PropertyNames
   name: PropertyNames
   href: api/VisualTreeAnalyzers.Snapshot.ElementSnapshot.html#VisualTreeAnalyzers_Snapshot_ElementSnapshot_PropertyNames
@@ -1117,19 +1130,6 @@ references:
   isSpec: "True"
   fullName: VisualTreeAnalyzers.Snapshot.ElementSnapshot.PropertyValues
   nameWithType: ElementSnapshot.PropertyValues
-- uid: VisualTreeAnalyzers.Snapshot.ElementSnapshot.TypeName
-  name: TypeName
-  href: api/VisualTreeAnalyzers.Snapshot.ElementSnapshot.html#VisualTreeAnalyzers_Snapshot_ElementSnapshot_TypeName
-  commentId: P:VisualTreeAnalyzers.Snapshot.ElementSnapshot.TypeName
-  fullName: VisualTreeAnalyzers.Snapshot.ElementSnapshot.TypeName
-  nameWithType: ElementSnapshot.TypeName
-- uid: VisualTreeAnalyzers.Snapshot.ElementSnapshot.TypeName*
-  name: TypeName
-  href: api/VisualTreeAnalyzers.Snapshot.ElementSnapshot.html#VisualTreeAnalyzers_Snapshot_ElementSnapshot_TypeName_
-  commentId: Overload:VisualTreeAnalyzers.Snapshot.ElementSnapshot.TypeName
-  isSpec: "True"
-  fullName: VisualTreeAnalyzers.Snapshot.ElementSnapshot.TypeName
-  nameWithType: ElementSnapshot.TypeName
 - uid: VisualTreeAnalyzers.Snapshot.ElementSnapshotCreator
   name: ElementSnapshotCreator
   href: api/VisualTreeAnalyzers.Snapshot.ElementSnapshotCreator.html
@@ -1238,6 +1238,19 @@ references:
   isSpec: "True"
   fullName: VisualTreeAnalyzers.Snapshot.IElementSnapshot.ElementName
   nameWithType: IElementSnapshot.ElementName
+- uid: VisualTreeAnalyzers.Snapshot.IElementSnapshot.FullTypeName
+  name: FullTypeName
+  href: api/VisualTreeAnalyzers.Snapshot.IElementSnapshot.html#VisualTreeAnalyzers_Snapshot_IElementSnapshot_FullTypeName
+  commentId: P:VisualTreeAnalyzers.Snapshot.IElementSnapshot.FullTypeName
+  fullName: VisualTreeAnalyzers.Snapshot.IElementSnapshot.FullTypeName
+  nameWithType: IElementSnapshot.FullTypeName
+- uid: VisualTreeAnalyzers.Snapshot.IElementSnapshot.FullTypeName*
+  name: FullTypeName
+  href: api/VisualTreeAnalyzers.Snapshot.IElementSnapshot.html#VisualTreeAnalyzers_Snapshot_IElementSnapshot_FullTypeName_
+  commentId: Overload:VisualTreeAnalyzers.Snapshot.IElementSnapshot.FullTypeName
+  isSpec: "True"
+  fullName: VisualTreeAnalyzers.Snapshot.IElementSnapshot.FullTypeName
+  nameWithType: IElementSnapshot.FullTypeName
 - uid: VisualTreeAnalyzers.Snapshot.IElementSnapshot.PropertyNames
   name: PropertyNames
   href: api/VisualTreeAnalyzers.Snapshot.IElementSnapshot.html#VisualTreeAnalyzers_Snapshot_IElementSnapshot_PropertyNames
@@ -1264,19 +1277,6 @@ references:
   isSpec: "True"
   fullName: VisualTreeAnalyzers.Snapshot.IElementSnapshot.PropertyValues
   nameWithType: IElementSnapshot.PropertyValues
-- uid: VisualTreeAnalyzers.Snapshot.IElementSnapshot.TypeName
-  name: TypeName
-  href: api/VisualTreeAnalyzers.Snapshot.IElementSnapshot.html#VisualTreeAnalyzers_Snapshot_IElementSnapshot_TypeName
-  commentId: P:VisualTreeAnalyzers.Snapshot.IElementSnapshot.TypeName
-  fullName: VisualTreeAnalyzers.Snapshot.IElementSnapshot.TypeName
-  nameWithType: IElementSnapshot.TypeName
-- uid: VisualTreeAnalyzers.Snapshot.IElementSnapshot.TypeName*
-  name: TypeName
-  href: api/VisualTreeAnalyzers.Snapshot.IElementSnapshot.html#VisualTreeAnalyzers_Snapshot_IElementSnapshot_TypeName_
-  commentId: Overload:VisualTreeAnalyzers.Snapshot.IElementSnapshot.TypeName
-  isSpec: "True"
-  fullName: VisualTreeAnalyzers.Snapshot.IElementSnapshot.TypeName
-  nameWithType: IElementSnapshot.TypeName
 - uid: VisualTreeAnalyzers.Snapshot.IElementSnapshotCreator
   name: IElementSnapshotCreator
   href: api/VisualTreeAnalyzers.Snapshot.IElementSnapshotCreator.html

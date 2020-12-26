@@ -142,8 +142,12 @@
     <Compile Include="Core\RuleScanner.cs" />
     <Compile Include="Snapshot\ElementSnapshot.cs" />
     <Compile Include="Snapshot\ElementSnapshotCreator.cs" />
+    <Compile Include="Snapshot\Exporter\IObjectToStringConverter.cs" />
+    <Compile Include="Snapshot\Exporter\StandardObjectToStringConverter.cs" />
+    <Compile Include="Snapshot\Exporter\XMLExporter.cs" />
     <Compile Include="Snapshot\IElementSnapshot.cs" />
     <Compile Include="Snapshot\IElementSnapshotCreator.cs" />
+    <Compile Include="Snapshot\NamespaceHelper.cs" />
     <Compile Include="Snapshot\StandardOptions.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -154,6 +158,7 @@
   <ItemGroup>
     <Content Include="Properties\VisualTreeAnalyzers.rd.xml" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

@@ -12,6 +12,7 @@ namespace VisualTreeAnalyzers.Snapshot
         /// </summary>
         public static IList<string> StandardPropertyNames { get; } = new string[]
         {
+            "Name",
             "Visibility",
             "Margin",
             "Padding",

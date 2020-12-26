@@ -1,6 +1,6 @@
 ﻿using Windows.UI.Xaml.Controls;
 
-namespace VisualTreeAnalyzers.Tests.DemoVisualTrees
+namespace VisualTreeAnalyzers.Tests.TestInfra.DemoVisualTrees
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.

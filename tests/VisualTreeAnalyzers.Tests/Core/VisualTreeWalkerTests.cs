@@ -2,9 +2,9 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.VisualStudio.TestTools.UnitTesting.AppContainer;
 using VisualTreeAnalyzers.Core;
-using VisualTreeAnalyzers.Tests.DemoVisualTrees;
-using VisualTreeAnalyzers.Tests.TestImplementations;
-using VisualTreeAnalyzers.Tests.Utils;
+using VisualTreeAnalyzers.Tests.TestInfra.DemoVisualTrees;
+using VisualTreeAnalyzers.Tests.TestInfra.TestImplementations;
+using VisualTreeAnalyzers.Tests.TestInfra.Utils;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 

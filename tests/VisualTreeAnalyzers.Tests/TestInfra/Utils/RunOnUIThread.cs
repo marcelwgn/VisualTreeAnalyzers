@@ -6,7 +6,7 @@ using Windows.UI.Core;
 using Windows.UI.ViewManagement;
 using Windows.UI.Xaml.Media;
 
-namespace VisualTreeAnalyzers.Tests.Utils
+namespace VisualTreeAnalyzers.Tests.TestInfra.Utils
 {
     // Class take from WinUI repository. Original source code:
     // https://github.com/microsoft/microsoft-ui-xaml/blob/master/test/MUXControlsTestApp/Utilities/RunOnUIThread.cs

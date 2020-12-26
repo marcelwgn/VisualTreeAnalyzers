@@ -3,7 +3,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting.AppContainer;
 using System;
 using System.Collections.Generic;
 using VisualTreeAnalyzers.Snapshot;
-using VisualTreeAnalyzers.Tests.DemoVisualTrees;
+using VisualTreeAnalyzers.Tests.TestInfra.DemoVisualTrees;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media;
 
@@ -34,7 +34,7 @@ namespace VisualTreeAnalyzers.Tests.Snapshot
             var pageSnapshot = snapshotCreator.CreateSnapshot();
             Assert.AreEqual(testPropertyNames, pageSnapshot.PropertyNames);
             Assert.AreEqual("SimplePageName", pageSnapshot.ElementName);
-            Assert.AreEqual("VisualTreeAnalyzers.Tests.DemoVisualTrees.SimplePage", pageSnapshot.FullTypeName);
+            Assert.AreEqual("VisualTreeAnalyzers.Tests.TestInfra.DemoVisualTrees.SimplePage", pageSnapshot.FullTypeName);
             Assert.AreEqual(1, pageSnapshot.Children.Count);
 
             var gridSnapshot = pageSnapshot.Children[0];

@@ -56,3 +56,68 @@ var snapshotCreator = new ElementSnapshotCreator(properties, name);
 // Get snapshot
 var elementSnapshot = snapshotCreator.CreateSnapshot();
 ```
+
+### Exporting to other formats
+Snapshots can also be exported into others formats such as XML or YML using the exporters included in the [exporter namespace](xref:VisualTreeAnalyzers.Snapshot.Exporter).
+Below are getting started guides for the different exporters.
+#### Exporting to XML
+You can export snapshots to XML using the [XMLExporter](xref:VisualTreeAnalyzers.Snapshot.Exporter.XMLExporter). The XMLExporter supports exporting both as [XmlDocument](https://docs.microsoft.com/uwp/api/windows.data.xml.dom.xmldocument) and as formatted string. In both exporting formats, namespaces can be ommitted, null valued properties and empty values can be excluded.
+
+Below are examples on how to use the XMLExporter:
+
+
+```c#
+var element = new TextBlock()
+{
+    Text="Demo text",
+    Foreground = new SolidColorBrush(Colors.DarkGreen)
+};
+var snapshot = new ElementSnapshotCreator(StandardOptions.StandardPropertyNames, element).CreateSnapshot();
+var xmlExporter = new XMLExporter();
+
+var xmlDocument = xmlExporter.CreateXMLDocument(element, true, true); // Creates a new XmlDocument representation including null values and namespaces
+
+var stringWithNullAndNamespaces = xmlExporter.CreateFormattedXMLString(element, true, true);
+// stringWithNullAndNamespaces: <Windows.UI.Xaml.Controls.TextBlock Name="" Visibility="Visible" Margin="0,0,0,0" Padding="0,0,0,0" Background="[null]" BorderBrush="[null]" BorderThickness="[null]" Foreground="#FF006400" />
+
+var stringWithNonNullAndTypename = xmlExporter.CreateFormattedXMLString(element, false, false);
+// stringWithNonNullAndTypename: <TextBlock Name="" Visibility="Visible" Margin="0,0,0,0" Padding="0,0,0,0" Foreground="#FF006400" />
+```
+
+Depending on your usecase, it can be beneficial to exclude null values or the namespaces. As long as there are no type name collisions and there is no doubt what control names are referring to, namespaces can be excluded from the snapshot. The formatted string also indents childe elements, e.g. the following XAML will generate the output below:
+
+```xml
+<StackPanel BorderBrush="DarkGreen" BorderThickness="1">
+    <Button x:Name="MyButton1" Background="LightGray">
+        <TextBlock Text="Click me" Foreground="Black"/>
+    </Button>
+    <TextBlock x:Name="ExampleTextBlock" Text="Some text" Foreground="DarkGreen"/>
+</StackPanel>
+```
+
+Formatted string output with namespaces and null values:
+```xml
+<Windows.UI.Xaml.Controls.StackPanel Name="" Visibility="Visible" Margin="0,0,0,0" Padding="0,0,0,0" Background="[null]" BorderBrush="#FF006400" BorderThickness="1,1,1,1" Foreground="[null]">
+    <Windows.UI.Xaml.Controls.Button Name="MyButton1" Visibility="Visible" Margin="0,0,0,0" Padding="8,4,8,5" Background="#FFD3D3D3" BorderBrush="#00FFFFFF" BorderThickness="2,2,2,2" Foreground="#FFFFFFFF">
+    <Windows.UI.Xaml.Controls.ContentPresenter Name="ContentPresenter" Visibility="Visible" Margin="0,0,0,0" Padding="8,4,8,5" Background="#FFD3D3D3" BorderBrush="#00FFFFFF" BorderThickness="2,2,2,2" Foreground="#FFFFFFFF">
+        <Windows.UI.Xaml.Controls.TextBlock Name="" Visibility="Visible" Margin="0,0,0,0" Padding="0,0,0,0" Background="[null]" BorderBrush="[null]" BorderThickness="[null]" Foreground="#FF000000" />
+    </Windows.UI.Xaml.Controls.ContentPresenter>
+    </Windows.UI.Xaml.Controls.Button>
+    <Windows.UI.Xaml.Controls.TextBlock Name="ExampleTextBlock" Visibility="Visible" Margin="0,0,0,0" Padding="0,0,0,0" Background="[null]" BorderBrush="[null]" BorderThickness="[null]" Foreground="#FF006400" />
+</Windows.UI.Xaml.Controls.StackPanel>
+```
+
+Formatted string output without namespaces and excluding null values and empty strings:
+```xml
+<StackPanel Visibility="Visible" Margin="0,0,0,0" Padding="0,0,0,0" BorderBrush="#FF006400" BorderThickness="1,1,1,1">
+    <Button Name="MyButton1" Visibility="Visible" Margin="0,0,0,0" Padding="8,4,8,5" Background="#FFD3D3D3" BorderBrush="#00FFFFFF" BorderThickness="2,2,2,2" Foreground="#FFFFFFFF">
+    <ContentPresenter Name="ContentPresenter" Visibility="Visible" Margin="0,0,0,0" Padding="8,4,8,5" Background="#FFD3D3D3" BorderBrush="#00FFFFFF" BorderThickness="2,2,2,2" Foreground="#FFFFFFFF">
+        <TextBlock Visibility="Visible" Margin="0,0,0,0" Padding="0,0,0,0" Foreground="#FF000000" />
+    </ContentPresenter>
+    </Button>
+    <TextBlock Name="ExampleTextBlock" Visibility="Visible" Margin="0,0,0,0" Padding="0,0,0,0" Foreground="#FF006400" />
+</StackPanel>
+```
+
+The XMLExporter and other exporters allow the usage of [IObjectToStringConverter](xref:VisualTreeAnalyzers.Snapshot.Exporter.IObjectToStringConverter) objects to provide better string representation of property values.
+Unless specified otherwise, the [StandardObjectToStringConverter](xref:VisualTreeAnalyzers.Snapshot.Exporter.StandardObjectToStringConverter) will be used to provide better representations.

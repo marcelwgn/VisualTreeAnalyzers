@@ -1,7 +1,7 @@
 ﻿using VisualTreeAnalyzers.Core;
 using Windows.UI.Xaml;
 
-namespace VisualTreeAnalyzers.Tests.TestImplementations
+namespace VisualTreeAnalyzers.Tests.TestInfra.TestImplementations
 {
     class AnalyzeInvokeCountAnalyzer : IElementAnalyzer
     {

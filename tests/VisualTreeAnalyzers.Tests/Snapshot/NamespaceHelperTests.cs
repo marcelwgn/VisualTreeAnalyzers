@@ -13,7 +13,7 @@ namespace VisualTreeAnalyzers.Tests.Snapshot
         [DataRow("Windows.UI.Xaml.Controls.TextBlock", "Windows.UI.Xaml.Controls")]
         public void VerifyNamespaceExtraction(string fullName, string expectedNamespace)
         {
-            Assert.AreEqual(expectedNamespace, NamespaceHelper.GetNameSpace(fullName));
+            Assert.AreEqual(expectedNamespace, NamespaceHelper.GetNamespace(fullName));
         }
 
         [DataTestMethod]

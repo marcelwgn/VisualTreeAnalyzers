@@ -71,7 +71,7 @@ namespace VisualTreeAnalyzers.Tests.Snapshot.Exporter
         }
 
         [UITestMethod]
-        public void VerifySimplePageFormattedXMLExport()
+        public void VerifySimplePageFormattedXMLExportWithNamespaces()
         {
             App.Content = new SimplePage();
             var exporter = new XMLExporter(new StandardObjectToStringConverter());
@@ -80,6 +80,18 @@ namespace VisualTreeAnalyzers.Tests.Snapshot.Exporter
             var exportFormatted = exporter.CreateFormattedXMLString(snapshotCreator.CreateSnapshot(), false, true);
 
             Assert.IsTrue(exportFormatted.Contains("<Windows.UI.Xaml.Controls.Grid Name=\"RootGrid\" Visibility=\"Visible\""));
+        }
+
+        [UITestMethod]
+        public void VerifySimplePageFormattedXMLExportWithoutNamespaces()
+        {
+            App.Content = new SimplePage();
+            var exporter = new XMLExporter(new StandardObjectToStringConverter());
+            var snapshotCreator = new ElementSnapshotCreator(StandardOptions.StandardPropertyNames, App.Content);
+
+            var exportFormatted = exporter.CreateFormattedXMLString(snapshotCreator.CreateSnapshot(), false, false);
+
+            Assert.IsTrue(exportFormatted.Contains("  <Grid Name=\"RootGrid\" Visibility=\"Visible\""));
         }
     }
 }

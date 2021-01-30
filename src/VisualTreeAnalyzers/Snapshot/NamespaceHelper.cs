@@ -12,7 +12,7 @@ namespace VisualTreeAnalyzers.Snapshot
         /// </summary>
         /// <param name="fullTypeName">The full typename.</param>
         /// <returns>The namespace of the type or an empty string if there was no namespace.</returns>
-        public static string GetNameSpace(string fullTypeName)
+        public static string GetNamespace(string fullTypeName)
         {
             if (fullTypeName is null) throw new ArgumentNullException(nameof(fullTypeName));
             int splitIndex = fullTypeName.LastIndexOf(".", StringComparison.Ordinal);

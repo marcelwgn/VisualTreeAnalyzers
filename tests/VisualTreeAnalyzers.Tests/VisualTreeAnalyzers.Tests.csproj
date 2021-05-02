@@ -134,7 +134,8 @@
     <Compile Include="Accessibility\Rules\SingleSelectionRuleTests.cs" />
     <Compile Include="Core\AnalyzerHelperTests.cs" />
     <Compile Include="Core\VisualTreeWalkerTimerTests.cs" />
-    <Compile Include="Snapshot\Exporter\XMLExporterTests.cs" />
+    <Compile Include="Snapshot\Exporter\JsonExporterTests.cs" />
+    <Compile Include="Snapshot\Exporter\XmlExporterTests.cs" />
     <Compile Include="Snapshot\NamespaceHelperTests.cs" />
     <Compile Include="TestInfra\DemoVisualTrees\BreadthFirsSearchTestTree.xaml.cs">
       <DependentUpon>BreadthFirsSearchTestTree.xaml</DependentUpon>

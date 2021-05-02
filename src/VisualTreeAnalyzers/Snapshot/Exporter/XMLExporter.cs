@@ -9,26 +9,26 @@ namespace VisualTreeAnalyzers.Snapshot.Exporter
     /// Allows usage of <see cref="IObjectToStringConverter"/> objects to improve output.
     /// Also allows excluding null values from the XML output.
     /// </summary>
-    public sealed class XMLExporter
+    public sealed class XmlExporter
     {
         private IObjectToStringConverter ObjectToStringConverter { get; }
 
         /// <summary>
-        /// Creates a new <see cref="XMLExporter"/> object which will export all properties and use the <see cref="StandardObjectToStringConverter"/> for string representations.
+        /// Creates a new <see cref="XmlExporter"/> object which will export all properties and use the <see cref="StandardObjectToStringConverter"/> for string representations.
         /// </summary>
-        public XMLExporter() : this(new StandardObjectToStringConverter()) { }
+        public XmlExporter() : this(new StandardObjectToStringConverter()) { }
 
         /// <summary>
-        /// Creates a new <see cref="XMLExporter"/> object with the given parameters.
+        /// Creates a new <see cref="XmlExporter"/> object with the given parameters.
         /// </summary>
         /// <param name="converter">The converter to use for object string representation calculation. If none is specified, ToString will be returned.</param>
-        public XMLExporter(IObjectToStringConverter converter)
+        public XmlExporter(IObjectToStringConverter converter)
         {
             ObjectToStringConverter = converter;
         }
 
         /// <summary>
-        /// Creates an <see cref="XmlDocument"/> represengint the provided snapshot.
+        /// Creates an <see cref="XmlDocument"/> representing the provided snapshot.
         /// </summary>
         /// <param name="snapshot">The snapshot to convert to XML.</param>
         /// <param name="indluceNullAndEmptyValues">Indicates whether null values should be included in the export or not. Set to true to include null values.</param>
@@ -43,7 +43,7 @@ namespace VisualTreeAnalyzers.Snapshot.Exporter
         }
 
         /// <summary>
-        /// Creates an <see cref="XmlDocument"/> represengint the provided snapshot.
+        /// Creates an <see cref="XmlDocument"/> representing the provided snapshot.
         /// </summary>
         /// <param name="snapshot">The snapshot to convert to a formatted XML string.</param>
         /// <param name="indluceNullAndEmptyValues">Indicates whether null values should be included in the export or not. Set to true to include null values.</param>

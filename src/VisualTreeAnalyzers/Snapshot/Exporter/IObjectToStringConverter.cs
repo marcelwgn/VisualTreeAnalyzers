@@ -9,7 +9,7 @@
         /// Gets a string representation of the object that can be used to present the object.
         /// </summary>
         /// <param name="obj">The object to get a presentation of.</param>
-        /// <returns>The string representaiton</returns>
+        /// <returns>The string representation</returns>
         string GetStringRepresentation(object obj);
     }
 }

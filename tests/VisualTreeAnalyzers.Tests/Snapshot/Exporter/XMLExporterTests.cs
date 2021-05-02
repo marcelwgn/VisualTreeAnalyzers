@@ -10,13 +10,13 @@ using Windows.UI.Xaml.Media;
 namespace VisualTreeAnalyzers.Tests.Snapshot.Exporter
 {
     [TestClass]
-    public class XMLExporterTests
+    public class XmlExporterTests
     {
         [UITestMethod]
         public void VerifySingleWUXCControlIsCorrectDefaultOptions()
         {
             App.Content = new TextBlock() { Text = "Some text", Foreground = new SolidColorBrush(Colors.DarkGreen) };
-            var exporter = new XMLExporter();
+            var exporter = new XmlExporter();
             var snapshotCreator = new ElementSnapshotCreator(StandardOptions.StandardPropertyNames, App.Content);
 
             var export = exporter.CreateXMLDocument(snapshotCreator.CreateSnapshot(), true, false);
@@ -37,7 +37,7 @@ namespace VisualTreeAnalyzers.Tests.Snapshot.Exporter
         public void VerifySingleWUXCControlIsCorrectNoConverterNoNullValues()
         {
             App.Content = new TextBlock() { Text = "Some text", Foreground = new SolidColorBrush(Colors.DarkGreen) };
-            var exporter = new XMLExporter(null);
+            var exporter = new XmlExporter(null);
             var snapshotCreator = new ElementSnapshotCreator(StandardOptions.StandardPropertyNames, App.Content);
 
             var export = exporter.CreateXMLDocument(snapshotCreator.CreateSnapshot(), false, true);
@@ -58,7 +58,7 @@ namespace VisualTreeAnalyzers.Tests.Snapshot.Exporter
         public void VerifySinglePageXMLExport()
         {
             App.Content = new SimplePage();
-            var exporter = new XMLExporter(new StandardObjectToStringConverter());
+            var exporter = new XmlExporter(new StandardObjectToStringConverter());
             var snapshotCreator = new ElementSnapshotCreator(StandardOptions.StandardPropertyNames, App.Content);
 
             var export = exporter.CreateXMLDocument(snapshotCreator.CreateSnapshot(), false, true);
@@ -74,7 +74,7 @@ namespace VisualTreeAnalyzers.Tests.Snapshot.Exporter
         public void VerifySimplePageFormattedXMLExportWithNamespaces()
         {
             App.Content = new SimplePage();
-            var exporter = new XMLExporter(new StandardObjectToStringConverter());
+            var exporter = new XmlExporter(new StandardObjectToStringConverter());
             var snapshotCreator = new ElementSnapshotCreator(StandardOptions.StandardPropertyNames, App.Content);
 
             var exportFormatted = exporter.CreateFormattedXMLString(snapshotCreator.CreateSnapshot(), false, true);
@@ -86,7 +86,7 @@ namespace VisualTreeAnalyzers.Tests.Snapshot.Exporter
         public void VerifySimplePageFormattedXMLExportWithoutNamespaces()
         {
             App.Content = new SimplePage();
-            var exporter = new XMLExporter(new StandardObjectToStringConverter());
+            var exporter = new XmlExporter(new StandardObjectToStringConverter());
             var snapshotCreator = new ElementSnapshotCreator(StandardOptions.StandardPropertyNames, App.Content);
 
             var exportFormatted = exporter.CreateFormattedXMLString(snapshotCreator.CreateSnapshot(), false, false);

@@ -17,6 +17,8 @@
             <muxc:NavigationView.MenuItems>
                 <muxc:NavigationViewItem x:Name="AccessibilityPageItem" 
                         IsSelected="True" Content="Accessiblity demo"/>
+                <muxc:NavigationViewItem x:Name="SnapshotDemoPageItem" 
+                        Content="VisualTree Snapshot demo"/>
             </muxc:NavigationView.MenuItems>
 
             <Frame x:Name="NavigationFrame"/>

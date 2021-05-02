@@ -31,9 +31,12 @@ namespace AnalyzersSampleApp
 
         private void MainNavigation_ItemInvoked(Microsoft.UI.Xaml.Controls.NavigationView _, Microsoft.UI.Xaml.Controls.NavigationViewItemInvokedEventArgs args)
         {
-            if(args.InvokedItem == AccessibilityPageItem)
+            if(args.InvokedItemContainer == AccessibilityPageItem)
             {
                 NavigationFrame.Navigate(typeof(AccessibilityDemoPage));
+            }else if(args.InvokedItemContainer == SnapshotDemoPageItem)
+            {
+                NavigationFrame.Navigate(typeof(VisualTreeSnapshotDemoPage));
             }
         }
     }

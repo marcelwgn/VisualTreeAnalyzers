@@ -128,6 +128,9 @@
     <Compile Include="Pages\AccessibilityDemoPage.xaml.cs">
       <DependentUpon>AccessibilityDemoPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\VisualTreeSnapshotDemoPage.xaml.cs">
+      <DependentUpon>VisualTreeSnapshotDemoPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -157,6 +160,10 @@
     <Page Include="Pages\AccessibilityDemoPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\VisualTreeSnapshotDemoPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>

@@ -143,8 +143,10 @@
     <Compile Include="Snapshot\ElementSnapshot.cs" />
     <Compile Include="Snapshot\ElementSnapshotCreator.cs" />
     <Compile Include="Snapshot\Exporter\IObjectToStringConverter.cs" />
+    <Compile Include="Snapshot\Exporter\JsonExporter.cs" />
+    <Compile Include="Snapshot\Exporter\JsonHelper.cs" />
     <Compile Include="Snapshot\Exporter\StandardObjectToStringConverter.cs" />
-    <Compile Include="Snapshot\Exporter\XMLExporter.cs" />
+    <Compile Include="Snapshot\Exporter\XmlExporter.cs" />
     <Compile Include="Snapshot\IElementSnapshot.cs" />
     <Compile Include="Snapshot\IElementSnapshotCreator.cs" />
     <Compile Include="Snapshot\NamespaceHelper.cs" />

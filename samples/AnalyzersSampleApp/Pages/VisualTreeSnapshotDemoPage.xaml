@@ -1,0 +1,100 @@
+﻿<Page
+    x:Class="AnalyzersSampleApp.Pages.VisualTreeSnapshotDemoPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:AnalyzersSampleApp.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+        <Grid Padding="20" VerticalAlignment="Stretch">
+            <Grid.Resources>
+                <Style TargetType="StackPanel">
+                    <Setter Property="Spacing" Value="5"/>
+                </Style>
+                <Style x:Key="SubHeaderTextStyle" TargetType="TextBlock">
+                    <Setter Property="Margin" Value="0,10,0,0"/>
+                    <Setter Property="FontSize" Value="18"/>
+                    <Setter Property="FontWeight" Value="Light"/>
+                </Style>
+            </Grid.Resources>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- First row -->
+            <StackPanel>
+                <TextBlock Text="VisualTree Snapshots" Style="{ThemeResource HeaderTextBlockStyle}"/>
+                <RichTextBlock Grid.ColumnSpan="2">
+                    <Paragraph>Below are some sample controls and the XAML used to create those controls. Underneath that, you will see the exported XML snapshot and the exported JSON export.</Paragraph>
+                    <Paragraph>For the exports below, the default exporters and properties were used. To learn more about the customizations options, feel free to view the online documentation
+                        <Hyperlink NavigateUri="https://google.com">here</Hyperlink> .
+                    </Paragraph>
+                </RichTextBlock>
+
+            </StackPanel>
+
+            <!-- Second row -->
+            <StackPanel Grid.Row="1">
+                <TextBlock Text="Sample Controls" Style="{StaticResource SubHeaderTextStyle}"/>
+                <StackPanel x:Name="SampleControlsPanel" Padding="5"
+                    BorderThickness="1" BorderBrush="{ThemeResource SystemControlDisabledChromeDisabledHighBrush}">
+                <StackPanel BorderBrush="DarkGreen" BorderThickness="1">
+                    <Button x:Name="MyButton1" Background="LightGray">
+                        <TextBlock Text="Click me" Foreground="Black"/>
+                    </Button>
+                    <TextBlock x:Name="ExampleTextBlock" Text="Some text" Foreground="DarkGreen"/>
+                </StackPanel>
+            </StackPanel>
+            </StackPanel>
+
+            <StackPanel Grid.Row="1" Grid.Column="1">
+                <TextBlock Text="Source code" Style="{StaticResource SubHeaderTextStyle}"/>
+                <ScrollViewer>
+                    <TextBlock>
+                        <TextBlock.Text>
+                            <x:String xml:space="preserve">&lt;StackPanel x:Name="SampleControlsPanel" Padding="5"
+       BorderThickness="1" BorderBrush="{ThemeResource SystemControlDisabledChromeDisabledHighBrush}"&gt;
+    &lt;Button x:Name="MyButton" Content="Click me"/&gt;
+    &lt;muxc:NumberBox Header="Enter a number"/&gt;
+    &lt;TextBlock Text="Here is some text" Foreground="{ThemeResource SystemAccentColor}"/&gt;
+&lt;/StackPanel&gt;
+</x:String>
+                        </TextBlock.Text>
+                    </TextBlock>
+                </ScrollViewer>
+            </StackPanel>
+
+            <!-- Row 2 -->
+            <StackPanel Grid.Row="2" Grid.ColumnSpan="2" Orientation="Horizontal">
+                <CheckBox x:Name="ShowNullAndEmptyValuesCheckbox" Content="Export null and empty values" IsChecked="False"/>
+                <CheckBox x:Name="IncludeNamespacesCheckbox" Content="Include namespaces in exports" IsChecked="False"/>
+                <Button Content="Update snapshots" Click="UpdateSnapshots_Click"/>
+            </StackPanel>
+
+            <!-- Row 3 -->
+            <TextBlock Grid.Row="3" Text="XML export" Style="{StaticResource SubHeaderTextStyle}"/>
+            <TextBlock Grid.Row="3" Grid.Column="1" Text="JSON export" Style="{StaticResource SubHeaderTextStyle}"/>
+
+            
+            <ScrollViewer Grid.Row="4" HorizontalAlignment="Stretch"
+                VerticalScrollBarVisibility="Auto" VerticalScrollMode="Enabled">
+                <TextBlock x:Name="XMLExportTextBlock" FontFamily="Consolas" IsTextSelectionEnabled="True"/>
+            </ScrollViewer>
+
+            <ScrollViewer Grid.Row="4" Grid.Column="1">
+                    <TextBlock x:Name="JSONExportTextBlock" FontFamily="Consolas" IsTextSelectionEnabled="True"/>
+            </ScrollViewer>
+        </Grid>
+</Page>

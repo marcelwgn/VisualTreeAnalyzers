@@ -1,0 +1,65 @@
+﻿<Page
+    x:Class="VisualTreeAnalyzers.Tests.TestInfra.DemoVisualTrees.BreadthFirsSearchTestTree"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Tag="0"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <StackPanel Tag="1">
+        <StackPanel Tag="2">
+            <StackPanel Tag="11">
+                <StackPanel Tag="20">
+                    <StackPanel Tag="24">
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Tag="3">
+            <StackPanel Tag="12">
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Tag="4">
+            <StackPanel Tag="13">
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Tag="5">
+            <StackPanel Tag="14">
+                <StackPanel Tag="21">
+                    <StackPanel Tag="25">
+                        <StackPanel Tag="26">
+                            <StackPanel Tag="27">
+                            </StackPanel>
+                        </StackPanel>
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Tag="6">
+            <StackPanel Tag="15">
+                <StackPanel Tag="22">
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Tag="7">
+            <StackPanel Tag="16">
+                <StackPanel Tag="23">
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Tag="8">
+            <StackPanel Tag="17">
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Tag="9">
+            <StackPanel Tag="18">
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Tag="10">
+            <StackPanel Tag="19">
+            </StackPanel>
+        </StackPanel>
+    </StackPanel>
+</Page>

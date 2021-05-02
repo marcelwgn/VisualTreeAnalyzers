@@ -3,3 +3,5 @@ items:
     href: ../../../../docs/get-started.md
   - name: Extending analyzers
     href: ../../../../docs/extending-analyzers.md
+  - name: Snapshot testing
+    href: ../../../../docs/snapshot-testing.md

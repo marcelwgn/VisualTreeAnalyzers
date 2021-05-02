@@ -1,0 +1,239 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Interface IElementSnapshotCreator
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Interface IElementSnapshotCreator
+   ">
+    <meta name="generator" content="docfx 2.56.6.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="VisualTreeAnalyzers.Snapshot.IElementSnapshotCreator">
+  
+  
+  <h1 id="VisualTreeAnalyzers_Snapshot_IElementSnapshotCreator" data-uid="VisualTreeAnalyzers.Snapshot.IElementSnapshotCreator" class="text-break">Interface IElementSnapshotCreator
+  </h1>
+  <div class="markdown level0 summary"><p>Interface defining the default information for an element snapshot creator.</p>
+<p>Element snapshot creators define a list of properties to save in every snapshot and an optional element that can be used as the visual tree element for snapshot creation.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="VisualTreeAnalyzers.Snapshot.html">VisualTreeAnalyzers.Snapshot</a></h6>
+  <h6><strong>Assembly</strong>: VisualTreeAnalyzers.dll</h6>
+  <h5 id="VisualTreeAnalyzers_Snapshot_IElementSnapshotCreator_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IElementSnapshotCreator</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <a id="VisualTreeAnalyzers_Snapshot_IElementSnapshotCreator_Element_" data-uid="VisualTreeAnalyzers.Snapshot.IElementSnapshotCreator.Element*"></a>
+  <h4 id="VisualTreeAnalyzers_Snapshot_IElementSnapshotCreator_Element" data-uid="VisualTreeAnalyzers.Snapshot.IElementSnapshotCreator.Element">Element</h4>
+  <div class="markdown level1 summary"><p>The element whose snapshot will be created and returned when calling <a class="xref" href="VisualTreeAnalyzers.Snapshot.IElementSnapshotCreator.html#VisualTreeAnalyzers_Snapshot_IElementSnapshotCreator_CreateSnapshot">CreateSnapshot()</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">DependencyObject Element { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Windows.UI.Xaml.DependencyObject</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="VisualTreeAnalyzers_Snapshot_IElementSnapshotCreator_PropertyNames_" data-uid="VisualTreeAnalyzers.Snapshot.IElementSnapshotCreator.PropertyNames*"></a>
+  <h4 id="VisualTreeAnalyzers_Snapshot_IElementSnapshotCreator_PropertyNames" data-uid="VisualTreeAnalyzers.Snapshot.IElementSnapshotCreator.PropertyNames">PropertyNames</h4>
+  <div class="markdown level1 summary"><p>The list of properties that will be saved in the snapshot.
+Note that the properties will be accessed using reflection and as such need to match the actual properties on the objects.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IList&lt;string&gt; PropertyNames { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <a id="VisualTreeAnalyzers_Snapshot_IElementSnapshotCreator_CreateSnapshot_" data-uid="VisualTreeAnalyzers.Snapshot.IElementSnapshotCreator.CreateSnapshot*"></a>
+  <h4 id="VisualTreeAnalyzers_Snapshot_IElementSnapshotCreator_CreateSnapshot" data-uid="VisualTreeAnalyzers.Snapshot.IElementSnapshotCreator.CreateSnapshot">CreateSnapshot()</h4>
+  <div class="markdown level1 summary"><p>Creates a snapshot of this elements <a class="xref" href="VisualTreeAnalyzers.Snapshot.IElementSnapshotCreator.html#VisualTreeAnalyzers_Snapshot_IElementSnapshotCreator_Element">Element</a> object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IElementSnapshot CreateSnapshot()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="VisualTreeAnalyzers.Snapshot.IElementSnapshot.html">IElementSnapshot</a></td>
+        <td><p>The snapshot of <a class="xref" href="VisualTreeAnalyzers.Snapshot.IElementSnapshotCreator.html#VisualTreeAnalyzers_Snapshot_IElementSnapshotCreator_Element">Element</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="VisualTreeAnalyzers_Snapshot_IElementSnapshotCreator_CreateSnapshot_" data-uid="VisualTreeAnalyzers.Snapshot.IElementSnapshotCreator.CreateSnapshot*"></a>
+  <h4 id="VisualTreeAnalyzers_Snapshot_IElementSnapshotCreator_CreateSnapshot_Windows_UI_Xaml_DependencyObject_" data-uid="VisualTreeAnalyzers.Snapshot.IElementSnapshotCreator.CreateSnapshot(Windows.UI.Xaml.DependencyObject)">CreateSnapshot(DependencyObject)</h4>
+  <div class="markdown level1 summary"><p>Creates the snapshot of the element passed to this function.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IElementSnapshot CreateSnapshot(DependencyObject element)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Windows.UI.Xaml.DependencyObject</span></td>
+        <td><span class="parametername">element</span></td>
+        <td><p>The element whose snapshot will be created.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="VisualTreeAnalyzers.Snapshot.IElementSnapshot.html">IElementSnapshot</a></td>
+        <td><p>The snapshot of the object passed to this function.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <a href="https://github.com/chingucoding/VisualTreeAnalyzers">VisualTreeAnalyzers on GitHub</a>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

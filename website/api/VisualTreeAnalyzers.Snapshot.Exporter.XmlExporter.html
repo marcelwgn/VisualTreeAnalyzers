@@ -1,0 +1,298 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class XmlExporter
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class XmlExporter
+   ">
+    <meta name="generator" content="docfx 2.56.6.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="VisualTreeAnalyzers.Snapshot.Exporter.XmlExporter">
+  
+  
+  <h1 id="VisualTreeAnalyzers_Snapshot_Exporter_XmlExporter" data-uid="VisualTreeAnalyzers.Snapshot.Exporter.XmlExporter" class="text-break">Class XmlExporter
+  </h1>
+  <div class="markdown level0 summary"><p>Converter that allows creating a XML representation of <a class="xref" href="VisualTreeAnalyzers.Snapshot.IElementSnapshot.html">IElementSnapshot</a> objects.
+Allows usage of <a class="xref" href="VisualTreeAnalyzers.Snapshot.Exporter.IObjectToStringConverter.html">IObjectToStringConverter</a> objects to improve output.
+Also allows excluding null values from the XML output.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">XmlExporter</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="VisualTreeAnalyzers.Snapshot.Exporter.html">VisualTreeAnalyzers.Snapshot.Exporter</a></h6>
+  <h6><strong>Assembly</strong>: VisualTreeAnalyzers.dll</h6>
+  <h5 id="VisualTreeAnalyzers_Snapshot_Exporter_XmlExporter_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class XmlExporter</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <a id="VisualTreeAnalyzers_Snapshot_Exporter_XmlExporter__ctor_" data-uid="VisualTreeAnalyzers.Snapshot.Exporter.XmlExporter.#ctor*"></a>
+  <h4 id="VisualTreeAnalyzers_Snapshot_Exporter_XmlExporter__ctor" data-uid="VisualTreeAnalyzers.Snapshot.Exporter.XmlExporter.#ctor">XmlExporter()</h4>
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="VisualTreeAnalyzers.Snapshot.Exporter.XmlExporter.html">XmlExporter</a> object which will export all properties and use the <a class="xref" href="VisualTreeAnalyzers.Snapshot.Exporter.StandardObjectToStringConverter.html">StandardObjectToStringConverter</a> for string representations.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public XmlExporter()</code></pre>
+  </div>
+  <a id="VisualTreeAnalyzers_Snapshot_Exporter_XmlExporter__ctor_" data-uid="VisualTreeAnalyzers.Snapshot.Exporter.XmlExporter.#ctor*"></a>
+  <h4 id="VisualTreeAnalyzers_Snapshot_Exporter_XmlExporter__ctor_VisualTreeAnalyzers_Snapshot_Exporter_IObjectToStringConverter_" data-uid="VisualTreeAnalyzers.Snapshot.Exporter.XmlExporter.#ctor(VisualTreeAnalyzers.Snapshot.Exporter.IObjectToStringConverter)">XmlExporter(IObjectToStringConverter)</h4>
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="VisualTreeAnalyzers.Snapshot.Exporter.XmlExporter.html">XmlExporter</a> object with the given parameters.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public XmlExporter(IObjectToStringConverter converter)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="VisualTreeAnalyzers.Snapshot.Exporter.IObjectToStringConverter.html">IObjectToStringConverter</a></td>
+        <td><span class="parametername">converter</span></td>
+        <td><p>The converter to use for object string representation calculation. If none is specified, ToString will be returned.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <a id="VisualTreeAnalyzers_Snapshot_Exporter_XmlExporter_CreateFormattedXMLString_" data-uid="VisualTreeAnalyzers.Snapshot.Exporter.XmlExporter.CreateFormattedXMLString*"></a>
+  <h4 id="VisualTreeAnalyzers_Snapshot_Exporter_XmlExporter_CreateFormattedXMLString_VisualTreeAnalyzers_Snapshot_IElementSnapshot_System_Boolean_System_Boolean_" data-uid="VisualTreeAnalyzers.Snapshot.Exporter.XmlExporter.CreateFormattedXMLString(VisualTreeAnalyzers.Snapshot.IElementSnapshot,System.Boolean,System.Boolean)">CreateFormattedXMLString(IElementSnapshot, Boolean, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Creates an <span class="xref">Windows.Data.Xml.Dom.XmlDocument</span> representing the provided snapshot.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string CreateFormattedXMLString(IElementSnapshot snapshot, bool indluceNullAndEmptyValues, bool includeNameSpaces)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="VisualTreeAnalyzers.Snapshot.IElementSnapshot.html">IElementSnapshot</a></td>
+        <td><span class="parametername">snapshot</span></td>
+        <td><p>The snapshot to convert to a formatted XML string.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">indluceNullAndEmptyValues</span></td>
+        <td><p>Indicates whether null values should be included in the export or not. Set to true to include null values.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">includeNameSpaces</span></td>
+        <td><p>Determines whether the full namespace of an element will be included or not. Set to false to only include the type name but not the namespace.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>The formatted XML string representation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="VisualTreeAnalyzers_Snapshot_Exporter_XmlExporter_CreateXMLDocument_" data-uid="VisualTreeAnalyzers.Snapshot.Exporter.XmlExporter.CreateXMLDocument*"></a>
+  <h4 id="VisualTreeAnalyzers_Snapshot_Exporter_XmlExporter_CreateXMLDocument_VisualTreeAnalyzers_Snapshot_IElementSnapshot_System_Boolean_System_Boolean_" data-uid="VisualTreeAnalyzers.Snapshot.Exporter.XmlExporter.CreateXMLDocument(VisualTreeAnalyzers.Snapshot.IElementSnapshot,System.Boolean,System.Boolean)">CreateXMLDocument(IElementSnapshot, Boolean, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Creates an <span class="xref">Windows.Data.Xml.Dom.XmlDocument</span> representing the provided snapshot.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public XmlDocument CreateXMLDocument(IElementSnapshot snapshot, bool indluceNullAndEmptyValues, bool includeNameSpaces)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="VisualTreeAnalyzers.Snapshot.IElementSnapshot.html">IElementSnapshot</a></td>
+        <td><span class="parametername">snapshot</span></td>
+        <td><p>The snapshot to convert to XML.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">indluceNullAndEmptyValues</span></td>
+        <td><p>Indicates whether null values should be included in the export or not. Set to true to include null values.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">includeNameSpaces</span></td>
+        <td><p>Determines whether the full namespace of an element will be included or not. Set to false to only include the type name but not the namespace.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Windows.Data.Xml.Dom.XmlDocument</span></td>
+        <td><p>The <span class="xref">Windows.Data.Xml.Dom.XmlDocument</span> representation of the object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <a href="https://github.com/chingucoding/VisualTreeAnalyzers">VisualTreeAnalyzers on GitHub</a>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

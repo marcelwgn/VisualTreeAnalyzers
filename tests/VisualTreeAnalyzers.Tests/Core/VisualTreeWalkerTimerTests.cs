@@ -1,8 +1,8 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.VisualStudio.TestTools.UnitTesting.Logging;
 using VisualTreeAnalyzers.Core;
-using VisualTreeAnalyzers.Tests.TestImplementations;
-using VisualTreeAnalyzers.Tests.Utils;
+using VisualTreeAnalyzers.Tests.TestInfra.TestImplementations;
+using VisualTreeAnalyzers.Tests.TestInfra.Utils;
 using Windows.UI.Xaml.Controls;
 
 namespace VisualTreeAnalyzers.Tests.Core

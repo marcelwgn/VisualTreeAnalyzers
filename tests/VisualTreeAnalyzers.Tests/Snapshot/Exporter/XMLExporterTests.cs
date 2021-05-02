@@ -71,27 +71,62 @@ namespace VisualTreeAnalyzers.Tests.Snapshot.Exporter
         }
 
         [UITestMethod]
-        public void VerifySimplePageFormattedXMLExportWithNamespaces()
+        public void VerifyButtonFormattedXMLExportWithNamespaces()
         {
-            App.Content = new SimplePage();
+            App.Content = new Button()
+            {
+                RequestedTheme = Windows.UI.Xaml.ElementTheme.Light
+            };
             var exporter = new XmlExporter(new StandardObjectToStringConverter());
             var snapshotCreator = new ElementSnapshotCreator(StandardOptions.StandardPropertyNames, App.Content);
 
             var exportFormatted = exporter.CreateFormattedXMLString(snapshotCreator.CreateSnapshot(), false, true);
 
-            Assert.IsTrue(exportFormatted.Contains("<Windows.UI.Xaml.Controls.Grid Name=\"RootGrid\" Visibility=\"Visible\""));
+            var expected =
+@"<Windows.UI.Xaml.Controls.Button Visibility=""Visible"" Margin=""0,0,0,0"" Padding=""8,4,8,5"" Background=""#33000000"" BorderBrush=""#00FFFFFF"" BorderThickness=""2,2,2,2"" Foreground=""#FF000000"">
+  <Windows.UI.Xaml.Controls.ContentPresenter Name=""ContentPresenter"" Visibility=""Visible"" Margin=""0,0,0,0"" Padding=""8,4,8,5"" Background=""#33000000"" BorderBrush=""#00FFFFFF"" BorderThickness=""2,2,2,2"" Foreground=""#FF000000"" />
+</Windows.UI.Xaml.Controls.Button>";
+            Assert.AreEqual(expected, exportFormatted);
         }
 
         [UITestMethod]
-        public void VerifySimplePageFormattedXMLExportWithoutNamespaces()
+        public void VerifyButtonFormattedXMLExportWithoutNamespaces()
         {
-            App.Content = new SimplePage();
+            App.Content = new Button()
+            {
+                RequestedTheme = Windows.UI.Xaml.ElementTheme.Light
+            };
             var exporter = new XmlExporter(new StandardObjectToStringConverter());
             var snapshotCreator = new ElementSnapshotCreator(StandardOptions.StandardPropertyNames, App.Content);
 
             var exportFormatted = exporter.CreateFormattedXMLString(snapshotCreator.CreateSnapshot(), false, false);
 
-            Assert.IsTrue(exportFormatted.Contains("  <Grid Name=\"RootGrid\" Visibility=\"Visible\""));
+            var expected =
+@"<Button Visibility=""Visible"" Margin=""0,0,0,0"" Padding=""8,4,8,5"" Background=""#33000000"" BorderBrush=""#00FFFFFF"" BorderThickness=""2,2,2,2"" Foreground=""#FF000000"">
+  <ContentPresenter Name=""ContentPresenter"" Visibility=""Visible"" Margin=""0,0,0,0"" Padding=""8,4,8,5"" Background=""#33000000"" BorderBrush=""#00FFFFFF"" BorderThickness=""2,2,2,2"" Foreground=""#FF000000"" />
+</Button>";
+
+            Assert.AreEqual(expected, exportFormatted);
+        }
+
+        [UITestMethod]
+        public void VerifyButtonFormattedXMLExportWithoutNamespacesWithNullValues()
+        {
+            App.Content = new Button()
+            {
+                RequestedTheme = Windows.UI.Xaml.ElementTheme.Light
+            };
+            var exporter = new XmlExporter(new StandardObjectToStringConverter());
+            var snapshotCreator = new ElementSnapshotCreator(StandardOptions.StandardPropertyNames, App.Content);
+
+            var exportFormatted = exporter.CreateFormattedXMLString(snapshotCreator.CreateSnapshot(), true, false);
+
+            var expected =
+@"<Button Name="""" Visibility=""Visible"" Margin=""0,0,0,0"" Padding=""8,4,8,5"" Background=""#33000000"" BorderBrush=""#00FFFFFF"" BorderThickness=""2,2,2,2"" Foreground=""#FF000000"">
+  <ContentPresenter Name=""ContentPresenter"" Visibility=""Visible"" Margin=""0,0,0,0"" Padding=""8,4,8,5"" Background=""#33000000"" BorderBrush=""#00FFFFFF"" BorderThickness=""2,2,2,2"" Foreground=""#FF000000"" />
+</Button>";
+
+            Assert.AreEqual(expected, exportFormatted);
         }
     }
 }

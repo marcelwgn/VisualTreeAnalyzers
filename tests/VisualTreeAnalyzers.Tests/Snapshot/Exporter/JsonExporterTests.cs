@@ -76,7 +76,9 @@ namespace VisualTreeAnalyzers.Tests.Snapshot.Exporter
         [UITestMethod]
         public void VerifyButtonFormattedJSONExportWithNamespaces()
         {
-            App.Content = new Button();
+            App.Content = new Button() { 
+                RequestedTheme = Windows.UI.Xaml.ElementTheme.Light
+            };
             var exporter = new JsonExporter(new StandardObjectToStringConverter());
             var snapshotCreator = new ElementSnapshotCreator(StandardOptions.StandardPropertyNames, App.Content);
 
@@ -88,10 +90,10 @@ namespace VisualTreeAnalyzers.Tests.Snapshot.Exporter
     ""Visibility"": ""Visible"",
     ""Margin"": ""0,0,0,0"",
     ""Padding"": ""8,4,8,5"",
-    ""Background"": ""#33FFFFFF"",
+    ""Background"": ""#33000000"",
     ""BorderBrush"": ""#00FFFFFF"",
     ""BorderThickness"": ""2,2,2,2"",
-    ""Foreground"": ""#FFFFFFFF"",
+    ""Foreground"": ""#FF000000"",
     ""children"": [
         {
             ""type"": ""Windows.UI.Xaml.Controls.ContentPresenter"",
@@ -99,10 +101,10 @@ namespace VisualTreeAnalyzers.Tests.Snapshot.Exporter
             ""Visibility"": ""Visible"",
             ""Margin"": ""0,0,0,0"",
             ""Padding"": ""8,4,8,5"",
-            ""Background"": ""#33FFFFFF"",
+            ""Background"": ""#33000000"",
             ""BorderBrush"": ""#00FFFFFF"",
             ""BorderThickness"": ""2,2,2,2"",
-            ""Foreground"": ""#FFFFFFFF"",
+            ""Foreground"": ""#FF000000"",
             ""children"": []
         }
     ]
@@ -113,7 +115,10 @@ namespace VisualTreeAnalyzers.Tests.Snapshot.Exporter
         [UITestMethod]
         public void VerifyButtonFormattedJSONExportWithoutNamespaces()
         {
-            App.Content = new Button();
+            App.Content = new Button()
+            {
+                RequestedTheme = Windows.UI.Xaml.ElementTheme.Light
+            };
             var exporter = new JsonExporter(new StandardObjectToStringConverter());
             var snapshotCreator = new ElementSnapshotCreator(StandardOptions.StandardPropertyNames, App.Content);
 
@@ -125,10 +130,10 @@ namespace VisualTreeAnalyzers.Tests.Snapshot.Exporter
     ""Visibility"": ""Visible"",
     ""Margin"": ""0,0,0,0"",
     ""Padding"": ""8,4,8,5"",
-    ""Background"": ""#33FFFFFF"",
+    ""Background"": ""#33000000"",
     ""BorderBrush"": ""#00FFFFFF"",
     ""BorderThickness"": ""2,2,2,2"",
-    ""Foreground"": ""#FFFFFFFF"",
+    ""Foreground"": ""#FF000000"",
     ""children"": [
         {
             ""type"": ""ContentPresenter"",
@@ -136,10 +141,52 @@ namespace VisualTreeAnalyzers.Tests.Snapshot.Exporter
             ""Visibility"": ""Visible"",
             ""Margin"": ""0,0,0,0"",
             ""Padding"": ""8,4,8,5"",
-            ""Background"": ""#33FFFFFF"",
+            ""Background"": ""#33000000"",
             ""BorderBrush"": ""#00FFFFFF"",
             ""BorderThickness"": ""2,2,2,2"",
-            ""Foreground"": ""#FFFFFFFF"",
+            ""Foreground"": ""#FF000000"",
+            ""children"": []
+        }
+    ]
+}";
+
+            Assert.AreEqual(expected, exportFormatted);
+        }
+
+        [UITestMethod]
+        public void VerifyButtonFormattedJSONExportWithoutNamespacesWithNullValues()
+        {
+            App.Content = new Button()
+            {
+                RequestedTheme = Windows.UI.Xaml.ElementTheme.Light
+            };
+            var exporter = new JsonExporter(new StandardObjectToStringConverter());
+            var snapshotCreator = new ElementSnapshotCreator(StandardOptions.StandardPropertyNames, App.Content);
+
+            var exportFormatted = exporter.CreateFormattedJSONString(snapshotCreator.CreateSnapshot(), true, false);
+
+            var expected =
+@"{
+    ""type"": ""Button"",
+    ""Name"": """",
+    ""Visibility"": ""Visible"",
+    ""Margin"": ""0,0,0,0"",
+    ""Padding"": ""8,4,8,5"",
+    ""Background"": ""#33000000"",
+    ""BorderBrush"": ""#00FFFFFF"",
+    ""BorderThickness"": ""2,2,2,2"",
+    ""Foreground"": ""#FF000000"",
+    ""children"": [
+        {
+            ""type"": ""ContentPresenter"",
+            ""Name"": ""ContentPresenter"",
+            ""Visibility"": ""Visible"",
+            ""Margin"": ""0,0,0,0"",
+            ""Padding"": ""8,4,8,5"",
+            ""Background"": ""#33000000"",
+            ""BorderBrush"": ""#00FFFFFF"",
+            ""BorderThickness"": ""2,2,2,2"",
+            ""Foreground"": ""#FF000000"",
             ""children"": []
         }
     ]

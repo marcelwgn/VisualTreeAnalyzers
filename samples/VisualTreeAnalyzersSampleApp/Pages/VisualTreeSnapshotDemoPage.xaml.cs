@@ -30,10 +30,16 @@ namespace AnalyzersSampleApp.Pages
 
         public VisualTreeSnapshotDemoPage()
         {
-            this.InitializeComponent();
-
+            InitializeComponent();
+            
             snapshotCreator = new ElementSnapshotCreator(StandardOptions.StandardPropertyNames, SampleControlsPanel);
 
+            Loaded += VisualTreeSnapshotDemoPage_Loaded;
+        }
+
+        private void VisualTreeSnapshotDemoPage_Loaded(object sender, RoutedEventArgs e)
+        {
+            UpdateSnapshots_Click(null, null);
         }
 
         private void UpdateSnapshots_Click(object sender, RoutedEventArgs e)

@@ -12,7 +12,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisualTreeAnalyzers.Tests",
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{32423AB3-8EE7-4DFD-AC17-CC7E9CDEBCD3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnalyzersSampleApp", "samples\AnalyzersSampleApp\AnalyzersSampleApp.csproj", "{94C875F9-7682-4702-8C7F-A5A121093BBC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisualTreeAnalyzersSampleApp", "samples\VisualTreeAnalyzersSampleApp\VisualTreeAnalyzersSampleApp.csproj", "{94C875F9-7682-4702-8C7F-A5A121093BBC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -56,6 +56,12 @@ var snapshotCreator = new ElementSnapshotCreator(StandardOptions.StandardPropert
 
 // Get snapshot
 var elementSnapshot = snapshotCreator.CreateSnapshot();
+
+// Get a formatted XML export ...
+var xmlExport = new XmlExporter().CreateFormattedXMLString(elementSnapshot, /* Show null/empty values */ false, /* Include namespaces */ false);
+
+// ... or get a formatted JSON export
+var jsonExport = new JsonExporter().CreateFormattedJSONString(elementSnapshot, /* Show null/empty values */ false, /* Include namespaces */ false);
 ```
 
 To learn more about snapshot customization and exporting snapshots into other formats, see [snapshot testing](./snapshot-testing.md).

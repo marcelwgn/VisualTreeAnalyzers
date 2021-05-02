@@ -14,8 +14,8 @@ You can find the official documentation [on the website](https://chingucoding.gi
 ## Samples
 This repository also contains sample projects showing the different features of the VisualTreeAnalyzers library. All samples are located inside the `samples` folder.
 
-### AnalyzersSampleApp
-The AnalyzerSampleApp is a small app showing the different analyzers being used to highlight rendered pages.
+### VisualTreeAnalyzersSampleApp
+The VisualTreeAnalyzersSampleApp is a small app showcasing different analyzers and features of VisualTreeAnalyzers.
 
 ## Building the project
 To build the project, you need Visual Studio 2019 and the latest Windows 10 SDK.

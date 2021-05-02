@@ -14,12 +14,12 @@ namespace VisualTreeAnalyzers.Snapshot.Exporter
         private IObjectToStringConverter ObjectToStringConverter { get; }
 
         /// <summary>
-        /// Creates a new <see cref="JSONExporter"/> object which will export all properties and use the <see cref="StandardObjectToStringConverter"/> for string representations.
+        /// Creates a new <see cref="JsonExporter"/> object which will export all properties and use the <see cref="StandardObjectToStringConverter"/> for string representations.
         /// </summary>
         public JsonExporter() : this(new StandardObjectToStringConverter()) { }
 
         /// <summary>
-        /// Creates a new <see cref="JSONExporter"/> object with the given parameters.
+        /// Creates a new <see cref="JsonExporter"/> object with the given parameters.
         /// </summary>
         /// <param name="converter">The converter to use for object string representation calculation. If none is specified, ToString will be returned.</param>
         public JsonExporter(IObjectToStringConverter converter)

@@ -1206,6 +1206,152 @@ references:
   isSpec: "True"
   fullName: VisualTreeAnalyzers.Snapshot.ElementSnapshotCreator.PropertyNames
   nameWithType: ElementSnapshotCreator.PropertyNames
+- uid: VisualTreeAnalyzers.Snapshot.Exporter
+  name: VisualTreeAnalyzers.Snapshot.Exporter
+  href: api/VisualTreeAnalyzers.Snapshot.Exporter.html
+  commentId: N:VisualTreeAnalyzers.Snapshot.Exporter
+  fullName: VisualTreeAnalyzers.Snapshot.Exporter
+  nameWithType: VisualTreeAnalyzers.Snapshot.Exporter
+- uid: VisualTreeAnalyzers.Snapshot.Exporter.IObjectToStringConverter
+  name: IObjectToStringConverter
+  href: api/VisualTreeAnalyzers.Snapshot.Exporter.IObjectToStringConverter.html
+  commentId: T:VisualTreeAnalyzers.Snapshot.Exporter.IObjectToStringConverter
+  fullName: VisualTreeAnalyzers.Snapshot.Exporter.IObjectToStringConverter
+  nameWithType: IObjectToStringConverter
+- uid: VisualTreeAnalyzers.Snapshot.Exporter.IObjectToStringConverter.GetStringRepresentation(System.Object)
+  name: GetStringRepresentation(Object)
+  href: api/VisualTreeAnalyzers.Snapshot.Exporter.IObjectToStringConverter.html#VisualTreeAnalyzers_Snapshot_Exporter_IObjectToStringConverter_GetStringRepresentation_System_Object_
+  commentId: M:VisualTreeAnalyzers.Snapshot.Exporter.IObjectToStringConverter.GetStringRepresentation(System.Object)
+  fullName: VisualTreeAnalyzers.Snapshot.Exporter.IObjectToStringConverter.GetStringRepresentation(System.Object)
+  nameWithType: IObjectToStringConverter.GetStringRepresentation(Object)
+- uid: VisualTreeAnalyzers.Snapshot.Exporter.IObjectToStringConverter.GetStringRepresentation*
+  name: GetStringRepresentation
+  href: api/VisualTreeAnalyzers.Snapshot.Exporter.IObjectToStringConverter.html#VisualTreeAnalyzers_Snapshot_Exporter_IObjectToStringConverter_GetStringRepresentation_
+  commentId: Overload:VisualTreeAnalyzers.Snapshot.Exporter.IObjectToStringConverter.GetStringRepresentation
+  isSpec: "True"
+  fullName: VisualTreeAnalyzers.Snapshot.Exporter.IObjectToStringConverter.GetStringRepresentation
+  nameWithType: IObjectToStringConverter.GetStringRepresentation
+- uid: VisualTreeAnalyzers.Snapshot.Exporter.JsonExporter
+  name: JsonExporter
+  href: api/VisualTreeAnalyzers.Snapshot.Exporter.JsonExporter.html
+  commentId: T:VisualTreeAnalyzers.Snapshot.Exporter.JsonExporter
+  fullName: VisualTreeAnalyzers.Snapshot.Exporter.JsonExporter
+  nameWithType: JsonExporter
+- uid: VisualTreeAnalyzers.Snapshot.Exporter.JsonExporter.#ctor
+  name: JsonExporter()
+  href: api/VisualTreeAnalyzers.Snapshot.Exporter.JsonExporter.html#VisualTreeAnalyzers_Snapshot_Exporter_JsonExporter__ctor
+  commentId: M:VisualTreeAnalyzers.Snapshot.Exporter.JsonExporter.#ctor
+  fullName: VisualTreeAnalyzers.Snapshot.Exporter.JsonExporter.JsonExporter()
+  nameWithType: JsonExporter.JsonExporter()
+- uid: VisualTreeAnalyzers.Snapshot.Exporter.JsonExporter.#ctor(VisualTreeAnalyzers.Snapshot.Exporter.IObjectToStringConverter)
+  name: JsonExporter(IObjectToStringConverter)
+  href: api/VisualTreeAnalyzers.Snapshot.Exporter.JsonExporter.html#VisualTreeAnalyzers_Snapshot_Exporter_JsonExporter__ctor_VisualTreeAnalyzers_Snapshot_Exporter_IObjectToStringConverter_
+  commentId: M:VisualTreeAnalyzers.Snapshot.Exporter.JsonExporter.#ctor(VisualTreeAnalyzers.Snapshot.Exporter.IObjectToStringConverter)
+  fullName: VisualTreeAnalyzers.Snapshot.Exporter.JsonExporter.JsonExporter(VisualTreeAnalyzers.Snapshot.Exporter.IObjectToStringConverter)
+  nameWithType: JsonExporter.JsonExporter(IObjectToStringConverter)
+- uid: VisualTreeAnalyzers.Snapshot.Exporter.JsonExporter.#ctor*
+  name: JsonExporter
+  href: api/VisualTreeAnalyzers.Snapshot.Exporter.JsonExporter.html#VisualTreeAnalyzers_Snapshot_Exporter_JsonExporter__ctor_
+  commentId: Overload:VisualTreeAnalyzers.Snapshot.Exporter.JsonExporter.#ctor
+  isSpec: "True"
+  fullName: VisualTreeAnalyzers.Snapshot.Exporter.JsonExporter.JsonExporter
+  nameWithType: JsonExporter.JsonExporter
+- uid: VisualTreeAnalyzers.Snapshot.Exporter.JsonExporter.CreateFormattedJSONString(VisualTreeAnalyzers.Snapshot.IElementSnapshot,System.Boolean,System.Boolean)
+  name: CreateFormattedJSONString(IElementSnapshot, Boolean, Boolean)
+  href: api/VisualTreeAnalyzers.Snapshot.Exporter.JsonExporter.html#VisualTreeAnalyzers_Snapshot_Exporter_JsonExporter_CreateFormattedJSONString_VisualTreeAnalyzers_Snapshot_IElementSnapshot_System_Boolean_System_Boolean_
+  commentId: M:VisualTreeAnalyzers.Snapshot.Exporter.JsonExporter.CreateFormattedJSONString(VisualTreeAnalyzers.Snapshot.IElementSnapshot,System.Boolean,System.Boolean)
+  fullName: VisualTreeAnalyzers.Snapshot.Exporter.JsonExporter.CreateFormattedJSONString(VisualTreeAnalyzers.Snapshot.IElementSnapshot, System.Boolean, System.Boolean)
+  nameWithType: JsonExporter.CreateFormattedJSONString(IElementSnapshot, Boolean, Boolean)
+- uid: VisualTreeAnalyzers.Snapshot.Exporter.JsonExporter.CreateFormattedJSONString*
+  name: CreateFormattedJSONString
+  href: api/VisualTreeAnalyzers.Snapshot.Exporter.JsonExporter.html#VisualTreeAnalyzers_Snapshot_Exporter_JsonExporter_CreateFormattedJSONString_
+  commentId: Overload:VisualTreeAnalyzers.Snapshot.Exporter.JsonExporter.CreateFormattedJSONString
+  isSpec: "True"
+  fullName: VisualTreeAnalyzers.Snapshot.Exporter.JsonExporter.CreateFormattedJSONString
+  nameWithType: JsonExporter.CreateFormattedJSONString
+- uid: VisualTreeAnalyzers.Snapshot.Exporter.JsonExporter.CreateJsonObject(VisualTreeAnalyzers.Snapshot.IElementSnapshot,System.Boolean,System.Boolean)
+  name: CreateJsonObject(IElementSnapshot, Boolean, Boolean)
+  href: api/VisualTreeAnalyzers.Snapshot.Exporter.JsonExporter.html#VisualTreeAnalyzers_Snapshot_Exporter_JsonExporter_CreateJsonObject_VisualTreeAnalyzers_Snapshot_IElementSnapshot_System_Boolean_System_Boolean_
+  commentId: M:VisualTreeAnalyzers.Snapshot.Exporter.JsonExporter.CreateJsonObject(VisualTreeAnalyzers.Snapshot.IElementSnapshot,System.Boolean,System.Boolean)
+  fullName: VisualTreeAnalyzers.Snapshot.Exporter.JsonExporter.CreateJsonObject(VisualTreeAnalyzers.Snapshot.IElementSnapshot, System.Boolean, System.Boolean)
+  nameWithType: JsonExporter.CreateJsonObject(IElementSnapshot, Boolean, Boolean)
+- uid: VisualTreeAnalyzers.Snapshot.Exporter.JsonExporter.CreateJsonObject*
+  name: CreateJsonObject
+  href: api/VisualTreeAnalyzers.Snapshot.Exporter.JsonExporter.html#VisualTreeAnalyzers_Snapshot_Exporter_JsonExporter_CreateJsonObject_
+  commentId: Overload:VisualTreeAnalyzers.Snapshot.Exporter.JsonExporter.CreateJsonObject
+  isSpec: "True"
+  fullName: VisualTreeAnalyzers.Snapshot.Exporter.JsonExporter.CreateJsonObject
+  nameWithType: JsonExporter.CreateJsonObject
+- uid: VisualTreeAnalyzers.Snapshot.Exporter.StandardObjectToStringConverter
+  name: StandardObjectToStringConverter
+  href: api/VisualTreeAnalyzers.Snapshot.Exporter.StandardObjectToStringConverter.html
+  commentId: T:VisualTreeAnalyzers.Snapshot.Exporter.StandardObjectToStringConverter
+  fullName: VisualTreeAnalyzers.Snapshot.Exporter.StandardObjectToStringConverter
+  nameWithType: StandardObjectToStringConverter
+- uid: VisualTreeAnalyzers.Snapshot.Exporter.StandardObjectToStringConverter.GetStringRepresentation(System.Object)
+  name: GetStringRepresentation(Object)
+  href: api/VisualTreeAnalyzers.Snapshot.Exporter.StandardObjectToStringConverter.html#VisualTreeAnalyzers_Snapshot_Exporter_StandardObjectToStringConverter_GetStringRepresentation_System_Object_
+  commentId: M:VisualTreeAnalyzers.Snapshot.Exporter.StandardObjectToStringConverter.GetStringRepresentation(System.Object)
+  fullName: VisualTreeAnalyzers.Snapshot.Exporter.StandardObjectToStringConverter.GetStringRepresentation(System.Object)
+  nameWithType: StandardObjectToStringConverter.GetStringRepresentation(Object)
+- uid: VisualTreeAnalyzers.Snapshot.Exporter.StandardObjectToStringConverter.GetStringRepresentation*
+  name: GetStringRepresentation
+  href: api/VisualTreeAnalyzers.Snapshot.Exporter.StandardObjectToStringConverter.html#VisualTreeAnalyzers_Snapshot_Exporter_StandardObjectToStringConverter_GetStringRepresentation_
+  commentId: Overload:VisualTreeAnalyzers.Snapshot.Exporter.StandardObjectToStringConverter.GetStringRepresentation
+  isSpec: "True"
+  fullName: VisualTreeAnalyzers.Snapshot.Exporter.StandardObjectToStringConverter.GetStringRepresentation
+  nameWithType: StandardObjectToStringConverter.GetStringRepresentation
+- uid: VisualTreeAnalyzers.Snapshot.Exporter.XmlExporter
+  name: XmlExporter
+  href: api/VisualTreeAnalyzers.Snapshot.Exporter.XmlExporter.html
+  commentId: T:VisualTreeAnalyzers.Snapshot.Exporter.XmlExporter
+  fullName: VisualTreeAnalyzers.Snapshot.Exporter.XmlExporter
+  nameWithType: XmlExporter
+- uid: VisualTreeAnalyzers.Snapshot.Exporter.XmlExporter.#ctor
+  name: XmlExporter()
+  href: api/VisualTreeAnalyzers.Snapshot.Exporter.XmlExporter.html#VisualTreeAnalyzers_Snapshot_Exporter_XmlExporter__ctor
+  commentId: M:VisualTreeAnalyzers.Snapshot.Exporter.XmlExporter.#ctor
+  fullName: VisualTreeAnalyzers.Snapshot.Exporter.XmlExporter.XmlExporter()
+  nameWithType: XmlExporter.XmlExporter()
+- uid: VisualTreeAnalyzers.Snapshot.Exporter.XmlExporter.#ctor(VisualTreeAnalyzers.Snapshot.Exporter.IObjectToStringConverter)
+  name: XmlExporter(IObjectToStringConverter)
+  href: api/VisualTreeAnalyzers.Snapshot.Exporter.XmlExporter.html#VisualTreeAnalyzers_Snapshot_Exporter_XmlExporter__ctor_VisualTreeAnalyzers_Snapshot_Exporter_IObjectToStringConverter_
+  commentId: M:VisualTreeAnalyzers.Snapshot.Exporter.XmlExporter.#ctor(VisualTreeAnalyzers.Snapshot.Exporter.IObjectToStringConverter)
+  fullName: VisualTreeAnalyzers.Snapshot.Exporter.XmlExporter.XmlExporter(VisualTreeAnalyzers.Snapshot.Exporter.IObjectToStringConverter)
+  nameWithType: XmlExporter.XmlExporter(IObjectToStringConverter)
+- uid: VisualTreeAnalyzers.Snapshot.Exporter.XmlExporter.#ctor*
+  name: XmlExporter
+  href: api/VisualTreeAnalyzers.Snapshot.Exporter.XmlExporter.html#VisualTreeAnalyzers_Snapshot_Exporter_XmlExporter__ctor_
+  commentId: Overload:VisualTreeAnalyzers.Snapshot.Exporter.XmlExporter.#ctor
+  isSpec: "True"
+  fullName: VisualTreeAnalyzers.Snapshot.Exporter.XmlExporter.XmlExporter
+  nameWithType: XmlExporter.XmlExporter
+- uid: VisualTreeAnalyzers.Snapshot.Exporter.XmlExporter.CreateFormattedXMLString(VisualTreeAnalyzers.Snapshot.IElementSnapshot,System.Boolean,System.Boolean)
+  name: CreateFormattedXMLString(IElementSnapshot, Boolean, Boolean)
+  href: api/VisualTreeAnalyzers.Snapshot.Exporter.XmlExporter.html#VisualTreeAnalyzers_Snapshot_Exporter_XmlExporter_CreateFormattedXMLString_VisualTreeAnalyzers_Snapshot_IElementSnapshot_System_Boolean_System_Boolean_
+  commentId: M:VisualTreeAnalyzers.Snapshot.Exporter.XmlExporter.CreateFormattedXMLString(VisualTreeAnalyzers.Snapshot.IElementSnapshot,System.Boolean,System.Boolean)
+  fullName: VisualTreeAnalyzers.Snapshot.Exporter.XmlExporter.CreateFormattedXMLString(VisualTreeAnalyzers.Snapshot.IElementSnapshot, System.Boolean, System.Boolean)
+  nameWithType: XmlExporter.CreateFormattedXMLString(IElementSnapshot, Boolean, Boolean)
+- uid: VisualTreeAnalyzers.Snapshot.Exporter.XmlExporter.CreateFormattedXMLString*
+  name: CreateFormattedXMLString
+  href: api/VisualTreeAnalyzers.Snapshot.Exporter.XmlExporter.html#VisualTreeAnalyzers_Snapshot_Exporter_XmlExporter_CreateFormattedXMLString_
+  commentId: Overload:VisualTreeAnalyzers.Snapshot.Exporter.XmlExporter.CreateFormattedXMLString
+  isSpec: "True"
+  fullName: VisualTreeAnalyzers.Snapshot.Exporter.XmlExporter.CreateFormattedXMLString
+  nameWithType: XmlExporter.CreateFormattedXMLString
+- uid: VisualTreeAnalyzers.Snapshot.Exporter.XmlExporter.CreateXMLDocument(VisualTreeAnalyzers.Snapshot.IElementSnapshot,System.Boolean,System.Boolean)
+  name: CreateXMLDocument(IElementSnapshot, Boolean, Boolean)
+  href: api/VisualTreeAnalyzers.Snapshot.Exporter.XmlExporter.html#VisualTreeAnalyzers_Snapshot_Exporter_XmlExporter_CreateXMLDocument_VisualTreeAnalyzers_Snapshot_IElementSnapshot_System_Boolean_System_Boolean_
+  commentId: M:VisualTreeAnalyzers.Snapshot.Exporter.XmlExporter.CreateXMLDocument(VisualTreeAnalyzers.Snapshot.IElementSnapshot,System.Boolean,System.Boolean)
+  fullName: VisualTreeAnalyzers.Snapshot.Exporter.XmlExporter.CreateXMLDocument(VisualTreeAnalyzers.Snapshot.IElementSnapshot, System.Boolean, System.Boolean)
+  nameWithType: XmlExporter.CreateXMLDocument(IElementSnapshot, Boolean, Boolean)
+- uid: VisualTreeAnalyzers.Snapshot.Exporter.XmlExporter.CreateXMLDocument*
+  name: CreateXMLDocument
+  href: api/VisualTreeAnalyzers.Snapshot.Exporter.XmlExporter.html#VisualTreeAnalyzers_Snapshot_Exporter_XmlExporter_CreateXMLDocument_
+  commentId: Overload:VisualTreeAnalyzers.Snapshot.Exporter.XmlExporter.CreateXMLDocument
+  isSpec: "True"
+  fullName: VisualTreeAnalyzers.Snapshot.Exporter.XmlExporter.CreateXMLDocument
+  nameWithType: XmlExporter.CreateXMLDocument
 - uid: VisualTreeAnalyzers.Snapshot.IElementSnapshot
   name: IElementSnapshot
   href: api/VisualTreeAnalyzers.Snapshot.IElementSnapshot.html
@@ -1328,6 +1474,38 @@ references:
   isSpec: "True"
   fullName: VisualTreeAnalyzers.Snapshot.IElementSnapshotCreator.PropertyNames
   nameWithType: IElementSnapshotCreator.PropertyNames
+- uid: VisualTreeAnalyzers.Snapshot.NamespaceHelper
+  name: NamespaceHelper
+  href: api/VisualTreeAnalyzers.Snapshot.NamespaceHelper.html
+  commentId: T:VisualTreeAnalyzers.Snapshot.NamespaceHelper
+  fullName: VisualTreeAnalyzers.Snapshot.NamespaceHelper
+  nameWithType: NamespaceHelper
+- uid: VisualTreeAnalyzers.Snapshot.NamespaceHelper.GetNamespace(System.String)
+  name: GetNamespace(String)
+  href: api/VisualTreeAnalyzers.Snapshot.NamespaceHelper.html#VisualTreeAnalyzers_Snapshot_NamespaceHelper_GetNamespace_System_String_
+  commentId: M:VisualTreeAnalyzers.Snapshot.NamespaceHelper.GetNamespace(System.String)
+  fullName: VisualTreeAnalyzers.Snapshot.NamespaceHelper.GetNamespace(System.String)
+  nameWithType: NamespaceHelper.GetNamespace(String)
+- uid: VisualTreeAnalyzers.Snapshot.NamespaceHelper.GetNamespace*
+  name: GetNamespace
+  href: api/VisualTreeAnalyzers.Snapshot.NamespaceHelper.html#VisualTreeAnalyzers_Snapshot_NamespaceHelper_GetNamespace_
+  commentId: Overload:VisualTreeAnalyzers.Snapshot.NamespaceHelper.GetNamespace
+  isSpec: "True"
+  fullName: VisualTreeAnalyzers.Snapshot.NamespaceHelper.GetNamespace
+  nameWithType: NamespaceHelper.GetNamespace
+- uid: VisualTreeAnalyzers.Snapshot.NamespaceHelper.GetTypeName(System.String)
+  name: GetTypeName(String)
+  href: api/VisualTreeAnalyzers.Snapshot.NamespaceHelper.html#VisualTreeAnalyzers_Snapshot_NamespaceHelper_GetTypeName_System_String_
+  commentId: M:VisualTreeAnalyzers.Snapshot.NamespaceHelper.GetTypeName(System.String)
+  fullName: VisualTreeAnalyzers.Snapshot.NamespaceHelper.GetTypeName(System.String)
+  nameWithType: NamespaceHelper.GetTypeName(String)
+- uid: VisualTreeAnalyzers.Snapshot.NamespaceHelper.GetTypeName*
+  name: GetTypeName
+  href: api/VisualTreeAnalyzers.Snapshot.NamespaceHelper.html#VisualTreeAnalyzers_Snapshot_NamespaceHelper_GetTypeName_
+  commentId: Overload:VisualTreeAnalyzers.Snapshot.NamespaceHelper.GetTypeName
+  isSpec: "True"
+  fullName: VisualTreeAnalyzers.Snapshot.NamespaceHelper.GetTypeName
+  nameWithType: NamespaceHelper.GetTypeName
 - uid: VisualTreeAnalyzers.Snapshot.StandardOptions
   name: StandardOptions
   href: api/VisualTreeAnalyzers.Snapshot.StandardOptions.html

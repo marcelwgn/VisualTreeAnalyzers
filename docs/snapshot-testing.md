@@ -4,7 +4,7 @@ This document explains how to use create snapshots of the visual tree and how to
 
 ## What is snapshot testing?
 
-Snapshot testing is a way of verifying that control and rendering output did not suddenly change. Snapshot tests compare the current rendering output of a control/visual tree against an already saved rendering output that has been saved earlier as correct rendering output. The [Snapshot namespace](xref:VisualTreeAnalyzers.Snapshot) contains classes that help in generating snapshots of a visual tree and also include helpers to export the snapshot in human readable formats.
+Snapshot testing is a way of verifying that control and rendering output did not suddenly change. Snapshot tests compare the current rendering output of a control/visual tree against an already saved rendering output that has been saved earlier as correct rendering output. The [Snapshot namespace](xref:VisualTreeAnalyzers.Snapshot) contains classes that help in generating snapshots of a visual tree and also include helpers to export the snapshot in human readable formats. Note that currently, only UWP with OS - XAML is supported.
 
 ## Creating a raw snapshot
 

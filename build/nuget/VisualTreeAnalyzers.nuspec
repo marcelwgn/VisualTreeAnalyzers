@@ -6,16 +6,18 @@
         <authors>Marcel Wagner</authors>
         <copyright>Marcel Wagner</copyright>
         <description>
-            Library containing different visual tree analyzers and helpers.
+Library containing different visual tree analyzers and helpers.
 
-            This library contains multiple analyzers directly scanning the visual tree for potential issues, especially for accessibility issues.
-            In addition to that, the library also allows easy writing of visual tree snapshot tests.
+This library currenty only supports UWP with OS XAML.
+
+This library contains multiple analyzers directly scanning the visual tree for potential issues and especially for accessibility issues.
+In addition to that, the library also allows easy writing of visual tree snapshot tests.
         </description>
         <title>VisualTreeAnalyzers</title>
-        <tags>c# uwp accessibility visualtree analyzer a11y</tags>
+        <tags>c# uwp accessibility visualtree analyzer a11y xaml snapshot testing snapshot-testing</tags>
         <repository type="git" url="https://github.com/chingucoding/VisualTreeAnalyzers" branch="main"/>
         <projectUrl>https://chingucoding.github.io/VisualTreeAnalyzers/website/index.html</projectUrl>
-        <version>0.2.0</version>
+        <version>0.2.1</version>
         <!-- <icon>./icon.png</icon> -->
         <!-- Optional elements -->
         <!-- ... -->

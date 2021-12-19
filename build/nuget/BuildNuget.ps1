@@ -2,7 +2,7 @@ $scriptFolder = Split-Path -Path $MyInvocation.MyCommand.Path;
 $buildFolder = Split-Path -Path $scriptFolder;
 $workingDirectory = Split-Path $buildFolder -Parent;
 
-$nuspecFile = $scriptFolder + "\VisualTreeAnalyzers.nuspec";
+$nuspecFile = $scriptFolder + "\VisualTreeAnalyzers.UWP.nuspec";
 $nugetPackageOutput = $workingDirectory + "\artifacts\package";
 
 if(Test-Path ($buildFolder + "./Nuget.exe") -PathType Leaf)

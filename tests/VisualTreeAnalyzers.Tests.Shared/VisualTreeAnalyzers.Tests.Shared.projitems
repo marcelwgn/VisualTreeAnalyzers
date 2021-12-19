@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects Condition="'$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>1e1c64d1-8222-41a5-8aa9-4f028df5c6b8</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>VisualTreeAnalyzers.Tests</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Accessibility\Rules\ControlNameNotIncludeTypeRuleTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Accessibility\Rules\ControlNonEmptyNameRuleTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Accessibility\Rules\ListItemNameNotEqualDataContextRuleTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Accessibility\Rules\PatternInterfaceImplementedRuleTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Accessibility\Rules\TypeButtonIsInvokeOrToggleRuleTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Accessibility\TestPeers\ControlTypePeer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Accessibility\TestPeers\LocalizedLandmarkPeer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Accessibility\TestPeers\NoneOrientationPeer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Accessibility\TestPeers\ControlTypeFocusPeer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Accessibility\Rules\ExpectKeyboardFocusableFalseRuleTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Accessibility\Rules\ExpectKeyboardFocusableTrueRuleTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Accessibility\Rules\LandmarkTypeMainOnceRuleTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Accessibility\Rules\LocalizedLandMarkTypeRuleTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Accessibility\Rules\NameReasonableLengthRuleTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Accessibility\Rules\OrientationNotNoneRuleTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Accessibility\Rules\RequiredSelectionRuleTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Accessibility\TestPeers\PatternInterfacePeer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Accessibility\TestPeers\SelectionPeer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Accessibility\Rules\SingleSelectionRuleTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\AnalyzerHelperTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\VisualTreeWalkerTimerTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Snapshot\Exporter\JsonExporterTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Snapshot\Exporter\XmlExporterTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Snapshot\NamespaceHelperTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Accessibility\AccessibilityAnalyzerTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Snapshot\ElementSnapshotCreatorTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Snapshot\StandardOptionsTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestImplementations\AnalyzeInvokeCountAnalyzer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestImplementations\CountingElementAnalyzer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\VisualTreeWalkerTests.cs" />
+  </ItemGroup>
+</Project>

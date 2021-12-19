@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects Condition="'$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>1e1c64d1-8222-41a5-8aa9-4f028df5c6b8</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>VisualTreeAnalyzers</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Accessibility\AccessibilityAnalyzer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Accessibility\AccessibilityRule.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Accessibility\Rules\ControlNameNotIncludeTypeRule.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Accessibility\Rules\ControlNonEmptyNameRule.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Accessibility\Rules\ExpectKeyboardFocusableFalseRule.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Accessibility\Rules\ExpectKeyboardFocusableTrueRule.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Accessibility\Rules\LandmarkTypeMainOnceRule.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Accessibility\Rules\ListItemNameNotEqualDataContextRule.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Accessibility\Rules\LocalizedLandMarkTypeRule.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Accessibility\Rules\NameReasonableLengthRule.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Accessibility\Rules\OrientationNotNoneRule.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Accessibility\Rules\PatternInterfaceImplementedRule.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Accessibility\Rules\RequiredSelectionRule.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Accessibility\Rules\SingleSelectionRule.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Accessibility\Rules\TypeButtonIsInvokeOrToggleRule.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\AnalyzerHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\IElementAnalyzer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\IRule.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\IVisualTreeWalker.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\IVisualTreeWalkerTimer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\RuleScanner.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\VisualTreeWalker.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\VisualTreeWalkerTimer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Snapshot\ElementSnapshot.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Snapshot\ElementSnapshotCreator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Snapshot\Exporter\IObjectToStringConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Snapshot\Exporter\JsonExporter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Snapshot\Exporter\JsonHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Snapshot\Exporter\StandardObjectToStringConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Snapshot\Exporter\XmlExporter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Snapshot\IElementSnapshot.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Snapshot\IElementSnapshotCreator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Snapshot\NamespaceHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Snapshot\StandardOptions.cs" />
+  </ItemGroup>
+</Project>

@@ -1,20 +1,30 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30523.141
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31912.275
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{FCE7B4AE-4C2B-447A-9FA2-6CFAD8FF6089}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{553C9B33-97C2-4C57-B5E9-88608ED61475}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisualTreeAnalyzers", "src\VisualTreeAnalyzers\VisualTreeAnalyzers.csproj", "{71D49058-4D49-4616-BDB7-A795823D9866}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisualTreeAnalyzers.Tests", "tests\VisualTreeAnalyzers.Tests\VisualTreeAnalyzers.Tests.csproj", "{9CCA940B-ACFE-4773-9441-0B6EDF9504A3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisualTreeAnalyzers.Tests.UWP", "tests\VisualTreeAnalyzers.Tests.UWP\VisualTreeAnalyzers.Tests.UWP.csproj", "{9CCA940B-ACFE-4773-9441-0B6EDF9504A3}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{32423AB3-8EE7-4DFD-AC17-CC7E9CDEBCD3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisualTreeAnalyzersSampleApp", "samples\VisualTreeAnalyzersSampleApp\VisualTreeAnalyzersSampleApp.csproj", "{94C875F9-7682-4702-8C7F-A5A121093BBC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisualTreeAnalyzers.UWP", "src\VisualTreeAnalyzers.UWP\VisualTreeAnalyzers.UWP.csproj", "{71D49058-4D49-4616-BDB7-A795823D9866}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "VisualTreeAnalyzers.Shared", "src\VisualTreeAnalyzers.Shared\VisualTreeAnalyzers.Shared.shproj", "{1E1C64D1-8222-41A5-8AA9-4F028DF5C6B8}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "VisualTreeAnalyzers.Tests.Shared", "tests\VisualTreeAnalyzers.Tests.Shared\VisualTreeAnalyzers.Tests.Shared.shproj", "{459E3085-96D7-4A0C-8A7D-4F8A10AED340}"
+EndProject
 Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		src\VisualTreeAnalyzers.Shared\VisualTreeAnalyzers.Shared.projitems*{1e1c64d1-8222-41a5-8aa9-4f028df5c6b8}*SharedItemsImports = 13
+		tests\VisualTreeAnalyzers.Tests.Shared\VisualTreeAnalyzers.Tests.Shared.projitems*{459e3085-96d7-4a0c-8a7d-4f8a10aed340}*SharedItemsImports = 13
+		src\VisualTreeAnalyzers.Shared\VisualTreeAnalyzers.Shared.projitems*{71d49058-4d49-4616-bdb7-a795823d9866}*SharedItemsImports = 4
+		tests\VisualTreeAnalyzers.Tests.Shared\VisualTreeAnalyzers.Tests.Shared.projitems*{9cca940b-acfe-4773-9441-0b6edf9504a3}*SharedItemsImports = 4
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Debug|ARM = Debug|ARM
@@ -28,26 +38,6 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{71D49058-4D49-4616-BDB7-A795823D9866}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{71D49058-4D49-4616-BDB7-A795823D9866}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{71D49058-4D49-4616-BDB7-A795823D9866}.Debug|ARM.ActiveCfg = Debug|ARM
-		{71D49058-4D49-4616-BDB7-A795823D9866}.Debug|ARM.Build.0 = Debug|ARM
-		{71D49058-4D49-4616-BDB7-A795823D9866}.Debug|ARM64.ActiveCfg = Debug|ARM64
-		{71D49058-4D49-4616-BDB7-A795823D9866}.Debug|ARM64.Build.0 = Debug|ARM64
-		{71D49058-4D49-4616-BDB7-A795823D9866}.Debug|x64.ActiveCfg = Debug|x64
-		{71D49058-4D49-4616-BDB7-A795823D9866}.Debug|x64.Build.0 = Debug|x64
-		{71D49058-4D49-4616-BDB7-A795823D9866}.Debug|x86.ActiveCfg = Debug|x86
-		{71D49058-4D49-4616-BDB7-A795823D9866}.Debug|x86.Build.0 = Debug|x86
-		{71D49058-4D49-4616-BDB7-A795823D9866}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{71D49058-4D49-4616-BDB7-A795823D9866}.Release|Any CPU.Build.0 = Release|Any CPU
-		{71D49058-4D49-4616-BDB7-A795823D9866}.Release|ARM.ActiveCfg = Release|ARM
-		{71D49058-4D49-4616-BDB7-A795823D9866}.Release|ARM.Build.0 = Release|ARM
-		{71D49058-4D49-4616-BDB7-A795823D9866}.Release|ARM64.ActiveCfg = Release|ARM64
-		{71D49058-4D49-4616-BDB7-A795823D9866}.Release|ARM64.Build.0 = Release|ARM64
-		{71D49058-4D49-4616-BDB7-A795823D9866}.Release|x64.ActiveCfg = Release|x64
-		{71D49058-4D49-4616-BDB7-A795823D9866}.Release|x64.Build.0 = Release|x64
-		{71D49058-4D49-4616-BDB7-A795823D9866}.Release|x86.ActiveCfg = Release|x86
-		{71D49058-4D49-4616-BDB7-A795823D9866}.Release|x86.Build.0 = Release|x86
 		{9CCA940B-ACFE-4773-9441-0B6EDF9504A3}.Debug|Any CPU.ActiveCfg = Debug|x86
 		{9CCA940B-ACFE-4773-9441-0B6EDF9504A3}.Debug|ARM.ActiveCfg = Debug|ARM
 		{9CCA940B-ACFE-4773-9441-0B6EDF9504A3}.Debug|ARM.Build.0 = Debug|ARM
@@ -100,14 +90,36 @@ Global
 		{94C875F9-7682-4702-8C7F-A5A121093BBC}.Release|x86.ActiveCfg = Release|x86
 		{94C875F9-7682-4702-8C7F-A5A121093BBC}.Release|x86.Build.0 = Release|x86
 		{94C875F9-7682-4702-8C7F-A5A121093BBC}.Release|x86.Deploy.0 = Release|x86
+		{71D49058-4D49-4616-BDB7-A795823D9866}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71D49058-4D49-4616-BDB7-A795823D9866}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71D49058-4D49-4616-BDB7-A795823D9866}.Debug|ARM.ActiveCfg = Debug|ARM
+		{71D49058-4D49-4616-BDB7-A795823D9866}.Debug|ARM.Build.0 = Debug|ARM
+		{71D49058-4D49-4616-BDB7-A795823D9866}.Debug|ARM64.ActiveCfg = Debug|ARM64
+		{71D49058-4D49-4616-BDB7-A795823D9866}.Debug|ARM64.Build.0 = Debug|ARM64
+		{71D49058-4D49-4616-BDB7-A795823D9866}.Debug|x64.ActiveCfg = Debug|x64
+		{71D49058-4D49-4616-BDB7-A795823D9866}.Debug|x64.Build.0 = Debug|x64
+		{71D49058-4D49-4616-BDB7-A795823D9866}.Debug|x86.ActiveCfg = Debug|x86
+		{71D49058-4D49-4616-BDB7-A795823D9866}.Debug|x86.Build.0 = Debug|x86
+		{71D49058-4D49-4616-BDB7-A795823D9866}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71D49058-4D49-4616-BDB7-A795823D9866}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71D49058-4D49-4616-BDB7-A795823D9866}.Release|ARM.ActiveCfg = Release|ARM
+		{71D49058-4D49-4616-BDB7-A795823D9866}.Release|ARM.Build.0 = Release|ARM
+		{71D49058-4D49-4616-BDB7-A795823D9866}.Release|ARM64.ActiveCfg = Release|ARM64
+		{71D49058-4D49-4616-BDB7-A795823D9866}.Release|ARM64.Build.0 = Release|ARM64
+		{71D49058-4D49-4616-BDB7-A795823D9866}.Release|x64.ActiveCfg = Release|x64
+		{71D49058-4D49-4616-BDB7-A795823D9866}.Release|x64.Build.0 = Release|x64
+		{71D49058-4D49-4616-BDB7-A795823D9866}.Release|x86.ActiveCfg = Release|x86
+		{71D49058-4D49-4616-BDB7-A795823D9866}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{71D49058-4D49-4616-BDB7-A795823D9866} = {553C9B33-97C2-4C57-B5E9-88608ED61475}
 		{9CCA940B-ACFE-4773-9441-0B6EDF9504A3} = {FCE7B4AE-4C2B-447A-9FA2-6CFAD8FF6089}
 		{94C875F9-7682-4702-8C7F-A5A121093BBC} = {32423AB3-8EE7-4DFD-AC17-CC7E9CDEBCD3}
+		{71D49058-4D49-4616-BDB7-A795823D9866} = {553C9B33-97C2-4C57-B5E9-88608ED61475}
+		{1E1C64D1-8222-41A5-8AA9-4F028DF5C6B8} = {553C9B33-97C2-4C57-B5E9-88608ED61475}
+		{459E3085-96D7-4A0C-8A7D-4F8A10AED340} = {FCE7B4AE-4C2B-447A-9FA2-6CFAD8FF6089}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {727E24E2-8BFC-48E0-AA93-5A15B0E6DF8A}

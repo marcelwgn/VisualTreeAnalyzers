@@ -1,6 +1,7 @@
 parameters:
   solution: '**/*.sln'
   testSetup: 'Test_Debug_x64'
+  project: 'VisualTreeAnalyzers.UWP.csproj'
 
 jobs:
   - job:
@@ -20,7 +21,7 @@ jobs:
     - task: MSBuild@1
       displayName: "Build Release anyCPU"
       inputs:
-        solution: '**/VisualTreeAnalyzers.csproj'
+        solution: '**/${{parameters.project}}'
         msbuildArchitecture: 'x64'
         platform: 'AnyCPU'
         configuration: 'Release'
@@ -28,7 +29,7 @@ jobs:
     - task: MSBuild@1
       displayName: "Build Release x86"
       inputs:
-        solution: '**/VisualTreeAnalyzers.csproj'
+        solution: '**/${{parameters.project}}'
         msbuildArchitecture: 'x64'
         platform: 'x86'
         configuration: 'Release'   
@@ -37,7 +38,7 @@ jobs:
     - task: MSBuild@1
       displayName: "Build Release x64"
       inputs:
-        solution: '**/VisualTreeAnalyzers.csproj'
+        solution: '**/${{parameters.project}}'
         msbuildArchitecture: 'x64'
         platform: 'x64'
         configuration: 'Release'
@@ -45,7 +46,7 @@ jobs:
     - task: MSBuild@1
       displayName: "Build Release ARM"
       inputs:
-        solution: '**/VisualTreeAnalyzers.csproj'
+        solution: '**/${{parameters.project}}'
         msbuildArchitecture: 'x64'
         platform: 'ARM'
         configuration: 'Release'
@@ -53,7 +54,7 @@ jobs:
     - task: MSBuild@1
       displayName: "Build Release ARM64"
       inputs:
-        solution: '**/VisualTreeAnalyzers.csproj'
+        solution: '**/${{parameters.project}}'
         msbuildArchitecture: 'x64'
         platform: 'ARM64'
         configuration: 'Release'

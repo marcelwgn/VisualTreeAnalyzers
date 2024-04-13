@@ -18,6 +18,6 @@ This repository also contains sample projects showing the different features of 
 The VisualTreeAnalyzersSampleApp is a small app showcasing different analyzers and features of VisualTreeAnalyzers.
 
 ## Building the project
-To build the project, you need Visual Studio 2019 and the latest Windows 10 SDK.
+To build the project, you need Visual Studio 2019 and the latest Windows 10/11 SDK.
 The project can be build by using the `VisualTreeAnalyzers.sln`solution.
 For more information see the [development guide](./docs/development/development.md).
